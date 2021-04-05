@@ -16,7 +16,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat malesua
 - create-react-app
 
 ### Libraries
-- none
+- gh-pages
 
 # Getting Started with Create React App
 

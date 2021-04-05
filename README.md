@@ -17,6 +17,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat malesua
 
 ### Libraries
 - gh-pages
+- styled-components
 
 # Getting Started with Create React App
 

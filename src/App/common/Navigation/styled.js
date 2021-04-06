@@ -113,6 +113,7 @@ export const Search = styled.label`
 
   @media (max-width: ${({ theme }) =>
       theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+    padding: 14px 18px;
     flex-basis: 100%;
     margin-top: 32px;
   }

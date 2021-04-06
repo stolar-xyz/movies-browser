@@ -16,7 +16,7 @@ const Navigation = () => (
     <Wrapper>
       <Header>
         <VideoIcon />
-        <Title>Movies browser</Title>
+        <Title>Movies&nbsp;browser</Title>
       </Header>
       <List>
         <ListItem>Movies</ListItem>

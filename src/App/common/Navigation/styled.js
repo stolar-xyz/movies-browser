@@ -12,8 +12,12 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 23px 16px;
+  padding: 24px 16px;
   max-width: 1368px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+    padding: 20px 16px;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     padding: 14px 16px;
@@ -39,8 +43,12 @@ export const Title = styled.h1`
   letter-spacing: -1.5px;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     letter-spacing: -0.5px;
+    font-size: 22px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 18px;
   }
 `;
@@ -48,9 +56,13 @@ export const Title = styled.h1`
 export const VideoIcon = styled(Video)`
   margin-right: 16px;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+    width: 32px;
+    margin-right: 10px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 22px;
-    margin-right: 10px;
   }
 `;
 
@@ -65,10 +77,13 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     justify-content: center;
-    font-size: 12px;
     grid-gap: 36px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 12px;
   }
 `;
 
@@ -92,7 +107,7 @@ export const Search = styled.label`
   border-radius: 25px;
   padding: 12px 26px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     padding: 8px 20px;
   }
 
@@ -106,9 +121,13 @@ export const Search = styled.label`
 export const SearchIcon = styled(Loupe)`
   margin-right: 16px;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+    width: 18px;
+    margin-right: 10px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 16px;
-    margin-right: 10px;
   }
 `;
 
@@ -116,7 +135,7 @@ export const SearchField = styled.input`
   flex-grow: 1;
   border: none;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     font-size: 13px;
   }
 

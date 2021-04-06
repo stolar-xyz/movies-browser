@@ -137,7 +137,7 @@ export const SearchField = styled.input`
   border: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   &:focus {

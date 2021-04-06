@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
 
 export const Header = styled.header`
   display: flex;
+  letter-spacing: -1.5px;
   align-items: center;
   cursor: pointer;
 `;

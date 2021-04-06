@@ -10,16 +10,24 @@ export const StyledNavigation = styled.nav`
 export const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
   padding: 23px 16px;
   max-width: 1368px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    padding: 14px 16px;
+  }
+
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+    flex-wrap: wrap;
+    padding: 32px 16px 16px;
+  }
 `;
 
 export const Header = styled.header`
   display: flex;
-  letter-spacing: -1.5px;
   align-items: center;
   cursor: pointer;
 `;
@@ -28,11 +36,22 @@ export const Title = styled.h1`
   text-transform: capitalize;
   font-size: 24px;
   font-weight: 500;
+  letter-spacing: -1.5px;
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    letter-spacing: -0.5px;
+    font-size: 18px;
+  }
 `;
 
 export const VideoIcon = styled(Video)`
   margin-right: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    width: 22px;
+    margin-right: 10px;
+  }
 `;
 
 export const List = styled.ul`
@@ -42,15 +61,28 @@ export const List = styled.ul`
   flex-basis: 33%;
   grid-gap: 66px;
   list-style-type: none;
+  font-size: 14px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    justify-content: center;
+    font-size: 12px;
+    grid-gap: 36px;
+  }
 `;
 
 export const ListItem = styled.li`
-  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+    &:last-child {
+      margin-right: 12px;
+    }
+  }
 `;
 
 export const Search = styled.label`
@@ -59,15 +91,34 @@ export const Search = styled.label`
   flex-basis: 33%;
   border-radius: 25px;
   padding: 12px 26px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    padding: 8px 20px;
+  }
+
+  @media (max-width: ${({ theme }) =>
+      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+    flex-basis: 100%;
+    margin-top: 32px;
+  }
 `;
 
 export const SearchIcon = styled(Loupe)`
   margin-right: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    width: 16px;
+    margin-right: 10px;
+  }
 `;
 
 export const SearchField = styled.input`
   flex-grow: 1;
   border: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 13px;
+  }
 
   &:focus {
     outline: none;

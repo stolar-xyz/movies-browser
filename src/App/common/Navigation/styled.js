@@ -103,6 +103,7 @@ export const ListItem = styled.li`
 export const Search = styled.label`
   background: #ffffff;
   display: flex;
+  align-items: center;
   flex-basis: 33%;
   border-radius: 25px;
   padding: 12px 26px;
@@ -134,6 +135,7 @@ export const SearchIcon = styled(Loupe)`
 
 export const SearchField = styled.input`
   flex-grow: 1;
+  line-height: normal;
   border: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {

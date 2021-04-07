@@ -28,6 +28,11 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
     padding: 32px 16px 16px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
+    justify-content: center;
+    padding: 22px 16px 16px;
+  }
 `;
 
 export const Header = styled.header`
@@ -55,6 +60,7 @@ export const Title = styled.h1`
 
 export const VideoIcon = styled(Video)`
   margin-right: 16px;
+  height: auto;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     width: 32px;
@@ -85,19 +91,17 @@ export const List = styled.ul`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 12px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
+    flex-basis: 100%;
+    margin-top: 26px;
+  }
 `;
 
 export const ListItem = styled.li`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-
-  @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
-    &:last-child {
-      margin-right: 12px;
-    }
-  }
 `;
 
 export const Search = styled.label`
@@ -118,10 +122,16 @@ export const Search = styled.label`
     flex-basis: 100%;
     margin-top: 32px;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
+    margin-top: 26px;
+    padding: 10px 16px;
+  }
 `;
 
 export const SearchIcon = styled(Loupe)`
   margin-right: 16px;
+  height: auto;
   color: #7e839a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {

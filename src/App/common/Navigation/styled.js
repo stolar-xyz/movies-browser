@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   @media (max-width: ${({ theme }) =>
       theme.breakpoints.mobileMax}px) and (orientation: portrait) {
     flex-wrap: wrap;
-    padding: 32px 16px 16px;
+    padding: 28px 16px 16px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
@@ -54,7 +54,7 @@ export const Title = styled.h1`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -77,7 +77,7 @@ export const List = styled.ul`
   grid-auto-flow: column;
   justify-content: start;
   flex-basis: 33%;
-  grid-gap: 66px;
+  grid-gap: 60px;
   list-style-type: none;
   font-size: 14px;
   margin: 0;
@@ -85,16 +85,16 @@ export const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     justify-content: center;
-    grid-gap: 36px;
+    grid-gap: 30px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
     flex-basis: 100%;
-    margin-top: 26px;
+    margin-top: 28px;
   }
 `;
 
@@ -113,19 +113,13 @@ export const Search = styled.label`
   padding: 12px 26px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
-    padding: 8px 20px;
+    padding: 8px 16px;
   }
 
   @media (max-width: ${({ theme }) =>
       theme.breakpoints.mobileMax}px) and (orientation: portrait) {
-    padding: 14px 18px;
     flex-basis: 100%;
-    margin-top: 32px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
-    margin-top: 26px;
-    padding: 10px 16px;
+    margin-top: 28px;
   }
 `;
 
@@ -152,6 +146,10 @@ export const SearchField = styled.input`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     font-size: 14px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 12px;
   }
 
   &:focus {

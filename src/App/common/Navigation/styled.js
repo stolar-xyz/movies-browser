@@ -89,7 +89,7 @@ export const List = styled.ul`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {

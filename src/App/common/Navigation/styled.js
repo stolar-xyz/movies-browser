@@ -122,6 +122,7 @@ export const Search = styled.label`
 
 export const SearchIcon = styled(Loupe)`
   margin-right: 16px;
+  color: #7e839a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     width: 18px;
@@ -130,6 +131,7 @@ export const SearchIcon = styled(Loupe)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 16px;
+    color: #627489;
   }
 `;
 

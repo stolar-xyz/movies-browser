@@ -1,4 +1,5 @@
 import Navigation from './common/Navigation';
+import Main from './common/Main';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -9,6 +10,9 @@ const App = () => (
     <GlobalStyle />
     <Normalize />
     <Navigation />
+    <Main>
+      
+    </Main>
   </ThemeProvider>
 );
 

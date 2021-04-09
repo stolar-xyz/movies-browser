@@ -4,6 +4,7 @@ import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
+import Subheader from './common/styled/Subheader';
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -11,7 +12,7 @@ const App = () => (
     <Normalize />
     <Navigation />
     <Main>
-      
+      <Subheader title={'Popular movies'} />
     </Main>
   </ThemeProvider>
 );

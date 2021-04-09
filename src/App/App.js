@@ -1,5 +1,5 @@
-import Navigation from './common/Navigation';
-import Main from './common/Main';
+import Navigation from './common/structure/Navigation';
+import Main from './common/styled/Main';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';

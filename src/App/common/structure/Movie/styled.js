@@ -7,6 +7,11 @@ export const StyledMovie = styled.div`
   border-radius: 5px;
   min-height: 650px;
   padding: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    display: flex;
+    min-height: unset;
+  }
 `;
 
 export const Image = styled.div`
@@ -15,18 +20,34 @@ export const Image = styled.div`
   width: 292px;
   height: 434px;
   border-radius: 5px;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+  flex-shrink: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    height: 169px;
+    width: 114px;
+    margin: 0 16px 0 0;
+  }
 `;
 
 export const Title = styled.h3`
   font-size: 22px;
   font-weight: 500;
   margin: 0 0 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 16px;
+    margin: 0 0 4px;
+  }
 `;
 
 export const Year = styled.span`
   font-weight: 400;
   color: #7e839a;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 13px;
+  }
 `;
 
 export const GenresWrapper = styled.ul`
@@ -43,6 +64,11 @@ export const Genres = styled.li`
   padding: 8px 16px;
   border-radius: 5px;
   margin: 4px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
 `;
 
 export const Rating = styled.div`
@@ -50,13 +76,28 @@ export const Rating = styled.div`
   align-items: center;
 `;
 
-export const StarIcon = styled(Star)``;
+export const StarIcon = styled(Star)`
+  height: auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    width: 16px;
+  }
+`;
 
 export const Rate = styled.span`
   font-weight: 600;
-  margin: 0 12px;
+  margin: 0 14px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 13px;
+    margin: 0 8px;
+  }
 `;
 
 export const Votes = styled.span`
   color: #7e839a;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 13px;
+  }
 `;

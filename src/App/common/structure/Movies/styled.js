@@ -8,4 +8,9 @@ export const StyledMovies = styled.ul`
   margin: 24px 0 40px;
   padding: 0;
   list-style: none;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    grid-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(261px, 1fr));
+  }
 `;

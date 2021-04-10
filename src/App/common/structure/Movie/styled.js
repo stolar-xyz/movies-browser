@@ -6,7 +6,6 @@ export const StyledMovie = styled.div`
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
   min-height: 650px;
-  padding: 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     display: flex;
@@ -19,14 +18,16 @@ export const Image = styled.div`
   background: darkgray;
   height: 434px;
   border-radius: 5px;
-  margin: 0 0 16px;
   flex-shrink: 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     height: 169px;
     width: 114px;
-    margin: 0 16px 0 0;
   }
+`;
+
+export const Wrapper = styled.div`
+  padding: 16px;
 `;
 
 export const Title = styled.h3`

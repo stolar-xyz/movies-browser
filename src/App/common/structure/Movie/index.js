@@ -9,13 +9,14 @@ import {
   StarIcon,
   Title,
   Year,
+  Wrapper,
 } from './styled';
 
 const Movie = ({ title, year, genres, rate, votes }) => (
   <StyledMovie>
     {/*  src={image} */}
     <Image alt={`"${title}" movie banner`} />
-    <div>
+    <Wrapper>
       <Title>{title}</Title>
       <Year>{year}</Year>
       <GenresWrapper>
@@ -29,7 +30,7 @@ const Movie = ({ title, year, genres, rate, votes }) => (
         <Rate>{rate}</Rate>
         <Votes>{votes}&nbsp;votes</Votes>
       </Rating>
-    </div>
+    </Wrapper>
   </StyledMovie>
 );
 

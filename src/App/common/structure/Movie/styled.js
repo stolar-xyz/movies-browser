@@ -17,7 +17,6 @@ export const StyledMovie = styled.div`
 export const Image = styled.div`
   //example sizes and div
   background: darkgray;
-  width: 292px;
   height: 434px;
   border-radius: 5px;
   margin: 0 0 16px;

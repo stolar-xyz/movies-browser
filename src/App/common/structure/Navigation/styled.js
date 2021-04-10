@@ -94,7 +94,7 @@ export const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
     flex-basis: 100%;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 `;
 
@@ -113,13 +113,13 @@ export const Search = styled.label`
   padding: 12px 26px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
-    padding: 8px 16px;
+    padding: 10px 18px;
   }
 
   @media (max-width: ${({ theme }) =>
       theme.breakpoints.mobileMax}px) and (orientation: portrait) {
     flex-basis: 100%;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 `;
 

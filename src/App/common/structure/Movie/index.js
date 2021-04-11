@@ -10,6 +10,7 @@ import {
   Title,
   Year,
   Wrapper,
+  Container,
 } from './styled';
 
 const Movie = ({ title, year, genres, rate, votes }) => (
@@ -17,14 +18,16 @@ const Movie = ({ title, year, genres, rate, votes }) => (
     {/*  src={image} */}
     <Image alt={`"${title}" movie banner`} />
     <Wrapper>
-      <Title>{title}</Title>
-      <Year>{year}</Year>
-      <GenresWrapper>
-        <Genres>{genres}</Genres>
-        <Genres>Adventure</Genres>
-        <Genres>Drama</Genres>
-        <Genres>Horror</Genres>
-      </GenresWrapper>
+      <Container>
+        <Title>{title}</Title>
+        <Year>{year}</Year>
+        <GenresWrapper>
+          <Genres>{genres}</Genres>
+          <Genres>Adventure</Genres>
+          <Genres>Drama</Genres>
+          <Genres>Horror</Genres>
+        </GenresWrapper>
+      </Container>
       <Rating>
         <StarIcon />
         <Rate>{rate}</Rate>

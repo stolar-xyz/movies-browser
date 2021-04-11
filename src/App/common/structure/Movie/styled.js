@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
-export const StyledMovie = styled.div`
+export const StyledMovie = styled.li`
   display: flex;
   flex-direction: column;
   background: #ffffff;

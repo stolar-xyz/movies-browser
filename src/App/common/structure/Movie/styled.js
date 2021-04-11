@@ -58,7 +58,7 @@ export const Title = styled.h3`
 
 export const Year = styled.span`
   font-weight: 400;
-  color: #7e839a;
+  color: #71758a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 13px;
@@ -111,7 +111,7 @@ export const Rate = styled.span`
 `;
 
 export const Votes = styled.span`
-  color: #7e839a;
+  color: #71758a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 13px;

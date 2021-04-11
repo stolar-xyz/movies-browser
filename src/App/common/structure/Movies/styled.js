@@ -11,6 +11,6 @@ export const StyledMovies = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(261px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 `;

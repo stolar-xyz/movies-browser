@@ -1,13 +1,26 @@
 import styled from 'styled-components';
 import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
+export const Wrapper = styled.div`
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 16px;
+  transition: filter 0.3s;
+`;
+
 export const StyledMovie = styled.li`
   display: flex;
   flex-direction: column;
-  background: #ffffff;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
   min-height: 650px;
+
+  &:hover ${Wrapper} {
+    filter: brightness(0.95);
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     flex-direction: row;
@@ -27,14 +40,6 @@ export const Image = styled.div`
     height: 177px;
     width: 114px;
   }
-`;
-
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-  padding: 16px;
 `;
 
 export const Container = styled.div`

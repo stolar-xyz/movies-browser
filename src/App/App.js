@@ -6,6 +6,7 @@ import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
+import PageSelect from './common/structure/PageSelect';
 
 const App = () => (
   <ThemeProvider theme={theme}>
@@ -16,6 +17,7 @@ const App = () => (
       <Subheader title={'Popular movies'} />
       <Movies />
     </Main>
+    <PageSelect fromNumber={'1'} toNumber={'500'} />
   </ThemeProvider>
 );
 

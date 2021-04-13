@@ -2,13 +2,13 @@ import styled, { css } from 'styled-components';
 import { ReactComponent as Arrowhead } from '../../../images/svgs/arrowhead.svg';
 
 export const StyledPageSelect = styled.div`
-  margin: 0 auto 103px;
+  margin: 40px auto 103px;
   width: max-content;
   display: flex;
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 0 auto 31px;
+    margin: 32px auto;
   }
 `;
 

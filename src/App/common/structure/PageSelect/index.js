@@ -1,6 +1,7 @@
 import {
   ArrowheadIcon,
   PageButton,
+  PageButtonText,
   PageNumber,
   PageText,
   StyledPageSelect,
@@ -11,11 +12,11 @@ const PageSelect = ({ fromNumber, toNumber }) => (
   <StyledPageSelect>
     <PageButton disabled>
       <ArrowheadIcon />
-      First
+      <PageButtonText>First</PageButtonText>
     </PageButton>
     <PageButton disabled>
       <ArrowheadIcon />
-      Previous
+      <PageButtonText>Previous</PageButtonText>
     </PageButton>
     <Wrapper>
       <PageText>Page</PageText>
@@ -24,11 +25,11 @@ const PageSelect = ({ fromNumber, toNumber }) => (
       <PageNumber>{toNumber}</PageNumber>
     </Wrapper>
     <PageButton>
-      Next
+      <PageButtonText>Next</PageButtonText>
       <ArrowheadIcon rotated />
     </PageButton>
     <PageButton>
-      Last
+      <PageButtonText>Last</PageButtonText>
       <ArrowheadIcon rotated />
     </PageButton>
   </StyledPageSelect>

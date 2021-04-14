@@ -1,5 +1,6 @@
 import {
   ArrowheadIcon,
+  ArrowheadsWrapper,
   PageButton,
   PageButtonText,
   PageNumber,
@@ -11,8 +12,10 @@ import {
 const PageSelect = ({ minNumber, maxNumber }) => (
   <StyledPageSelect>
     <PageButton disabled>
-      <ArrowheadIcon />
-      <ArrowheadIcon />
+      <ArrowheadsWrapper>
+        <ArrowheadIcon />
+        <ArrowheadIcon />
+      </ArrowheadsWrapper>
       <PageButtonText>First</PageButtonText>
     </PageButton>
     <PageButton disabled>
@@ -31,8 +34,10 @@ const PageSelect = ({ minNumber, maxNumber }) => (
     </PageButton>
     <PageButton>
       <PageButtonText>Last</PageButtonText>
-      <ArrowheadIcon rotated />
-      <ArrowheadIcon rotated />
+      <ArrowheadsWrapper>
+        <ArrowheadIcon rotated />
+        <ArrowheadIcon rotated />
+      </ArrowheadsWrapper>
     </PageButton>
   </StyledPageSelect>
 );

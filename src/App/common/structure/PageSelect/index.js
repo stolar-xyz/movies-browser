@@ -12,6 +12,7 @@ const PageSelect = ({ minNumber, maxNumber }) => (
   <StyledPageSelect>
     <PageButton disabled>
       <ArrowheadIcon />
+      <ArrowheadIcon />
       <PageButtonText>First</PageButtonText>
     </PageButton>
     <PageButton disabled>
@@ -30,6 +31,7 @@ const PageSelect = ({ minNumber, maxNumber }) => (
     </PageButton>
     <PageButton>
       <PageButtonText>Last</PageButtonText>
+      <ArrowheadIcon rotated />
       <ArrowheadIcon rotated />
     </PageButton>
   </StyledPageSelect>

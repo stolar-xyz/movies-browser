@@ -12,12 +12,8 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 24px 16px;
+  padding: 20px 16px;
   max-width: 1368px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
-    padding: 20px 16px;
-  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     padding: 14px 16px;
@@ -76,8 +72,8 @@ export const List = styled.ul`
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
+  grid-gap: 12px;
   flex-basis: 33%;
-  grid-gap: 60px;
   list-style-type: none;
   font-size: 14px;
   margin: 0;
@@ -85,11 +81,11 @@ export const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     justify-content: center;
-    grid-gap: 30px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 12px;
+    grid-gap: 6px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
@@ -102,6 +98,18 @@ export const ListItem = styled.li`
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+  padding: 12px 22px;
+  border-radius: 30px;
+  transition: color 0.15s, background 0.15s;
+
+  &:hover {
+    color: #000000;
+    background: #ffffff;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    padding: 10px 16px;
+  }
 `;
 
 export const Search = styled.label`

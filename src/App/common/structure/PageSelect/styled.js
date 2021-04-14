@@ -4,42 +4,46 @@ import { ReactComponent as Arrowhead } from '../../../images/svgs/arrowhead.svg'
 export const StyledPageSelect = styled.div`
   margin: 40px auto 103px;
   width: max-content;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 12px;
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     margin: 32px auto;
+    grid-gap: 8px;
   }
 `;
 
 export const ArrowheadIcon = styled(Arrowhead)`
   color: #0044cc;
-  margin: 0 8px 0 0;
 
   ${({ rotated }) =>
     rotated &&
     css`
       transform: rotate(180deg);
-      margin: 0 0 0 8px;
     `}
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 0;
     width: 5px;
     height: 8px;
   }
 `;
 
+export const ArrowheadsWrapper = styled.div`
+  display: flex;
+`;
+
 export const PageButton = styled.button`
   border: none;
-  vertical-align: center;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 8px;
   align-items: center;
   font-size: 14px;
   cursor: pointer;
   color: #000000;
   padding: 8px 16px;
-  margin: 0 6px;
   background: #d6e4ff;
   border-radius: 5px;
   transition: box-shadow 0.3s;
@@ -62,7 +66,6 @@ export const PageButton = styled.button`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 0 4px;
     padding: 8px 12px;
   }
 `;
@@ -74,15 +77,15 @@ export const PageButtonText = styled.span`
 `;
 
 export const Wrapper = styled.div`
-  display: inline-grid;
+  display: grid;
   grid-auto-flow: column;
-  margin: 0 18px;
+  margin: 0 12px;
   grid-gap: 8px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-gap: 4px;
     font-size: 10px;
-    margin: 0 4px;
+    margin: 0;
   }
 `;
 

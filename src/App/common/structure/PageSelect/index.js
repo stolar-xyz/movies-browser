@@ -8,7 +8,7 @@ import {
   Wrapper,
 } from './styled';
 
-const PageSelect = ({ fromNumber, toNumber }) => (
+const PageSelect = ({ minNumber, maxNumber }) => (
   <StyledPageSelect>
     <PageButton disabled>
       <ArrowheadIcon />
@@ -20,9 +20,9 @@ const PageSelect = ({ fromNumber, toNumber }) => (
     </PageButton>
     <Wrapper>
       <PageText>Page</PageText>
-      <PageNumber>{fromNumber}</PageNumber>
+      <PageNumber>{minNumber}</PageNumber>
       <PageText>of</PageText>
-      <PageNumber>{toNumber}</PageNumber>
+      <PageNumber>{maxNumber}</PageNumber>
     </Wrapper>
     <PageButton>
       <PageButtonText>Next</PageButtonText>

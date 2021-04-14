@@ -9,8 +9,11 @@ export const StyledPageSelect = styled.div`
   grid-gap: 12px;
   align-items: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
     margin: 32px auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-gap: 8px;
   }
 `;
@@ -85,7 +88,6 @@ export const Wrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-gap: 4px;
     font-size: 10px;
-    margin: 0;
   }
 `;
 

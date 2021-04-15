@@ -1,4 +1,4 @@
-import Movie from '../Movie';
+import Movie from './Movie';
 import { StyledMovies } from './styled';
 
 const Movies = () => {

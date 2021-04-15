@@ -1,7 +1,7 @@
 import Navigation from './common/structure/Navigation';
 import Main from './common/styled/Main';
 import Subheader from './common/styled/Subheader';
-import Movies from './common/structure/Movies';
+import Movies from './features/Movies/Movies';
 import PageSelect from './common/structure/PageSelect';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';

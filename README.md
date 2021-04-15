@@ -19,7 +19,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat malesua
 - gh-pages
 - styled-components
 - styled-normalize
-- react-router
+- react-router-dom
 
 # Getting Started with Create React App
 

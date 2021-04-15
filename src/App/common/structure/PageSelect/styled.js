@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components';
 import { ReactComponent as Arrowhead } from '../../../images/svgs/arrowhead.svg';
 
 export const StyledPageSelect = styled.div`
-  margin: 40px auto 103px;
-  width: max-content;
+  margin: 64px 0;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 12px;
   align-items: center;
+  justify-content: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
-    margin: 32px auto;
+    margin: 32px 0;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -86,6 +86,7 @@ export const Wrapper = styled.div`
   grid-gap: 8px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin: 0 6px;
     grid-gap: 4px;
     font-size: 10px;
   }

@@ -33,7 +33,7 @@ export const ArrowheadIcon = styled(Arrowhead)`
   }
 `;
 
-export const ArrowheadsWrapper = styled.div`
+export const ArrowheadsWrapper = styled.span`
   display: flex;
 `;
 

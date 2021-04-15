@@ -15,8 +15,10 @@ import {
 
 const Movie = ({ title, year, genres, rate, votes }) => (
   <StyledMovie>
-    {/*  src={image} */}
-    <Image alt={`"${title}" movie banner`} />
+    <Image
+      alt={`"${title}" movie banner`}
+      src={'https://thisdoesnotexist.com/'}
+    />
     <Wrapper>
       <Container>
         <Title>{title}</Title>

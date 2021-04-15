@@ -33,8 +33,8 @@ export const StyledMovie = styled.li`
   }
 `;
 
-export const Image = styled.div`
-  //example sizes and div
+export const Image = styled.img`
+  //example sizes
   background: darkgray;
   height: 434px;
   border-radius: 5px 5px 0 0;

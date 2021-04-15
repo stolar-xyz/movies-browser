@@ -1,7 +1,5 @@
 import {
-  Header,
   List,
-  ListItem,
   Search,
   SearchIcon,
   SearchField,
@@ -9,28 +7,29 @@ import {
   VideoIcon,
   Title,
   Wrapper,
+  StyledNavLink,
+  StyledLink,
 } from './styled';
-import { NavLink } from 'react-router-dom';
 import { toMovies, toPeople } from '../../../routes';
 
 const Navigation = () => (
   <StyledNavigation>
     <Wrapper>
-      <Header>
+      <header>
         <Title>
-          <NavLink to={toMovies()}>
+          <StyledLink to={toMovies()}>
             <VideoIcon />
             Movies&nbsp;browser
-          </NavLink>
+          </StyledLink>
         </Title>
-      </Header>
+      </header>
       <List>
-        <ListItem>
-          <NavLink to={toMovies()}>Movies</NavLink>
-        </ListItem>
-        <ListItem>
-          <NavLink to={toPeople()}>People</NavLink>
-        </ListItem>
+        <li>
+          <StyledNavLink to={toMovies()}>Movies</StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to={toPeople()}>People</StyledNavLink>
+        </li>
       </List>
       <Search>
         <SearchIcon />

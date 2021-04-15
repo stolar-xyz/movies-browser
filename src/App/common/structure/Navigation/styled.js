@@ -1,6 +1,49 @@
 import styled from 'styled-components';
 import { ReactComponent as Loupe } from '../../../images/svgs/loupe.svg';
 import { ReactComponent as Video } from '../../../images/svgs/video.svg';
+import { Link, NavLink } from 'react-router-dom';
+
+const activeClassName = 'active';
+
+export const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+`;
+
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+  activeClassName,
+}))`
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  transition: color 0.15s, background 0.15s;
+
+  &:hover {
+    color: #000000;
+    background: #ffffff;
+  }
+
+  &.${activeClassName} {
+    border: 2px solid;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    padding: 6px 16px;
+    border: 1px solid transparent;
+
+    &.${activeClassName} {
+      border: 1px solid;
+    }
+  }
+`;
 
 export const StyledNavigation = styled.nav`
   background: #18181b;
@@ -29,12 +72,6 @@ export const Wrapper = styled.div`
     justify-content: center;
     padding: 22px 16px 16px;
   }
-`;
-
-export const Header = styled.header`
-  display: flex;
-  align-items: center;
-  cursor: pointer;
 `;
 
 export const Title = styled.h1`
@@ -91,24 +128,6 @@ export const List = styled.ul`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
     flex-basis: 100%;
     margin-top: 24px;
-  }
-`;
-
-export const ListItem = styled.li`
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 12px 22px;
-  border-radius: 30px;
-  transition: color 0.15s, background 0.15s;
-
-  &:hover {
-    color: #000000;
-    background: #ffffff;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    padding: 10px 16px;
   }
 `;
 

@@ -1,5 +1,5 @@
 import Subheader from '../../common/styled/Subheader';
-import Movie from './Movie';
+import Movie from '../../common/structure/Movie';
 import { StyledMovies } from './styled';
 
 const Movies = () => {

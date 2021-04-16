@@ -1,5 +1,5 @@
 import Subheader from '../../common/styled/Subheader';
-import Person from './Person';
+import Person from '../../common/structure/Person';
 import { StyledPeople } from './styled';
 
 const People = () => (

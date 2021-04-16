@@ -35,7 +35,8 @@ export const StyledMovie = styled.li`
 export const Image = styled.img`
   //example sizes
   background: darkgray;
-  height: 434px;
+  height: 67.5%;
+  width: 100%;
   border-radius: 5px 5px 0 0;
   flex-shrink: 0;
 

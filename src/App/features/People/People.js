@@ -1,6 +1,6 @@
 import Subheader from '../../common/styled/Subheader';
-import Movie from '../Movies/Movie';
-import { StyledMovies } from '../Movies/styled';
+import Movie from '../movies/Movie';
+import { StyledMovies } from '../movies/styled';
 
 const People = () => (
   <>

@@ -11,14 +11,14 @@ import {
 
 const PageSelect = ({ minNumber, maxNumber }) => (
   <StyledPageSelect>
-    <PageButton disabled>
+    <PageButton disabled title={'First page'}>
       <ArrowheadsWrapper>
         <ArrowheadIcon />
         <ArrowheadIcon />
       </ArrowheadsWrapper>
       <PageButtonText>First</PageButtonText>
     </PageButton>
-    <PageButton disabled>
+    <PageButton disabled title={'Previous page'}>
       <ArrowheadIcon />
       <PageButtonText>Previous</PageButtonText>
     </PageButton>
@@ -28,11 +28,11 @@ const PageSelect = ({ minNumber, maxNumber }) => (
       <PageText>of</PageText>
       <PageNumber>{maxNumber}</PageNumber>
     </Wrapper>
-    <PageButton>
+    <PageButton title={'Next page'}>
       <PageButtonText>Next</PageButtonText>
       <ArrowheadIcon rotated />
     </PageButton>
-    <PageButton>
+    <PageButton title={'Last page'}>
       <PageButtonText>Last</PageButtonText>
       <ArrowheadsWrapper>
         <ArrowheadIcon rotated />

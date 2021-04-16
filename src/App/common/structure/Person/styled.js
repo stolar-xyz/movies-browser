@@ -19,7 +19,7 @@ export const StyledPerson = styled.li`
   background: #ffffff;
   flex-direction: column;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  min-height: 330px;
+  height: 330px;
   border-radius: 5px 5px 0 0;
 
   &:hover ${Wrapper} {
@@ -32,19 +32,15 @@ export const StyledPerson = styled.li`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    min-height: 210px;
+    height: 230px;
   }
 `;
 
 export const Image = styled.img`
   //example sizes
   background: darkgray;
-  height: 255px;
+  height: 80%;
   border-radius: 5px 5px 0 0;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    height: 155px;
-  }
 `;
 
 export const Name = styled.h3`

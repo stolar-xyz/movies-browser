@@ -109,7 +109,7 @@ export const List = styled.ul`
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
-  grid-gap: 12px;
+  grid-gap: 18px;
   flex-basis: 33%;
   list-style-type: none;
   font-size: 14px;
@@ -122,7 +122,7 @@ export const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 12px;
-    grid-gap: 6px;
+    grid-gap: 8px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {

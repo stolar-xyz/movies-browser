@@ -15,7 +15,6 @@ export const StyledMovie = styled.li`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  border-radius: 5px;
   min-height: 650px;
 
   &:hover ${Wrapper} {

@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   text-align: center;
   padding: 16px;
   transition: filter 0.3s, box-shadow 0.3s ease-out;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    padding: 8px;
+  }
 `;
 
 export const StyledPerson = styled.li`
@@ -20,6 +24,14 @@ export const StyledPerson = styled.li`
   &:hover ${Wrapper} {
     filter: brightness(0.9775);
     box-shadow: 0 6px 0 0 #fcd420;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      box-shadow: 0 4px 0 0 #fcd420;
+    }
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    min-height: 210px;
   }
 `;
 
@@ -28,10 +40,18 @@ export const Image = styled.img`
   background: darkgray;
   height: 255px;
   border-radius: 5px 5px 0 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    height: 155px;
+  }
 `;
 
 export const Name = styled.h3`
   font-size: 20px;
   font-weight: 500;
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 14px;
+  }
 `;

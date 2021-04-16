@@ -93,7 +93,7 @@ export const Wrapper = styled.div`
 `;
 
 export const PageText = styled.span`
-  color: #7e839a;
+  color: #6b6f83;
 `;
 
 export const PageNumber = styled.span`

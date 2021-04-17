@@ -65,6 +65,7 @@ export const Image = styled.img`
 export const Wrapper = styled.div`
   color: #ffffff;
   position: absolute;
+  left: 5%;
   bottom: 5%;
 `;
 

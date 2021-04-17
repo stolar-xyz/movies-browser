@@ -3,6 +3,7 @@ import Main from './common/styled/Main';
 import Movies from './features/movies/Movies';
 import People from './features/people/People';
 import PageSelect from './common/structure/PageSelect';
+import Section from './common/styled/Section';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -19,10 +20,14 @@ const App = () => (
       <Main>
         <Switch>
           <Route path={toMovies()}>
-            <Movies />
+            <Section>
+              <Movies />
+            </Section>
           </Route>
           <Route path={toPeople()}>
-            <People />
+            <Section>
+              <People />
+            </Section>
           </Route>
           <Route>
             <Redirect to={toMovies()} />

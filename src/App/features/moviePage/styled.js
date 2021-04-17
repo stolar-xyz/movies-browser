@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 import { ReactComponent as Star } from '../../images/svgs/star.svg';
 
+export const ImageFill = styled.div`
+  background: #000000;
+`;
+
 export const ImageContainer = styled.div`
   position: relative;
+  max-width: 1400px;
+  margin: 0 10%;
 `;
 
 export const ImageOverlay = styled.div`
@@ -10,39 +16,40 @@ export const ImageOverlay = styled.div`
   height: 100%;
   position: absolute;
   background: linear-gradient(
-      270deg,
-      #000000 14.11%,
-      rgba(0, 0, 0, 0.873268) 15.08%,
-      rgba(0, 0, 0, 0.720529) 16.51%,
-      rgba(0, 0, 0, 0.294577) 19.99%,
-      rgba(0, 0, 0, 0.159921) 21.88%,
-      rgba(0, 0, 0, 0) 25.68%
-    ),
+        270deg,
+        rgb(0, 0, 0) 14.11%,
+        rgba(0, 0, 0, 0.875) 15.08%,
+        rgba(0, 0, 0, 0.72) 16.51%,
+        rgba(0, 0, 0, 0.294) 19.99%,
+        rgba(0, 0, 0, 0.16) 21.88%,
+        rgba(0, 0, 0, 0) 25.68%
+      )
+      center center / 140%,
     linear-gradient(
-      90deg,
-      #000000 13.6%,
-      rgba(0, 0, 0, 0.984059) 14.58%,
-      rgba(0, 0, 0, 0.967732) 15.44%,
-      rgba(0, 0, 0, 0.865569) 16.3%,
-      rgba(0, 0, 0, 0.230315) 22.87%,
-      rgba(0, 0, 0, 0) 26.64%
-    ),
+        90deg,
+        rgb(0, 0, 0) 13.6%,
+        rgba(0, 0, 0, 0.984) 14.58%,
+        rgba(0, 0, 0, 0.97) 15.44%,
+        rgba(0, 0, 0, 0.867) 16.3%,
+        rgba(0, 0, 0, 0.23) 22.87%,
+        rgba(0, 0, 0, 0) 26.64%
+      )
+      center center / 140%,
     linear-gradient(
-      180deg,
-      #000000 0%,
-      rgba(0, 0, 0, 0.689555) 4.66%,
-      rgba(0, 0, 0, 0.439033) 9.34%,
-      rgba(0, 0, 0, 0.20628) 15.16%,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.69) 4.66%,
+      rgba(0, 0, 0, 0.44) 9.34%,
+      rgba(0, 0, 0, 0.208) 15.16%,
       rgba(0, 0, 0, 0) 24.22%
     ),
     linear-gradient(
       189.44deg,
       rgba(0, 0, 0, 0) 58.48%,
-      rgba(0, 0, 0, 0.106473) 63.17%,
-      rgba(0, 0, 0, 0.235359) 68.85%,
-      rgba(0, 0, 0, 0.492821) 78.08%,
-      rgba(0, 0, 0, 0.740286) 85.86%,
-      #000000 92.87%
+      rgba(0, 0, 0, 0.106) 63.17%,
+      rgba(0, 0, 0, 0.235) 68.85%,
+      rgba(0, 0, 0, 0.494) 78.08%,
+      rgba(0, 0, 0, 0.74) 85.86%,
+      rgb(0, 0, 0) 92.87%
     );
 `;
 
@@ -53,12 +60,11 @@ export const Image = styled.img`
 export const Wrapper = styled.div`
   color: #ffffff;
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
 `;
 
 export const Title = styled.h2`
   font-size: 64px;
-  font-weight: 600;
   margin: 0 0 24px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -68,13 +74,10 @@ export const Title = styled.h2`
 `;
 
 export const Container = styled.div`
-  display: flex;
-  align-items: baseline;
   margin-bottom: 18px;
 `;
 
 export const StarIcon = styled(Star)`
-  align-self: normal;
   width: 40px;
   height: auto;
 

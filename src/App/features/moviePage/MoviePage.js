@@ -8,10 +8,12 @@ import {
   Wrapper,
   ImageOverlay,
   ImageContainer,
+  ImageFill,
 } from './styled';
 import movieBackground from '../../images/example/movieBackground.jpg';
 
 const MoviePage = ({ title, rate, votes }) => (
+  <ImageFill>
     <ImageContainer>
       <ImageOverlay />
       <Image alt={`"${title}" movie background`} src={movieBackground} />
@@ -25,6 +27,7 @@ const MoviePage = ({ title, rate, votes }) => (
         <TextContent>{votes}&nbsp;votes</TextContent>
       </Wrapper>
     </ImageContainer>
+  </ImageFill>
 );
 
 export default MoviePage;

@@ -1,4 +1,4 @@
-import Subheader from '../../common/styled/Subheader';
+import Subheader from '../../common/structure/Subheader';
 import Person from '../../common/structure/Person';
 import { StyledPeople } from './styled';
 

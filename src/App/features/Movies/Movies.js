@@ -1,4 +1,4 @@
-import Subheader from '../../common/styled/Subheader';
+import Subheader from '../../common/structure/Subheader';
 import Movie from '../../common/structure/Movie';
 import { StyledMovies } from './styled';
 

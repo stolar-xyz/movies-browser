@@ -1,5 +1,4 @@
 import Navigation from './common/structure/Navigation';
-import Main from './common/styled/Main';
 import Section from './common/styled/Section';
 import Movies from './features/movies/Movies';
 import People from './features/people/People';
@@ -18,7 +17,7 @@ const App = () => (
     <Normalize />
     <HashRouter>
       <Navigation />
-      <Main>
+      <main>
         <Switch>
           <Route path={toMovies()}>
             <MoviePage title={'Mulan'} rate={'7,8'} votes={'335'} />
@@ -35,7 +34,7 @@ const App = () => (
             <Redirect to={toMovies()} />
           </Route>
         </Switch>
-      </Main>
+      </main>
     </HashRouter>
     <PageSelect minNumber={'1'} maxNumber={'500'} />
   </ThemeProvider>

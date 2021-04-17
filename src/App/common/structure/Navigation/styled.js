@@ -46,7 +46,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 `;
 
 export const StyledNavigation = styled.nav`
-  background: #18181b;
+  background: #000000;
   color: #ffffff;
 `;
 

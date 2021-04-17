@@ -8,7 +8,11 @@ export const ImageFill = styled.div`
 export const ImageContainer = styled.div`
   position: relative;
   max-width: 1400px;
-  margin: 0 10%;
+  margin: 0 auto;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin: 0 5%;
+  }
 `;
 
 export const ImageOverlay = styled.div`

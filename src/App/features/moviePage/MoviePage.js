@@ -9,6 +9,7 @@ import {
   ImageOverlay,
   ImageContainer,
   ImageFill,
+  Details,
 } from './styled';
 import movieBackground from '../../images/example/movieBackground.jpg';
 
@@ -19,12 +20,14 @@ const MoviePage = ({ title, rate, votes }) => (
       <Image alt={`"${title}" movie background`} src={movieBackground} />
       <Wrapper>
         <Title>{title}</Title>
-        <Container>
-          <StarIcon />
-          <Rate>{rate}</Rate>
-          <TextContent>/&nbsp;10</TextContent>
-        </Container>
-        <TextContent>{votes}&nbsp;votes</TextContent>
+        <Details>
+          <Container>
+            <StarIcon />
+            <Rate>{rate}</Rate>
+            <TextContent>/&nbsp;10</TextContent>
+          </Container>
+          <TextContent>{votes}&nbsp;votes</TextContent>
+        </Details>
       </Wrapper>
     </ImageContainer>
   </ImageFill>

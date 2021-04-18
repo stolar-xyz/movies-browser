@@ -60,6 +60,7 @@ export const ImageOverlay = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
+  display: block;
 `;
 
 export const Wrapper = styled.div`
@@ -72,6 +73,11 @@ export const Wrapper = styled.div`
 export const Title = styled.h2`
   font-size: 64px;
   margin: 0 0 24px;
+  overflow-wrap: anywhere;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+    margin: 0 0 14px;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 24px;
@@ -79,13 +85,27 @@ export const Title = styled.h2`
   }
 `;
 
+export const Details = styled.div`
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    display: flex;
+    align-items: baseline;
+  }
+`;
+
 export const Container = styled.div`
-  margin-bottom: 18px;
+  display: flex;
+  align-items: baseline;
+  margin: 0 0 18px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin: 0 8px 0 0;
+  }
 `;
 
 export const StarIcon = styled(Star)`
   width: 40px;
   height: auto;
+  align-self: flex-end;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 16px;

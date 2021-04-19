@@ -6,7 +6,7 @@ const Section = styled.section`
   padding: 0 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 24px auto 32px;
+    margin: 24px auto 0;
   }
 `;
 

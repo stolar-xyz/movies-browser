@@ -17,20 +17,18 @@ const App = () => (
     <HashRouter>
       <Navigation />
       <main>
-        <section>
-          <Switch>
-            <Route path={toMovies()}>
-              <MoviePage title={'Mulan'} rate={'7,8'} votes={'335'} />
+        <Switch>
+          <Route path={toMovies()}>
+              <MoviePage />
               <Movies />
-            </Route>
-            <Route path={toPeople()}>
-              <People />
-            </Route>
-            <Route>
-              <Redirect to={toMovies()} />
-            </Route>
-          </Switch>
-        </section>
+          </Route>
+          <Route path={toPeople()}>
+            <People />
+          </Route>
+          <Route>
+            <Redirect to={toMovies()} />
+          </Route>
+        </Switch>
       </main>
     </HashRouter>
     <PageSelect minNumber={'1'} maxNumber={'500'} />

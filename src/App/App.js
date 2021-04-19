@@ -1,5 +1,4 @@
 import Navigation from './common/structure/Navigation';
-import Section from './common/styled/Section';
 import Movies from './features/movies/Movies';
 import People from './features/people/People';
 import PageSelect from './common/structure/PageSelect';
@@ -18,22 +17,20 @@ const App = () => (
     <HashRouter>
       <Navigation />
       <main>
-        <Switch>
-          <Route path={toMovies()}>
-            <MoviePage title={'Mulan'} rate={'7,8'} votes={'335'} />
-            <Section>
+        <section>
+          <Switch>
+            <Route path={toMovies()}>
+              <MoviePage title={'Mulan'} rate={'7,8'} votes={'335'} />
               <Movies />
-            </Section>
-          </Route>
-          <Route path={toPeople()}>
-            <Section>
+            </Route>
+            <Route path={toPeople()}>
               <People />
-            </Section>
-          </Route>
-          <Route>
-            <Redirect to={toMovies()} />
-          </Route>
-        </Switch>
+            </Route>
+            <Route>
+              <Redirect to={toMovies()} />
+            </Route>
+          </Switch>
+        </section>
       </main>
     </HashRouter>
     <PageSelect minNumber={'1'} maxNumber={'500'} />

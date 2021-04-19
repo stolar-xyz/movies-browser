@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledSubheader = styled.h2`
+const Subheader = styled.h2`
   font-size: 36px;
   font-weight: 600;
   margin: 0;
@@ -9,3 +9,5 @@ export const StyledSubheader = styled.h2`
     font-size: 18px;
   }
 `;
+
+export default Subheader;

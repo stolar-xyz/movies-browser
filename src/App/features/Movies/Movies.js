@@ -1,11 +1,11 @@
-import Subheader from '../../common/structure/Subheader';
+import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
 import { StyledMovies } from './styled';
 
 const Movies = () => {
   return (
     <>
-      <Subheader title={'Popular movies'} />
+      <Subheader>Popular movies</Subheader>
       <StyledMovies>
         <Movie
           title={'Mulan'}

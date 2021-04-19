@@ -1,10 +1,10 @@
 import Subheader from '../../common/styled/Subheader';
 import Person from '../../common/structure/Person';
-import Container from '../../common/styled/Container';
+import Section from '../../common/styled/Section';
 import { StyledPeople } from './styled';
 
 const People = () => (
-  <Container>
+  <Section>
     <Subheader>Popular people</Subheader>
     <StyledPeople>
       <Person name={'Henry Cavill'} />
@@ -17,7 +17,7 @@ const People = () => (
       <Person name={'Henry Cavill'} />
       <Person name={'Henry Cavill'} />
     </StyledPeople>
-  </Container>
+  </Section>
 );
 
 export default People;

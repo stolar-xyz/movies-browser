@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Section = styled.section`
   max-width: 1400px;
   margin: 56px auto 0;
   padding: 0 16px;
@@ -10,4 +10,4 @@ const Container = styled.div`
   }
 `;
 
-export default Container;
+export default Section;

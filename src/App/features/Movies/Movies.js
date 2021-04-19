@@ -1,10 +1,10 @@
 import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
-import Container from '../../common/styled/Container';
+import Section from '../../common/styled/Section';
 import { StyledMovies } from './styled';
 
 const Movies = () => (
-  <Container>
+  <Section>
     <Subheader>Popular movies</Subheader>
     <StyledMovies>
       <Movie
@@ -36,7 +36,7 @@ const Movies = () => (
         votes={'35'}
       />
     </StyledMovies>
-  </Container>
+  </Section>
 );
 
 export default Movies;

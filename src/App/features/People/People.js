@@ -1,12 +1,12 @@
 import Subheader from '../../common/styled/Subheader';
 import Person from '../../common/structure/Person';
 import Section from '../../common/styled/Section';
-import { StyledPeople } from './styled';
+import List from '../../common/styled/List';
 
 const People = () => (
   <Section>
     <Subheader>Popular people</Subheader>
-    <StyledPeople>
+    <List people>
       <Person name={'Henry Cavill'} />
       <Person name={'Henry Cavill'} />
       <Person name={'Henry Cavill'} />
@@ -16,7 +16,7 @@ const People = () => (
       <Person name={'Henry Cavill'} />
       <Person name={'Henry Cavill'} />
       <Person name={'Henry Cavill'} />
-    </StyledPeople>
+    </List>
   </Section>
 );
 

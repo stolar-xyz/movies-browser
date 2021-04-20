@@ -1,8 +1,7 @@
+import Genres from '../Genres';
 import {
   StyledMovie,
-  GenresWrapper,
   Image,
-  Genres,
   Rate,
   Votes,
   Rating,
@@ -23,12 +22,7 @@ const Movie = ({ title, year, genres, rate, votes }) => (
       <Container>
         <Title>{title}</Title>
         <Year>{year}</Year>
-        <GenresWrapper>
-          <Genres>{genres}</Genres>
-          <Genres>Adventure</Genres>
-          <Genres>Drama</Genres>
-          <Genres>Horror</Genres>
-        </GenresWrapper>
+        <Genres genres={genres} />
       </Container>
       <Rating>
         <StarIcon />

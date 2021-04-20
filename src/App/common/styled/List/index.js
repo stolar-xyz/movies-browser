@@ -17,21 +17,21 @@ const List = styled.ul`
     movies &&
     css`
       grid-template-columns: repeat(auto-fill, 314px);
-    `}
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  }
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      }
+    `}
 
   ${({ people }) =>
     people &&
     css`
       grid-template-columns: repeat(auto-fill, 185px);
-    `}
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    grid-template-columns: repeat(auto-fill, 136px);
-  }
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        grid-template-columns: repeat(auto-fill, 136px);
+      }
+    `}
 `;
 
 export default List;

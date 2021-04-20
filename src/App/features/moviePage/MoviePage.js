@@ -1,36 +1,20 @@
-import {
-  Container,
-  Image,
-  Rate,
-  StarIcon,
-  TextContent,
-  Title,
-  Wrapper,
-  ImageOverlay,
-  ImageContainer,
-  ImageFill,
-  Details,
-} from './styled';
-import movieBackground from '../../images/example/movieBackground.jpg';
+import MovieImage from './MovieImage';
+import MovieTile from './MovieTile';
+import Container from '../../common/styled/Section';
 
-const MoviePage = ({ title, rate, votes }) => (
-  <ImageFill>
-    <ImageContainer>
-      <ImageOverlay />
-      <Image alt={`"${title}" movie background`} src={movieBackground} />
-      <Wrapper>
-        <Title>{title}</Title>
-        <Details>
-          <Container>
-            <StarIcon />
-            <Rate>{rate}</Rate>
-            <TextContent>/&nbsp;10</TextContent>
-          </Container>
-          <TextContent>{votes}&nbsp;votes</TextContent>
-        </Details>
-      </Wrapper>
-    </ImageContainer>
-  </ImageFill>
+//test structure
+const title = 'Mulan';
+const rate = '7,8';
+const votes = '35';
+const genres = 'Action';
+
+const MoviePage = () => (
+  <>
+    <MovieImage title={title} rate={rate} votes={votes} />
+    <Container>
+      <MovieTile title={title} rate={rate} votes={votes} genres={genres} />
+    </Container>
+  </>
 );
 
 export default MoviePage;

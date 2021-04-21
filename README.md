@@ -4,7 +4,7 @@
 
 ## Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean placerat malesuada pretium. Duis nec pulvinar turpis. Aliquam vulputate orci tortor, in tempor felis condimentum non. Duis in laoreet tellus.
+IN PROGRESS
 
 ### Used technologies
 

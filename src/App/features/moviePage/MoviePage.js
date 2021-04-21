@@ -1,19 +1,23 @@
-import MovieImage from './MovieImage';
-import MovieTile from './MovieTile';
-import Container from '../../common/styled/Section';
+import MovieMain from './MovieMain';
+import movieWallpaper from '../.././images/example/movieWallpaper.jpg';
 
 //test structure
-const title = 'Mulan';
-const rate = '7,8';
-const votes = '35';
-const genres = 'Action';
 
 const MoviePage = () => (
   <>
-    <MovieImage title={title} rate={rate} votes={votes} />
-    <Container>
-      <MovieTile title={title} rate={rate} votes={votes} genres={genres} />
-    </Container>
+    <MovieMain
+      movieWallpaper={movieWallpaper}
+      title={'Mulan'}
+      rate={'7,8'}
+      votes={'35'}
+      year={'2020'}
+      genres={'Action'}
+      production={'China, United States of America'}
+      date={'24.10.2020'}
+      description={
+        'A young Chinese maiden disguises herself as a male warrior in order to save her father. Disguises herself as a male warrior in order to save her father. A young Chinese maiden disguises herself as a male warrior in order to save her father.'
+      }
+    />
   </>
 );
 

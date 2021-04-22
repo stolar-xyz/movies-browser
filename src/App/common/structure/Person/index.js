@@ -1,10 +1,11 @@
-import { StyledPerson, Image, Wrapper, Name } from './styled';
+import { StyledPerson, Image, Wrapper, Name, Role } from './styled';
 
-const Person = ({ name }) => (
+const Person = ({ name, role }) => (
   <StyledPerson>
     <Image alt={`photo of ${name}`} src={'https://thisdoesnotexist.com/'} />
     <Wrapper>
       <Name>{name}</Name>
+      <Role>{role}</Role>
     </Wrapper>
   </StyledPerson>
 );

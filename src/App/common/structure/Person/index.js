@@ -5,7 +5,7 @@ const Person = ({ name, role }) => (
     <Image alt={`photo of ${name}`} src={'https://thisdoesnotexist.com/'} />
     <Wrapper>
       <Name>{name}</Name>
-      <Role>{role}</Role>
+      {role && <Role>{role}</Role>}
     </Wrapper>
   </StyledPerson>
 );

@@ -25,7 +25,7 @@ const MoviePage = () => (
     <Section>
       <Subheader>Cast</Subheader>
       <List people>
-        <Person name={'Henry Cavill'} />
+        <Person name={'Henry Cavill'} role={'Witcher'} />
         <Person name={'Henry Cavill'} />
         <Person name={'Henry Cavill'} />
         <Person name={'Henry Cavill'} />

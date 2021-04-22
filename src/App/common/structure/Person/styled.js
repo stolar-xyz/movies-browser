@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  display: grid;
-  grid-gap: 8px;
   padding: 16px;
   flex-grow: 1;
   text-align: center;
@@ -50,10 +48,13 @@ export const Name = styled.span`
 `;
 
 export const Role = styled.span`
+  display: block;
+  margin-top: 8px;
   font-size: 16px;
   color: #7e839a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 12px;
+    margin-top: 4px;
   }
 `;

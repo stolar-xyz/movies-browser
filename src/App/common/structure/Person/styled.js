@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   padding: 16px;
+  overflow-wrap: anywhere;
   flex-grow: 1;
   text-align: center;
   transition: box-shadow 0.3s ease-out;

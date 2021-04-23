@@ -1,4 +1,4 @@
-import MovieMain from './MovieMain';
+import MovieWallpaper from './MovieWallpaper';
 import Subheader from '../../common/styled/Subheader';
 import Tile from '../../common/structure/Tile';
 import List from '../../common/styled/List';
@@ -15,7 +15,7 @@ const date = {
 
 const MoviePage = () => (
   <>
-    <MovieMain
+    <MovieWallpaper
       movieWallpaper={movieWallpaper}
       title={date.title}
       rate={date.rate}

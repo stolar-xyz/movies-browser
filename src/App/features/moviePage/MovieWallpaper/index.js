@@ -12,7 +12,7 @@ import {
   Details,
 } from './styled';
 
-const MovieMain = ({ movieWallpaper, title, rate, votes }) => (
+const MovieWallpaper = ({ movieWallpaper, title, rate, votes }) => (
   <WallpaperFill>
     <WallpaperContainer>
       <WallpaperOverlay />
@@ -32,4 +32,4 @@ const MovieMain = ({ movieWallpaper, title, rate, votes }) => (
   </WallpaperFill>
 );
 
-export default MovieMain;
+export default MovieWallpaper;

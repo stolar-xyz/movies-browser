@@ -1,55 +1,44 @@
 import Subheader from '../../styled/Subheader';
-import Genres from '../Genres';
 import {
   Description,
   Image,
   Information,
   Informations,
-  Rating,
-  StarIcon,
   StyledTile,
-  Rate,
-  TextContent,
   Wrapper,
   Year,
 } from './styled';
 
 const Tile = ({
-  title,
-  rate,
-  votes,
+  altImageText,
+  imageSource,
+  name,
   year,
+  firstInformation,
+  firstInformationDetails,
+  secondInformation,
+  secondInformationDetails,
   genres,
-  production,
-  date,
+  rating,
   description,
 }) => (
-  // do more generically
   <StyledTile>
-    <Image
-      alt={`"${title}" movie poster`}
-      src={'https://thisdoesnotexist.com/'}
-    />
+    <Image alt={`${name} ${altImageText}`} src={imageSource} />
     <Wrapper>
-      <Subheader>{title}</Subheader>
-      <Year>{year}</Year>
+      <Subheader>{name}</Subheader>
+      {year && <Year>{year}</Year>}
       <Informations>
         <div>
-          <Information>Production:</Information>
-          {production}
+          <Information>{firstInformation}</Information>
+          {firstInformationDetails}
         </div>
         <div>
-          <Information>Release&nbsp;date:</Information>
-          {date}
+          <Information>{secondInformation}</Information>
+          {secondInformationDetails}
         </div>
       </Informations>
-      <Genres genres={genres} />
-      <Rating>
-        <StarIcon />
-        <Rate>{rate}</Rate>
-        <TextContent>/&nbsp;10</TextContent>
-        {votes}&nbsp;votes
-      </Rating>
+      {genres}
+      {rating}
     </Wrapper>
     <Description>{description}</Description>
   </StyledTile>

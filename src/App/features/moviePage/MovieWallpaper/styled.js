@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
 export const WallpaperFill = styled.div`
   background: #000000;
@@ -82,50 +81,5 @@ export const Title = styled.h2`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 24px;
     margin: 0 0 6px;
-  }
-`;
-
-export const Details = styled.div`
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    display: flex;
-    align-items: baseline;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  align-items: baseline;
-  margin: 0 0 18px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 0 8px 0 0;
-  }
-`;
-
-export const StarIcon = styled(Star)`
-  width: 40px;
-  height: auto;
-  align-self: flex-end;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    width: 16px;
-  }
-`;
-
-export const Rate = styled.span`
-  font-weight: 500;
-  font-size: 30px;
-  margin: 0 8px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0 2px 0 4px;
-  }
-`;
-
-export const TextContent = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 10px;
   }
 `;

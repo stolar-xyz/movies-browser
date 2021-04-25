@@ -23,10 +23,14 @@ const MoviePage = () => (
     />
     <Section>
       <Tile
-        title={date.title}
+        altImageText={'movie poster'}
+        imageSource={'https://thisdoesnotexist.com/'}
+        name={date.title}
         year={'2020'}
-        production={'China, United States of America'}
-        date={'24.10.2020'}
+        firstInformation={'Production:'}
+        firstInformationDetails={'China, United States of America'}
+        secondInformation={'Release date:'}
+        secondInformationDetails={'24.10.2020'}
         rating={<Rating rate={date.rate} votes={date.votes} />}
         description={
           'A young Chinese maiden disguises herself as a male warrior in order to save her father. Disguises herself as a male warrior in order to save her father. A young Chinese maiden disguises herself as a male warrior in order to save her father.'

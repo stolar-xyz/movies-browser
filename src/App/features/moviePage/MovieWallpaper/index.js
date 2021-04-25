@@ -1,32 +1,20 @@
 import {
-  Container,
   Wallpaper,
-  Rate,
-  StarIcon,
-  TextContent,
   Title,
   Wrapper,
   WallpaperOverlay,
   WallpaperContainer,
   WallpaperFill,
-  Details,
 } from './styled';
 
-const MovieWallpaper = ({ movieWallpaper, title, rate, votes }) => (
+const MovieWallpaper = ({ movieWallpaper, title, rating }) => (
   <WallpaperFill>
     <WallpaperContainer>
       <WallpaperOverlay />
       <Wallpaper alt={`"${title}" movie wallpaper`} src={movieWallpaper} />
       <Wrapper>
         <Title>{title}</Title>
-        <Details>
-          <Container>
-            <StarIcon />
-            <Rate>{rate}</Rate>
-            <TextContent>/&nbsp;10</TextContent>
-          </Container>
-          <TextContent>{votes}&nbsp;votes</TextContent>
-        </Details>
+        {rating}
       </Wrapper>
     </WallpaperContainer>
   </WallpaperFill>

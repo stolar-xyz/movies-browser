@@ -6,7 +6,7 @@ import {
   Informations,
   StyledTile,
   Wrapper,
-  Year,
+  TextContent,
 } from './styled';
 
 const Tile = ({
@@ -26,7 +26,7 @@ const Tile = ({
     <Image alt={`${name} ${altImageText}`} src={imageSource} />
     <Wrapper>
       <Subheader>{name}</Subheader>
-      {year && <Year>{year}</Year>}
+      {year && <TextContent>{year}</TextContent>}
       <Informations>
         <div>
           <Information>{firstInformation}</Information>

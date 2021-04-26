@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   flex-grow: 1;
   justify-content: space-between;
   padding: 16px;
-  transition: filter 0.3s, box-shadow 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out;
 `;
 
 export const StyledMovie = styled.li`
@@ -17,7 +17,6 @@ export const StyledMovie = styled.li`
   min-height: 650px;
 
   &:hover ${Wrapper} {
-    filter: brightness(0.9775);
     box-shadow: 0 6px 0 0 #fcd420;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
 export const Wrapper = styled.div`
   background: #ffffff;
@@ -68,38 +67,6 @@ export const Title = styled.h3`
 
 export const Year = styled.span`
   font-weight: 400;
-  color: #71758a;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 13px;
-  }
-`;
-
-export const Rating = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-`;
-
-export const StarIcon = styled(Star)`
-  height: auto;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    width: 16px;
-  }
-`;
-
-export const Rate = styled.span`
-  font-weight: 600;
-  margin: 0 14px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 13px;
-    margin: 0 8px;
-  }
-`;
-
-export const Votes = styled.span`
   color: #71758a;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {

@@ -14,7 +14,7 @@ const Movie = ({ title, year, genres, rate, votes }) => (
         <Year>{year}</Year>
         <Genres genres={genres} />
       </Container>
-      <Rating rate={rate} votes={votes} />
+      <Rating small rate={rate} votes={votes} />
     </Wrapper>
   </StyledMovie>
 );

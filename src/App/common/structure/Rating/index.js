@@ -1,13 +1,24 @@
-import { Container, Limit, Rate, StarIcon, StyledRating } from './styled';
+import {
+  Container,
+  Limit,
+  Rate,
+  StarIcon,
+  StyledRating,
+  Votes,
+} from './styled';
 
-const Rating = ({ rate, votes, big }) => (
+const Rating = ({ rate, votes, big, small }) => (
   <StyledRating big={big}>
     <Container big={big}>
       <StarIcon big={big} />
-      <Rate big={big}>{rate}</Rate>
-      <Limit big={big}>/&nbsp;10</Limit>
+      <Rate big={big} small={small}>
+        {rate}
+      </Rate>
+      <Limit big={big}>
+        /&nbsp;10
+      </Limit>
     </Container>
-    {votes}&nbsp;votes
+    <Votes small={small}>{votes}&nbsp;votes</Votes>
   </StyledRating>
 );
 

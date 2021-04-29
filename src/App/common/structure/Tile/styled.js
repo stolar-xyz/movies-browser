@@ -57,7 +57,7 @@ export const Informations = styled.div`
 `;
 
 export const Information = styled.span`
-  color: #74788b;
+  color: #717487;
   margin-right: 0.5em;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {

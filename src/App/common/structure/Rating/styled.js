@@ -41,7 +41,7 @@ export const Limit = styled.span`
 `;
 
 export const Votes = styled.span`
-  color: ${({ small }) => small && '#7E839A'};
+  color: ${({ small }) => small && '#717487'};
   display: ${({ big }) => big && 'block'};
   margin-top: ${({ big }) => big && '16px'};
 

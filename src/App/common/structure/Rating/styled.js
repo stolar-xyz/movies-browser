@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
 export const StyledRating = styled.div`
-  font-size: ${({ big }) => big || '14px'};
+  font-size: ${({ big }) => !big && '14px'};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: ${({ big }) => (big ? '10px' : '12px')};
@@ -33,7 +33,7 @@ export const Rate = styled.span`
 `;
 
 export const Limit = styled.span`
-  display: ${({ big }) => big || 'none'};
+  display: ${({ big }) => !big && 'none'};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     margin-right: ${({ big }) => big && '8px'};

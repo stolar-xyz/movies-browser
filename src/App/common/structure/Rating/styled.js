@@ -2,30 +2,17 @@ import styled from 'styled-components';
 import { ReactComponent as Star } from '../../../images/svgs/star.svg';
 
 export const StyledRating = styled.div`
-  display: flex;
-  align-items: baseline;
-  flex-direction: ${({ big }) => big && 'column'};
-  font-size: ${({ big }) => (big ? '16px' : '14px')};
+  font-size: ${({ big }) => big || '14px'};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: ${({ big }) => (big ? '10px' : '12px')};
-    flex-direction: ${({ big }) => big && 'row'};
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  align-items: baseline;
-  margin-bottom: ${({ big }) => big && '16px'};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin-bottom: ${({ big }) => big && 'unset'};
   }
 `;
 
 export const StarIcon = styled(Star)`
-  width: ${({ big }) => (big ? '40px' : '24px')};
+  width: ${({ big }) => big && '40px'};
   height: auto;
+  vertical-align: bottom;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 16px;
@@ -55,4 +42,10 @@ export const Limit = styled.span`
 
 export const Votes = styled.span`
   color: ${({ small }) => small && '#7E839A'};
+  display: ${({ big }) => big && 'block'};
+  margin-top: ${({ big }) => big && '16px'};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin-top: ${({ big }) => big && 'unset'};
+  }
 `;

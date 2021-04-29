@@ -24,7 +24,6 @@ export const Container = styled.div`
 `;
 
 export const StarIcon = styled(Star)`
-  align-self: flex-end;
   width: ${({ big }) => (big ? '40px' : '24px')};
   height: auto;
 
@@ -34,22 +33,26 @@ export const StarIcon = styled(Star)`
 `;
 
 export const Rate = styled.span`
-  margin: 0 8px;
+  margin: ${({ small }) => (small ? '0 12px' : '0 8px')};
+  font-size: ${({ big }) => (big ? '30px' : '18px')};
   font-weight: 500;
-  font-size: ${({ big }) => (big ? '30px' : '22px')};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     margin: ${({ big }) => big && '0 2px 0 4px'};
+    margin: ${({ small }) => small && '0 8px'};
     font-weight: 600;
     font-size: 14px;
   }
 `;
 
 export const Limit = styled.span`
-  margin-right: ${({ big }) => big || '12px'};
+  display: ${({ big }) => big || 'none'};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    display: ${({ big }) => big || 'none'};
     margin-right: ${({ big }) => big && '8px'};
   }
+`;
+
+export const Votes = styled.span`
+  color: ${({ small }) => small && '#7E839A'};
 `;

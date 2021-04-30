@@ -46,6 +46,6 @@ export const Votes = styled.span`
   margin-top: ${({ big }) => big && '16px'};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin-top: ${({ big }) => big && 'unset'};
+    display: ${({ big }) => big && 'unset'};
   }
 `;

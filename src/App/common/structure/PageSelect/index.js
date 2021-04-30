@@ -30,13 +30,13 @@ const PageSelect = ({ minNumber, maxNumber }) => (
     </Wrapper>
     <PageButton title={'Next page'}>
       <PageButtonText>Next</PageButtonText>
-      <ArrowheadIcon rotated />
+      <ArrowheadIcon rotated={'true'} />
     </PageButton>
     <PageButton title={'Last page'}>
       <PageButtonText>Last</PageButtonText>
       <ArrowheadsWrapper>
-        <ArrowheadIcon rotated />
-        <ArrowheadIcon rotated />
+        <ArrowheadIcon rotated={'true'} />
+        <ArrowheadIcon rotated={'true'} />
       </ArrowheadsWrapper>
     </PageButton>
   </StyledPageSelect>

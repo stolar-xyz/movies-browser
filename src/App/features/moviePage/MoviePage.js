@@ -19,7 +19,7 @@ const MoviePage = () => (
     <MovieWallpaper
       movieWallpaper={movieWallpaper}
       title={date.title}
-      rating={<Rating big rate={date.rate} votes={date.votes} />}
+      rating={<Rating big={'true'} rate={date.rate} votes={date.votes} />}
     />
     <Section>
       <Tile

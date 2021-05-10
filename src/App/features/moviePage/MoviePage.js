@@ -4,7 +4,7 @@ import Tile from '../../common/structure/Tile';
 import List from '../../common/styled/List';
 import Section from '../../common/styled/Section';
 import Person from '../../common/structure/Person';
-import movieWallpaper from '../.././images/example/movieWallpaper.jpg';
+import movieWallpaper from '../.././assets/example/movieWallpaper.jpg';
 import Rating from '../../common/structure/Rating';
 
 //test structure

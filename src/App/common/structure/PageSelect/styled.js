@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ReactComponent as Arrowhead } from '../../../images/svgs/arrowhead.svg';
+import { ReactComponent as Arrowhead } from '../../../assets/svgs/arrowhead.svg';
 
 export const StyledPageSelect = styled.div`
   margin: 64px 0;

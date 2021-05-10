@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as Star } from '../../../images/svgs/star.svg';
+import { ReactComponent as Star } from '../../../assets/svgs/star.svg';
 
 export const StyledRating = styled.div`
   font-size: ${({ big }) => !big && '14px'};

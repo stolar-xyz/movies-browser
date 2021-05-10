@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ReactComponent as Loupe } from '../../../images/svgs/loupe.svg';
-import { ReactComponent as Video } from '../../../images/svgs/video.svg';
+import { ReactComponent as Loupe } from '../../../assets/svgs/loupe.svg';
+import { ReactComponent as Video } from '../../../assets/svgs/video.svg';
 import { Link, NavLink } from 'react-router-dom';
 
 const activeClassName = 'active';

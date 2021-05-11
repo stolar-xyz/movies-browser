@@ -1,12 +1,13 @@
+import Container from '../../../common/styled/Container';
 import Subheader from '../../../common/styled/Subheader';
-import { FailurePicture, PictureContainer } from './styled';
+import { FailurePicture } from './styled';
 
 const Failure = ({ title }) => (
   <>
     <Subheader>Sorry, there are no results for “{title}”</Subheader>
-    <PictureContainer>
+    <Container>
       <FailurePicture />
-    </PictureContainer>
+    </Container>
   </>
 );
 

@@ -3,11 +3,23 @@ import Tile from '../../common/structure/Tile';
 import List from '../../common/styled/List';
 import Section from '../../common/styled/Section';
 import Movie from '../../common/structure/Movie';
+import NoResults from '../Content/NoResults';
+import Loading from '../Content/Loading';
+import Failure from '../Content/Failure';
 
 //test structure
 
 const PersonPage = () => (
   <>
+    <Section>
+      <Failure />
+    </Section>
+    <Section>
+      <Loading title={'Mulan'} />
+    </Section>
+    <Section>
+      <NoResults title={'Mulan'} />
+    </Section>
     <Section>
       <Tile
         altImageText={'photo'}

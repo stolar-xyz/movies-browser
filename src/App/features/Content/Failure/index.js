@@ -1,9 +1,8 @@
-import Container from '../../../common/styled/Container';
 import Subheader from '../../../common/styled/Subheader';
-import { DangerIcon, Description, Button } from './styled';
+import { DangerIcon, Description, Button, StyledContainer } from './styled';
 
 const Failure = () => (
-  <Container>
+  <StyledContainer>
     <DangerIcon />
     <Subheader>Ooops! Something went wrong...</Subheader>
     <Description>
@@ -11,7 +10,7 @@ const Failure = () => (
       <br /> and try again
     </Description>
     <Button>Back to home page</Button>
-  </Container>
+  </StyledContainer>
 );
 
 export default Failure;

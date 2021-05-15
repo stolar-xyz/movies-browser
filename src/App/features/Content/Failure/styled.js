@@ -34,6 +34,15 @@ export const Button = styled.button`
   color: #ffffff;
   border-radius: 5px;
   font-weight: 500;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 12px;

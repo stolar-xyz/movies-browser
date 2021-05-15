@@ -10,7 +10,7 @@ export const DangerIcon = styled(Danger)`
   margin-bottom: 24px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    width: 90px;
+    width: 15vw;
     height: auto;
     margin-bottom: 12px;
   }

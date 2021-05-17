@@ -5,7 +5,7 @@ import { StyledMovie, Image, Title, Year, Wrapper, Container } from './styled';
 const Movie = ({ title, year, genres, rate, votes }) => (
   <StyledMovie>
     <Image
-      alt={`"${title}" movie banner`}
+      alt={`${title} movie banner`}
       src={'https://thisdoesnotexist.com/'}
     />
     <Wrapper>

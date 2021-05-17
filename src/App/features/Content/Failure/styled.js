@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Container from '../../../common/styled/Container';
 import { ReactComponent as Danger } from '../../../assets/svgs/danger.svg';
+import { Link } from 'react-router-dom';
 
 export const StyledContainer = styled(Container)`
   text-align: center;
@@ -26,9 +27,10 @@ export const Description = styled.p`
   }
 `;
 
-export const Button = styled.button`
+export const StyledLinkButton = styled(Link)`
   border: none;
   cursor: pointer;
+  text-decoration: none;
   background: #0044cc;
   padding: 16px 24px;
   color: #ffffff;

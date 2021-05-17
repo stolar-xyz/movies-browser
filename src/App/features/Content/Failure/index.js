@@ -1,5 +1,6 @@
 import Subheader from '../../../common/styled/Subheader';
-import { DangerIcon, Description, Button, StyledContainer } from './styled';
+import { DangerIcon, Description, StyledLinkButton, StyledContainer } from './styled';
+import { toMovies } from '../../../routes';
 
 const Failure = () => (
   <StyledContainer>
@@ -9,7 +10,7 @@ const Failure = () => (
       Please check your network connection
       <br /> and try again
     </Description>
-    <Button>Back to home page</Button>
+    <StyledLinkButton to={toMovies()}>Back to home page</StyledLinkButton>
   </StyledContainer>
 );
 

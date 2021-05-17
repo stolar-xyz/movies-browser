@@ -6,6 +6,7 @@ import Section from '../../common/styled/Section';
 import Person from '../../common/structure/Person';
 import movieWallpaper from '../.././assets/example/movieWallpaper.jpg';
 import Rating from '../../common/structure/Rating';
+import Genres from '../../common/structure/Genres';
 
 //test structure
 const data = {
@@ -31,6 +32,7 @@ const MoviePage = () => (
         firstInformationDetails={'China, United States of America'}
         secondInformation={'Release date:'}
         secondInformationDetails={'24.10.2020'}
+        genres={<Genres genres={'Action'} />}
         rating={<Rating rate={data.rate} votes={data.votes} />}
         description={
           'A young Chinese maiden disguises herself as a male warrior in order to save her father. Disguises herself as a male warrior in order to save her father. A young Chinese maiden disguises herself as a male warrior in order to save her father.'

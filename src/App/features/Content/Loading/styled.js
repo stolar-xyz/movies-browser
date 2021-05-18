@@ -14,7 +14,7 @@ export const Loader = styled.div`
   border-top-color: #000000;
   animation: ${spin} 1s ease-in-out infinite;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     border-width: 5px;
   }
 `;

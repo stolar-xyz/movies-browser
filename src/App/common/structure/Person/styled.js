@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   text-align: center;
   transition: box-shadow 0.3s ease-out;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 8px;
   }
 `;
@@ -22,7 +22,7 @@ export const StyledPerson = styled.li`
   &:hover ${Wrapper} {
     box-shadow: 0 6px 0 0 #fcd420;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.mobileMax}px) {
       box-shadow: 0 4px 0 0 #fcd420;
     }
   }
@@ -34,7 +34,7 @@ export const Image = styled.img`
   height: 295px;
   border-radius: 5px 5px 0 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     height: 195px;
   }
 `;
@@ -43,7 +43,7 @@ export const Name = styled.span`
   font-size: 18px;
   font-weight: 500;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 14px;
   }
 `;
@@ -52,9 +52,9 @@ export const Role = styled.span`
   display: block;
   margin-top: 8px;
   font-size: 16px;
-  color: #717487;
+  color: #717487; // storm gray
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;
     margin-top: 4px;
   }

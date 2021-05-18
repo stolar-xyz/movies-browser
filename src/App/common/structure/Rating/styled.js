@@ -4,7 +4,7 @@ import { ReactComponent as Star } from '../../../assets/svgs/star.svg';
 export const StyledRating = styled.div`
   font-size: ${({ big }) => !big && '14px'};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: ${({ big }) => (big ? '10px' : '12px')};
   }
 `;
@@ -14,7 +14,7 @@ export const StarIcon = styled(Star)`
   height: auto;
   vertical-align: bottom;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 16px;
   }
 `;
@@ -24,7 +24,7 @@ export const Rate = styled.span`
   font-size: ${({ big }) => (big ? '30px' : '18px')};
   font-weight: 500;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin: ${({ big }) => big && '0 2px 0 4px'};
     margin: ${({ small }) => small && '0 8px'};
     font-weight: 600;
@@ -35,7 +35,7 @@ export const Rate = styled.span`
 export const Limit = styled.span`
   display: ${({ big }) => !big && 'none'};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin-right: ${({ big }) => big && '8px'};
   }
 `;
@@ -45,7 +45,7 @@ export const Votes = styled.span`
   display: ${({ big }) => big && 'block'};
   margin-top: ${({ big }) => big && '16px'};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     display: ${({ big }) => big && 'unset'};
   }
 `;

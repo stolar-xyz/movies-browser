@@ -19,12 +19,12 @@ export const StyledMovie = styled.li`
   &:hover ${Wrapper} {
     box-shadow: 0 6px 0 0 #fcd420;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    @media (max-width: ${({ theme }) => theme.mobileMax}px) {
       box-shadow: 4px 0 0 0 #fcd420;
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     flex-direction: row;
     min-height: unset;
   }
@@ -38,7 +38,7 @@ export const Image = styled.img`
   border-radius: 5px 5px 0 0;
   flex-shrink: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     border-radius: 5px 0 0 5px;
     height: 177px;
     width: 114px;
@@ -49,7 +49,7 @@ export const Container = styled.div`
   display: grid;
   grid-gap: 8px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     grid-gap: 4px;
   }
 `;
@@ -59,7 +59,7 @@ export const Title = styled.h3`
   font-weight: 500;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 16px;
   }
 `;
@@ -68,7 +68,7 @@ export const Year = styled.span`
   font-weight: 400;
   color: #71758a;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 13px;
   }
 `;

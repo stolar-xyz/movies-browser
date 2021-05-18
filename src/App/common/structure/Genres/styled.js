@@ -15,7 +15,7 @@ export const Genre = styled.li`
   border-radius: 5px;
   margin: 4px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 10px;
     padding: 4px 8px;
   }

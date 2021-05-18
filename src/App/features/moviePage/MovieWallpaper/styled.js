@@ -9,7 +9,7 @@ export const WallpaperContainer = styled.div`
   max-width: 1368px;
   margin: 0 auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin: 0 5%;
   }
 `;
@@ -74,11 +74,11 @@ export const Title = styled.h2`
   margin: 0 0 24px;
   overflow-wrap: anywhere;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     margin: 0 0 14px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 24px;
     margin: 0 0 6px;
   }

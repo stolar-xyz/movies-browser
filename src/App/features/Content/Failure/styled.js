@@ -10,7 +10,7 @@ export const StyledContainer = styled(Container)`
 export const DangerIcon = styled(Danger)`
   margin-bottom: 24px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 15vw;
     height: auto;
     margin-bottom: 12px;
@@ -22,7 +22,7 @@ export const Description = styled.p`
   font-weight: 500;
   line-height: 1.4;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 14px;
   }
 `;
@@ -46,7 +46,7 @@ export const StyledLinkButton = styled(Link)`
     box-shadow: inset 0px 0px 5px #c1c1c1;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;
     padding: 10px 14px;
     font-weight: 400;

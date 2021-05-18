@@ -9,11 +9,11 @@ export const StyledPageSelect = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     margin: 32px 0;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     grid-gap: 8px;
   }
 `;
@@ -27,7 +27,7 @@ export const ArrowheadIcon = styled(Arrowhead)`
       transform: rotate(180deg);
     `}
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 5px;
     height: 8px;
   }
@@ -68,13 +68,13 @@ export const PageButton = styled.button`
     }
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 8px 12px;
   }
 `;
 
 export const PageButtonText = styled.span`
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     display: none;
   }
 `;
@@ -85,7 +85,7 @@ export const Wrapper = styled.div`
   margin: 0 12px;
   grid-gap: 8px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin: 0 6px;
     grid-gap: 4px;
     font-size: 10px;
@@ -93,7 +93,7 @@ export const Wrapper = styled.div`
 `;
 
 export const PageText = styled.span`
-  color: #6b6f83;
+  color: #6b6f83; //storm gray
 `;
 
 export const PageNumber = styled.span`

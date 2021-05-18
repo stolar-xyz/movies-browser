@@ -5,7 +5,7 @@ const Subheader = styled.h2`
   font-weight: 600;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 18px;
     font-weight: 500;
   }

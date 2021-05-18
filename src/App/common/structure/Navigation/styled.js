@@ -35,7 +35,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
     border: 2px solid;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 6px 16px;
     border: 1px solid transparent;
 
@@ -58,17 +58,17 @@ export const Wrapper = styled.div`
   padding: 20px 16px;
   max-width: 1368px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 14px 16px;
   }
 
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+      theme.mobileMax}px) and (orientation: portrait) {
     flex-wrap: wrap;
     padding: 28px 16px 16px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileSmallMax}px) {
     justify-content: center;
     padding: 22px 16px 16px;
   }
@@ -81,12 +81,12 @@ export const Title = styled.h1`
   letter-spacing: -1.5px;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     letter-spacing: -0.5px;
     font-size: 22px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 16px;
   }
 `;
@@ -95,12 +95,12 @@ export const VideoIcon = styled(Video)`
   margin-right: 16px;
   height: auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     width: 32px;
     margin-right: 10px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 22px;
   }
 `;
@@ -116,16 +116,16 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     justify-content: center;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;
     grid-gap: 8px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmallMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileSmallMax}px) {
     flex-basis: 100%;
     margin-top: 24px;
   }
@@ -139,12 +139,12 @@ export const Search = styled.label`
   border-radius: 25px;
   padding: 12px 26px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     padding: 10px 18px;
   }
 
   @media (max-width: ${({ theme }) =>
-      theme.breakpoints.mobileMax}px) and (orientation: portrait) {
+      theme.mobileMax}px) and (orientation: portrait) {
     flex-basis: 100%;
     margin-top: 24px;
   }
@@ -155,12 +155,12 @@ export const SearchIcon = styled(Loupe)`
   height: auto;
   color: #7e839a;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     width: 18px;
     margin-right: 10px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 16px;
     color: #627489;
   }
@@ -171,11 +171,11 @@ export const SearchField = styled.input`
   line-height: normal;
   border: none;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletMax}px) {
+  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     font-size: 14px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;
   }
 

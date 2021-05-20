@@ -20,6 +20,7 @@ IN PROGRESS
 - styled-components
 - styled-normalize
 - react-router-dom
+- react-redux
 
 # Getting Started with Create React App
 

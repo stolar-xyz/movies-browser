@@ -16,11 +16,13 @@ IN PROGRESS
 - create-react-app
 
 ### Libraries
+
 - gh-pages
 - styled-components
 - styled-normalize
 - react-router-dom
 - react-redux
+- redux-toolkit
 
 # Getting Started with Create React App
 

@@ -22,6 +22,7 @@ IN PROGRESS
 - styled-normalize
 - react-router-dom
 - react-redux
+- redux-saga
 - redux-toolkit
 
 # Getting Started with Create React App

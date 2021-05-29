@@ -4,7 +4,7 @@ export const Toggler = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  
+
   ${({ clicked }) =>
     clicked &&
     css`
@@ -16,6 +16,7 @@ export const Toggler = styled.button`
 
 export const TogglerField = styled.span`
   display: flex;
+  align-items: center;
   padding: 2px;
   border-radius: 20px;
   border: 1px solid darkgrey;

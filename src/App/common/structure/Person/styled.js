@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledPerson = styled.li`
+  color: ${({ theme }) => theme.color.text.primaryText};
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
@@ -42,7 +43,6 @@ export const Image = styled.img`
 export const Name = styled.span`
   font-size: 18px;
   font-weight: 500;
-  color: ${({ theme }) => theme.color.text.primaryText};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 14px;

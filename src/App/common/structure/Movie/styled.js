@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  color: ${({ theme }) => theme.color.text.primaryText};
   background: ${({ theme }) => theme.color.background.secondaryBackground};
   display: flex;
   flex-direction: column;
@@ -12,6 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledMovie = styled.li`
+  color: ${({ theme }) => theme.color.text.primaryText};
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};

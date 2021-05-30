@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Toggler = styled.button`
   background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
 
   ${({ clicked }) =>

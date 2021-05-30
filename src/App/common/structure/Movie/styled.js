@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: #ffffff;
+  color: ${({ theme }) => theme.color.text.primaryText};
+  background: ${({ theme }) => theme.color.background.secondaryBackground};
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -13,7 +14,7 @@ export const Wrapper = styled.div`
 export const StyledMovie = styled.li`
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   min-height: 650px;
 
   &:hover ${Wrapper} {
@@ -66,7 +67,7 @@ export const Title = styled.h3`
 
 export const Year = styled.span`
   font-weight: 400;
-  color: #71758a;
+  color: ${({ theme }) => theme.color.text.secondaryText};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 13px;

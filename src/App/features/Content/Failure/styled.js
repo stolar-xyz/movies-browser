@@ -18,6 +18,7 @@ export const DangerIcon = styled(Danger)`
 `;
 
 export const Description = styled.p`
+  color: ${({ theme }) => theme.color.text.primaryText};
   font-size: 22px;
   font-weight: 500;
   line-height: 1.4;

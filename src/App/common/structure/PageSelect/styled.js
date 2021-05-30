@@ -45,9 +45,9 @@ export const PageButton = styled.button`
   align-items: center;
   font-size: 14px;
   cursor: pointer;
-  color: #000000;
+  color: ${({ theme }) => theme.color.text.primaryText};
   padding: 8px 16px;
-  background: #d6e4ff;
+  background: ${({ theme }) => theme.color.element.pageSelectButtonActive};
   border-radius: 5px;
   transition: box-shadow 0.3s;
 
@@ -57,7 +57,8 @@ export const PageButton = styled.button`
 
   &:disabled {
     cursor: unset;
-    background: #e4e6f0;
+    background: ${({ theme }) => theme.color.element.pageSelectButtonDisabled};
+    color: ${({ theme }) => theme.color.text.secondaryText};
 
     &:hover {
       box-shadow: none;
@@ -93,9 +94,10 @@ export const Wrapper = styled.div`
 `;
 
 export const PageText = styled.span`
-  color: #6b6f83; //storm gray
+  color: ${({ theme }) => theme.color.text.secondaryText};
 `;
 
 export const PageNumber = styled.span`
+  color: ${({ theme }) => theme.color.text.primaryText};
   font-weight: 600;
 `;

@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   flex-grow: 1;
   text-align: center;
   transition: box-shadow 0.3s ease-out;
+  background: ${({ theme }) => theme.color.background.secondaryBackground};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 8px;
@@ -14,9 +15,8 @@ export const Wrapper = styled.div`
 
 export const StyledPerson = styled.li`
   display: flex;
-  background: #ffffff;
   flex-direction: column;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   border-radius: 5px 5px 0 0;
 
   &:hover ${Wrapper} {
@@ -42,6 +42,7 @@ export const Image = styled.img`
 export const Name = styled.span`
   font-size: 18px;
   font-weight: 500;
+  color: ${({ theme }) => theme.color.text.primaryText};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 14px;
@@ -52,7 +53,7 @@ export const Role = styled.span`
   display: block;
   margin-top: 8px;
   font-size: 16px;
-  color: #717487; // storm gray
+  color: ${({ theme }) => theme.color.text.secondaryText};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;

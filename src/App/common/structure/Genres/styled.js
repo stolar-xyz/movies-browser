@@ -9,7 +9,7 @@ export const StyledGenres = styled.ul`
 `;
 
 export const Genre = styled.li`
-  background: #e4e6f0;
+  background: ${({ theme }) => theme.color.background.genre};
   font-size: 14px;
   padding: 8px 16px;
   border-radius: 5px;

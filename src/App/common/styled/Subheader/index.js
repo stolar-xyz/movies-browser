@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Subheader = styled.h2`
+  color: ${({ theme }) => theme.color.text.primaryText};
   font-size: 36px;
   font-weight: 600;
   margin: 0;

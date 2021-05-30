@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledTile = styled.div`
-  background: #ffffff;
+  color: ${({ theme }) => theme.color.text.primaryText};
+  background: ${({ theme }) => theme.color.background.secondaryBackground};
   padding: 26px;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   border-radius: 5px;
   overflow: hidden;
 
@@ -42,7 +43,7 @@ export const TextContent = styled.span`
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 13px;
-    color: #707489; //storm  gray
+    color: ${({ theme }) => theme.color.text.secondaryText};
   }
 `;
 
@@ -57,7 +58,7 @@ export const Informations = styled.div`
 `;
 
 export const Information = styled.span`
-  color: #717487;
+  color: ${({ theme }) => theme.color.text.secondaryText};
   margin-right: 0.5em;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

@@ -23,6 +23,11 @@ export const TogglerField = styled.span`
   border: 1px solid darkgrey;
   width: 50px;
   height: 25px;
+
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
+    width: 40px;
+    height: 20px;
+  }
 `;
 
 export const Ball = styled.span`
@@ -31,4 +36,9 @@ export const Ball = styled.span`
   height: 20px;
   width: 20px;
   transition: transform 0.5s, background 0.5s;
+
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
+    height: 15px;
+    width: 15px;
+  }
 `;

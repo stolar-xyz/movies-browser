@@ -16,7 +16,7 @@ const colors = {
   candlelight: '#FCD420',
 };
 
-export const theme = {
+export const lightTheme = {
   color: {
     text: {
       primaryText: colors.black,
@@ -45,5 +45,10 @@ export const theme = {
     },
   },
 
+  ...breakpoints,
+};
+
+export const darkTheme = {
+  color: {},
   ...breakpoints,
 };

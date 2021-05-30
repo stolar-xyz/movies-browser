@@ -10,6 +10,7 @@ export const Toggler = styled.button`
     css`
       ${Ball} {
         transform: translateX(calc(100% + 4px));
+        background: #e3e3e3;
       }
     `}
 `;
@@ -29,5 +30,5 @@ export const Ball = styled.span`
   border-radius: 50%;
   height: 20px;
   width: 20px;
-  transition: transform 0.5s;
+  transition: transform 0.5s, background 0.5s;
 `;

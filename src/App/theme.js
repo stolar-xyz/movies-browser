@@ -7,41 +7,27 @@ const breakpoints = {
 const colors = {
   white: '#FFFFFF',
   black: '#000000',
-  whisper: '#F5F5FA',
-  stormGray: '#717487',
-  waterloo: '#7E839A',
-  scienceBlue: '#0044CC',
   mystic: '#E4E6F0',
-  pattensBlue: '#D6E4FF',
-  candlelight: '#FCD420',
+  woodsmoke: '#18181B',
 };
 
 export const lightTheme = {
   color: {
     text: {
       primaryText: colors.black,
-      secondaryText: colors.white,
-      extraText: colors.stormGray,
+      secondaryText: '#717487',
     },
 
     background: {
-      primaryBackground: colors.whisper,
+      primaryBackground: '#F5F5FA',
       secondaryBackground: colors.white,
       genre: colors.mystic,
-      failureButton: colors.scienceBlue,
-      loader: colors.mystic,
     },
 
     element: {
-      arrowheadActive: colors.scienceBlue,
-      arrowheadDisabled: colors.waterloo,
-      pageSelectButtonActive: colors.pattensBlue,
+      pageSelectButtonActive: '#D6E4FF',
       pageSelectButtonDisabled: colors.mystic,
-    },
-
-    hover: {
-      boxBottomShadow: colors.candlelight,
-      pageSelectBorder: colors.scienceBlue,
+      boxShadow: '#eaedf3',
     },
   },
 
@@ -49,6 +35,24 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  color: {},
+  color: {
+    text: {
+      primaryText: '#e3e3e3',
+      secondaryText: '#7E839A',
+    },
+
+    background: {
+      primaryBackground: colors.woodsmoke,
+      secondaryBackground: colors.black,
+      genre: colors.woodsmoke,
+    },
+
+    element: {
+      pageSelectButtonActive: '#212327',
+      pageSelectButtonDisabled: '#111113',
+      boxShadow: colors.woodsmoke,
+    },
+  },
+
   ...breakpoints,
 };

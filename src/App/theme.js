@@ -6,7 +6,7 @@ const breakpoints = {
 
 const colors = {
   white: '#FFFFFF',
-  mercury: '#E3E3E3',
+  gallery: '#EEEEEE',
   black: '#000000',
   mystic: '#E4E6F0',
   woodsmoke: '#18181B',
@@ -39,9 +39,9 @@ export const lightTheme = {
 export const darkTheme = {
   color: {
     text: {
-      primaryText: colors.mercury,
+      primaryText: colors.gallery,
       secondaryText: '#7E839A',
-      whiteText: colors.mercury,
+      whiteText: colors.gallery,
     },
 
     background: {

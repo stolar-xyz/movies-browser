@@ -19,6 +19,7 @@ export const StyledPerson = styled.li`
   flex-direction: column;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 
   &:hover ${Wrapper} {
     box-shadow: 0 6px 0 0 #fcd420;

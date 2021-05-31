@@ -16,6 +16,7 @@ export const StyledMovie = styled.li`
   flex-direction: column;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   min-height: 650px;
+  cursor: pointer;
 
   &:hover ${Wrapper} {
     box-shadow: 0 6px 0 0 #fcd420;

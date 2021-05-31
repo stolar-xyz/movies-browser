@@ -63,7 +63,7 @@ export const Wallpaper = styled.img`
 `;
 
 export const Wrapper = styled.div`
-  color: #ffffff;
+  color: ${({ theme }) => theme.color.text.whiteText};
   position: absolute;
   left: 5%;
   bottom: 5%;

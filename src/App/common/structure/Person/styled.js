@@ -34,6 +34,7 @@ export const Image = styled.img`
   //example sizes
   background: darkgray;
   height: 295px;
+  width: 100%;
   border-radius: 5px 5px 0 0;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

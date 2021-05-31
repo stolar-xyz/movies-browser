@@ -16,7 +16,7 @@ export const lightTheme = {
   color: {
     text: {
       primaryText: colors.black,
-      secondaryText: '#717487',
+      secondaryText: '#6C6F81',
       whiteText: colors.white,
     },
 

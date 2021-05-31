@@ -6,6 +6,7 @@ const breakpoints = {
 
 const colors = {
   white: '#FFFFFF',
+  mercury: '#E3E3E3',
   black: '#000000',
   mystic: '#E4E6F0',
   woodsmoke: '#18181B',
@@ -16,6 +17,7 @@ export const lightTheme = {
     text: {
       primaryText: colors.black,
       secondaryText: '#717487',
+      whiteText: colors.white,
     },
 
     background: {
@@ -27,7 +29,7 @@ export const lightTheme = {
     element: {
       pageSelectButtonActive: '#D6E4FF',
       pageSelectButtonDisabled: colors.mystic,
-      boxShadow: '#eaedf3',
+      boxShadow: colors.mystic,
     },
   },
 
@@ -37,8 +39,9 @@ export const lightTheme = {
 export const darkTheme = {
   color: {
     text: {
-      primaryText: '#e3e3e3',
+      primaryText: colors.mercury,
       secondaryText: '#7E839A',
+      whiteText: colors.mercury,
     },
 
     background: {
@@ -50,7 +53,7 @@ export const darkTheme = {
     element: {
       pageSelectButtonActive: '#212327',
       pageSelectButtonDisabled: '#111113',
-      boxShadow: colors.woodsmoke,
+      boxShadow: '#0B0B0E',
     },
   },
 

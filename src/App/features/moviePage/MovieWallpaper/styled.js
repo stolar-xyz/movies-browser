@@ -59,14 +59,13 @@ export const WallpaperOverlay = styled.div`
 export const Wallpaper = styled.img`
   width: 100%;
   height: 100%;
-  display: block;
 `;
 
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.color.text.whiteText};
   position: absolute;
   left: 5%;
-  bottom: 5%;
+  bottom: 10%;
 `;
 
 export const Title = styled.h2`

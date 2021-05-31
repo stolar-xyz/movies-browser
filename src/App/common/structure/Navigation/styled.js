@@ -16,7 +16,7 @@ export const StyledLink = styled(Link)`
 export const StyledNavLink = styled(NavLink).attrs(() => ({
   activeClassName,
 }))`
-  color: inherit;
+  color: ${({ theme }) => theme.color.text.whiteText};
   text-decoration: none;
   cursor: pointer;
   font-weight: 600;
@@ -28,7 +28,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 
   &:hover {
     color: #000000;
-    background: #ffffff;
+    background: ${({ theme }) => theme.color.text.whiteText};
   }
 
   &.${activeClassName} {
@@ -47,7 +47,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 
 export const StyledNavigation = styled.nav`
   background: #000000;
-  color: #ffffff;
+  color: ${({ theme }) => theme.color.text.whiteText};
 `;
 
 export const Wrapper = styled.div`
@@ -132,7 +132,7 @@ export const List = styled.ul`
 `;
 
 export const Search = styled.label`
-  background: #ffffff;
+  background: ${({ theme }) => theme.color.text.whiteText};
   display: flex;
   align-items: center;
   flex-basis: 33%;
@@ -153,16 +153,11 @@ export const Search = styled.label`
 export const SearchIcon = styled(Loupe)`
   margin-right: 16px;
   height: auto;
-  color: #7e839a;
+  color: #6C6F81;
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    width: 18px;
-    margin-right: 10px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 16px;
-    color: #627489;
+    margin-right: 10px;
   }
 `;
 
@@ -170,6 +165,7 @@ export const SearchField = styled.input`
   flex-grow: 1;
   line-height: normal;
   border: none;
+  background: inherit;
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     font-size: 14px;

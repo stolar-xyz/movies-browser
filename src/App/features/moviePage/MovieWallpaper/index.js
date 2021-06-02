@@ -11,7 +11,7 @@ const MovieWallpaper = ({ movieWallpaper, title, rating }) => (
   <WallpaperFill>
     <WallpaperContainer>
       <WallpaperOverlay />
-      <Wallpaper alt={`"${title}" movie wallpaper`} src={movieWallpaper} />
+      <Wallpaper alt={`${title} movie wallpaper`} src={movieWallpaper} />
       <Wrapper>
         <Title>{title}</Title>
         {rating}

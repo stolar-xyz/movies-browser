@@ -10,8 +10,8 @@ import {
 } from './styled';
 
 const Tile = ({
-  altImageText,
-  imageSource,
+  altText,
+  source,
   name,
   year,
   firstInformation,
@@ -23,7 +23,7 @@ const Tile = ({
   description,
 }) => (
   <StyledTile>
-    <Image alt={`${name} ${altImageText}`} src={imageSource} />
+    <Image alt={`${name} ${altText}`} src={source} />
     <Wrapper>
       <Subheader>{name}</Subheader>
       {year && <TextContent>{year}</TextContent>}

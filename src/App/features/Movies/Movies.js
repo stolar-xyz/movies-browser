@@ -2,10 +2,13 @@ import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
 import Section from '../../common/styled/Section';
 import List from '../../common/styled/List';
+import ThemeToggler from '../themeToggler/ThemeToggler';
 
 const Movies = () => (
   <Section>
-    <Subheader>Popular movies</Subheader>
+    <Subheader extra>
+      Popular movies <ThemeToggler />
+    </Subheader>
     <List movies>
       <Movie
         title={'Mulan'}

@@ -2,12 +2,9 @@ import Genres from '../Genres';
 import Rating from '../Rating';
 import { StyledMovie, Image, Title, Year, Wrapper, Container } from './styled';
 
-const Movie = ({ title, year, genres, rate, votes }) => (
+const Movie = ({ title, year, genres, rate, votes, source }) => (
   <StyledMovie>
-    <Image
-      alt={`${title} movie banner`}
-      src={'https://thisdoesnotexist.com/'}
-    />
+    <Image alt={`${title} movie banner`} src={source} />
     <Wrapper>
       <Container>
         <Title>{title}</Title>

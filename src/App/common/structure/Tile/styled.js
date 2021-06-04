@@ -14,18 +14,15 @@ export const StyledTile = styled.div`
 `;
 
 export const Image = styled.img`
-  //example
   margin-right: 36px;
   float: left;
-  background: darkgray;
-  width: 312px;
-  height: 464px;
+  width: 30%;
+  height: 100%;
   border-radius: 5px;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin-right: 16px;
-    width: 114px;
-    height: 169px;
+    min-width: 130px;
   }
 `;
 

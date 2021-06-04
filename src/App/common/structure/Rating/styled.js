@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as Star } from '../../../assets/svgs/star.svg';
 
 export const StyledRating = styled.div`
+  white-space: nowrap;
   font-size: ${({ big }) => !big && '14px'};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

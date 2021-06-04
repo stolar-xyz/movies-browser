@@ -33,17 +33,13 @@ export const StyledMovie = styled.li`
 `;
 
 export const Image = styled.img`
-  //example sizes
-  background: darkgray;
-  height: 67.5%;
   width: 100%;
-  border-radius: 5px 5px 0 0;
-  flex-shrink: 0;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     border-radius: 5px 0 0 5px;
-    height: 177px;
-    width: 114px;
+    width: 40%;
   }
 `;
 

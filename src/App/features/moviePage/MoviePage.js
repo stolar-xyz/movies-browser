@@ -7,6 +7,7 @@ import Person from '../../common/structure/Person';
 import movieWallpaper from '../.././assets/example/movieWallpaper.jpg';
 import Rating from '../../common/structure/Rating';
 import Genres from '../../common/structure/Genres';
+import moviePoster from '../.././assets/example/moviePoster.jpg';
 
 //test structure
 const data = {
@@ -24,8 +25,8 @@ const MoviePage = () => (
     />
     <Section>
       <Tile
-        altImageText={'movie poster'}
-        imageSource={'https://thisdoesnotexist.com/'}
+        altText={'movie poster'}
+        source={moviePoster}
         name={data.title}
         year={'2020'}
         firstInformation={'Production:'}

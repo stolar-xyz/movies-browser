@@ -81,24 +81,14 @@ export const Title = styled.h1`
   letter-spacing: -1.5px;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    letter-spacing: -0.5px;
-    font-size: 22px;
-  }
-
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 16px;
   }
 `;
 
 export const VideoIcon = styled(Video)`
-  margin-right: 16px;
+  margin-right: 10px;
   height: auto;
-
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    width: 32px;
-    margin-right: 10px;
-  }
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 22px;
@@ -118,11 +108,11 @@ export const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     justify-content: center;
+    grid-gap: 10px;
   }
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 12px;
-    grid-gap: 8px;
   }
 
   @media (max-width: ${({ theme }) => theme.mobileSmallMax}px) {
@@ -139,14 +129,11 @@ export const Search = styled.label`
   border-radius: 25px;
   padding: 12px 26px;
 
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    padding: 10px 18px;
-  }
-
   @media (max-width: ${({ theme }) =>
       theme.mobileMax}px) and (orientation: portrait) {
     flex-basis: 100%;
     margin-top: 24px;
+    padding: 10px 18px;
   }
 `;
 
@@ -169,10 +156,6 @@ export const SearchField = styled.input`
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     font-size: 14px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    font-size: 12px;
   }
 
   &:focus {

@@ -6,6 +6,7 @@ import Movie from '../../common/structure/Movie';
 import NoResults from '../Content/NoResults';
 import Loading from '../Content/Loading';
 import Failure from '../Content/Failure';
+import profilePhoto from '../.././assets/example/profilePhoto.jpg';
 
 //test structure
 
@@ -23,7 +24,7 @@ const PersonPage = () => (
     <Section>
       <Tile
         altText={'photo'}
-        source={'https://thisdoesnotexist.com/'}
+        source={profilePhoto}
         name={'Liu Yifei'}
         firstInformation={'Date of birth:'}
         firstInformationDetails={'25.08.1987'}

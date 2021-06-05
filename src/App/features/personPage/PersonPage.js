@@ -22,8 +22,8 @@ const PersonPage = () => (
     </Section>
     <Section>
       <Tile
-        altImageText={'photo'}
-        imageSource={'https://thisdoesnotexist.com/'}
+        altText={'photo'}
+        source={'https://thisdoesnotexist.com/'}
         name={'Liu Yifei'}
         firstInformation={'Date of birth:'}
         firstInformationDetails={'25.08.1987'}

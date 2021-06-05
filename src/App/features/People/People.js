@@ -7,7 +7,7 @@ import ThemeToggler from '../themeToggler/ThemeToggler';
 const People = () => (
   <Section>
     <Subheader extra>
-      Popular movies <ThemeToggler />
+      Popular people <ThemeToggler />
     </Subheader>
     <List people>
       <Person name={'Henry Cavill'} />

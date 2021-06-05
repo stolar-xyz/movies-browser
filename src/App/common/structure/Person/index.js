@@ -1,8 +1,8 @@
 import { StyledPerson, Image, Wrapper, Name, Role } from './styled';
 
-const Person = ({ name, role }) => (
+const Person = ({ name, role, source }) => (
   <StyledPerson>
-    <Image alt={`photo of ${name}`} src={'https://thisdoesnotexist.com/'} />
+    <Image alt={`photo of ${name}`} src={source} />
     <Wrapper>
       <Name>{name}</Name>
       {role && <Role>{role}</Role>}

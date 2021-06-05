@@ -31,15 +31,9 @@ export const StyledPerson = styled.li`
 `;
 
 export const Image = styled.img`
-  //example sizes
-  background: darkgray;
-  height: 295px;
+  height: 100%;
   width: 100%;
   border-radius: 5px 5px 0 0;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 195px;
-  }
 `;
 
 export const Name = styled.span`

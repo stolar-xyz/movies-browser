@@ -31,7 +31,7 @@ export const StyledPerson = styled.li`
 `;
 
 export const Image = styled.img`
-  height: 100%;
+  height: 196px;
   width: 100%;
   border-radius: 5px 5px 0 0;
 `;

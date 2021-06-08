@@ -1,13 +1,22 @@
 import Overlay from '../Overlay';
-import { StyledPerson, Image, Wrapper, Name, Role } from './styled';
+import {
+  StyledPerson,
+  Image,
+  Wrapper,
+  Name,
+  Role,
+  Container,
+} from './styled';
 
 const Person = ({ name, role, source }) => (
   <StyledPerson>
-    {source ? (
-      <Image alt={`photo of ${name}`} src={source} />
-    ) : (
-      <Overlay on={'person'} />
-    )}
+    <Container>
+      {source ? (
+        <Image alt={`photo of ${name}`} src={source} />
+      ) : (
+        <Overlay on={'person'} />
+      )}
+    </Container>
     <Wrapper>
       <Name>{name}</Name>
       {role && <Role>{role}</Role>}

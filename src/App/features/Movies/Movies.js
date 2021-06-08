@@ -25,7 +25,6 @@ const Movies = () => (
         genres={'Action'}
         rate={'7,8'}
         votes={'35'}
-        source={moviePoster}
       />
       <Movie
         title={'Mulan'}

@@ -5,18 +5,18 @@ import {
   Wrapper,
   Name,
   Role,
-  Container,
+  OverlayContainer,
 } from './styled';
 
 const Person = ({ name, role, source }) => (
   <StyledPerson>
-    <Container>
-      {source ? (
-        <Image alt={`photo of ${name}`} src={source} />
-      ) : (
+    {source ? (
+      <Image alt={`photo of ${name}`} src={source} />
+    ) : (
+      <OverlayContainer>
         <Overlay on={'person'} />
-      )}
-    </Container>
+      </OverlayContainer>
+    )}
     <Wrapper>
       <Name>{name}</Name>
       {role && <Role>{role}</Role>}

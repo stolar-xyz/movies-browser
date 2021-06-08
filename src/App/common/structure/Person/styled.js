@@ -32,11 +32,15 @@ export const StyledPerson = styled.li`
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 260px;
   border-radius: 5px 5px 0 0;
+
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
+    height: 195px;
+  }
 `;
 
-export const Container = styled.div`
+export const OverlayContainer = styled.div`
   height: 260px;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

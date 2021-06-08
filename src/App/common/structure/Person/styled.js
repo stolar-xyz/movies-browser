@@ -31,9 +31,17 @@ export const StyledPerson = styled.li`
 `;
 
 export const Image = styled.img`
-  height: 196px;
   width: 100%;
+  height: 100%;
   border-radius: 5px 5px 0 0;
+`;
+
+export const Container = styled.div`
+  height: 260px;
+
+  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
+    height: 195px;
+  }
 `;
 
 export const Name = styled.span`

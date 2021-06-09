@@ -2,13 +2,13 @@ import { StyledOverlay } from './styled';
 import { ReactComponent as ProfileIcon } from '../../../assets/svgs/profile.svg';
 import { ReactComponent as VideoIcon } from '../../../assets/svgs/videoExtra.svg';
 
-const Overlay = ({ on }) => (
-  <StyledOverlay>
+const Overlay = ({ person, movie }) => (
+  <StyledOverlay person={person} movie={movie}>
     {(() => {
-      switch (on) {
-        case 'person':
+      switch (true) {
+        case person:
           return <ProfileIcon />;
-        case 'movie':
+        case movie:
           return <VideoIcon />;
         default:
           return null;

@@ -38,7 +38,7 @@ export const Image = styled.img`
   border-radius: 5px 5px 0px 0px;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 215px;
+    height: 220px;
     width: 145px;
     border-radius: 5px 0 0 5px;
   }
@@ -48,7 +48,7 @@ export const OverlayContainer = styled.div`
   height: 100%;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 215px;
+    height: 220px;
     min-width: 145px;
   }
 `;

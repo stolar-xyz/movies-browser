@@ -4,6 +4,7 @@ import { ReactComponent as Star } from '../../../assets/svgs/star.svg';
 export const StyledRating = styled.div`
   white-space: nowrap;
   font-size: ${({ big }) => !big && '14px'};
+  margin-top: ${({ small }) => small && '16px'};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: ${({ big }) => (big ? '10px' : '12px')};

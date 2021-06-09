@@ -1,7 +1,7 @@
 import { Limit, Rate, StarIcon, StyledRating, Votes } from './styled';
 
 const Rating = ({ rate, votes, big, small }) => (
-  <StyledRating big={big}>
+  <StyledRating big={big} small={small}>
     <StarIcon big={big} />
     <Rate big={big} small={small}>
       {rate}

@@ -5,6 +5,7 @@ export const StyledOverlay = styled.div`
   align-items: center;
   justify-content: center;
   background: #c4c4c4;
+  border-radius: 5px 5px 0 0;
 
   ${({ person }) =>
     person &&
@@ -24,6 +25,7 @@ export const StyledOverlay = styled.div`
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         height: 220px;
         min-width: 145px;
+        border-radius: 5px 0 0 5px;
       }
     `}
 `;

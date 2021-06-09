@@ -40,14 +40,6 @@ export const Image = styled.img`
   }
 `;
 
-export const OverlayContainer = styled.div`
-  height: 260px;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 195px;
-  }
-`;
-
 export const Name = styled.span`
   font-size: 18px;
   font-weight: 500;

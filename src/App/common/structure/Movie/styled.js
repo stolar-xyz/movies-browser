@@ -44,15 +44,6 @@ export const Image = styled.img`
   }
 `;
 
-export const OverlayContainer = styled.div`
-  height: 100%;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 220px;
-    min-width: 145px;
-  }
-`;
-
 export const Container = styled.div`
   display: grid;
   grid-gap: 8px;

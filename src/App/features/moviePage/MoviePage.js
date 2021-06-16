@@ -19,7 +19,7 @@ const data = {
 const MoviePage = () => (
   <>
     <MovieWallpaper
-      movieWallpaper={movieWallpaper}
+      source={movieWallpaper}
       title={data.title}
       rating={<Rating big={'true'} rate={data.rate} votes={data.votes} />}
     />

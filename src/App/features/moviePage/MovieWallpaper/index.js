@@ -7,17 +7,19 @@ import {
   WallpaperFill,
 } from './styled';
 
-const MovieWallpaper = ({ movieWallpaper, title, rating }) => (
-  <WallpaperFill>
-    <WallpaperContainer>
-      <WallpaperOverlay />
-      <Wallpaper alt={`${title} movie wallpaper`} src={movieWallpaper} />
-      <Wrapper>
-        <Title>{title}</Title>
-        {rating}
-      </Wrapper>
-    </WallpaperContainer>
-  </WallpaperFill>
-);
+const MovieWallpaper = ({ source, title, rating }) => {
+  return source ? (
+    <WallpaperFill>
+      <WallpaperContainer>
+        <WallpaperOverlay />
+        <Wallpaper alt={`${title} movie wallpaper`} src={source} />
+        <Wrapper>
+          <Title>{title}</Title>
+          {rating}
+        </Wrapper>
+      </WallpaperContainer>
+    </WallpaperFill>
+  ) : null;
+};
 
 export default MovieWallpaper;

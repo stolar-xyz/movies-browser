@@ -1,22 +1,15 @@
 # movies-browser
 
+**The application is still under development.** \
 [Demo](https://stolar-code.github.io/movies-browser/)
 
 ## Description
 
-IN PROGRESS
+The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled using Styled Components and adapted for display on small screens (RWD). The site will allow you to change the theme to a darker one by clicking a switch near the subheader.
 
-### Used technologies
+### Libraries Used
 
-- HTML
-- CSS
-- JavaScript
-- JSX
-- React
-- create-react-app
-
-### Libraries
-
+- react
 - gh-pages
 - styled-components
 - styled-normalize

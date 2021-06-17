@@ -17,6 +17,7 @@ The app will allow you to browse movies and actors based on the [API](https://ap
 - react-redux
 - redux-saga
 - redux-toolkit
+- axios
 
 ## Getting Started with Create React App
 

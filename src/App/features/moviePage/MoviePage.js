@@ -4,10 +4,8 @@ import Tile from '../../common/structure/Tile';
 import List from '../../common/styled/List';
 import Section from '../../common/styled/Section';
 import Person from '../../common/structure/Person';
-import movieWallpaper from '../.././assets/example/movieWallpaper.jpg';
 import Rating from '../../common/structure/Rating';
 import Genres from '../../common/structure/Genres';
-import moviePoster from '../.././assets/example/moviePoster.jpg';
 
 //test structure
 const data = {
@@ -19,14 +17,14 @@ const data = {
 const MoviePage = () => (
   <>
     <MovieWallpaper
-      source={movieWallpaper}
+      source={''}
       title={data.title}
       rating={<Rating big={'true'} rate={data.rate} votes={data.votes} />}
     />
     <Section>
       <Tile
         altText={'movie poster'}
-        source={moviePoster}
+        source={''}
         name={data.title}
         year={'2020'}
         firstInformation={'Production:'}

@@ -10,7 +10,7 @@ const listSlice = createSlice({
     fetchList: state => {
       state.status = 'loading';
     },
-    fetchListSuccess: (state, payload) => {
+    fetchListSuccess: (state, { payload }) => {
       state.status = 'success';
       state.result = payload.results;
     },

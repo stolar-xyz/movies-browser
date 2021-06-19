@@ -10,7 +10,6 @@ const List = styled.ul`
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     grid-gap: 16px;
-    margin: 12px 0 0;
   }
 
   ${({ movies }) =>

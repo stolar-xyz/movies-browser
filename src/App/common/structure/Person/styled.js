@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  display: grid;
+  place-items: center;
   padding: 16px;
   overflow-wrap: anywhere;
   flex-grow: 1;
@@ -32,11 +34,11 @@ export const StyledPerson = styled.li`
 
 export const Image = styled.img`
   width: 100%;
-  height: 260px;
+  height: 278px;
   border-radius: 5px 5px 0 0;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 195px;
+    height: 204px;
   }
 `;
 

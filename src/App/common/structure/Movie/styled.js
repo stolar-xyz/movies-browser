@@ -34,12 +34,12 @@ export const StyledMovie = styled.li`
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 471px;
   border-radius: 5px 5px 0px 0px;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 220px;
-    width: 145px;
+    height: 225px;
+    width: 150px;
     border-radius: 5px 0 0 5px;
   }
 `;

@@ -10,21 +10,21 @@ export const StyledOverlay = styled.div`
   ${({ person }) =>
     person &&
     css`
-      height: 260px;
+      height: 278px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-        height: 195px;
+        height: 204px;
       }
     `}
 
   ${({ movie }) =>
     movie &&
     css`
-      height: 100%;
+      height: 471px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-        height: 220px;
-        min-width: 145px;
+        height: 225px;
+        width: 150px;
         border-radius: 5px 0 0 5px;
       }
     `}

@@ -2,11 +2,12 @@ import Genres from '../Genres';
 import Overlay from '../Overlay';
 import Rating from '../Rating';
 import { StyledMovie, Image, Title, Year, Wrapper, Container } from './styled';
+import { baseImage } from '../../../apiDetails';
 
 const Movie = ({ title, year, genres, rate, votes, source }) => (
   <StyledMovie>
     {source ? (
-      <Image alt={`${title} movie poster`} src={source} />
+      <Image alt={`${title} movie poster`} src={`${baseImage}w342${source}`} />
     ) : (
       <Overlay movie />
     )}

@@ -1,10 +1,11 @@
 import Overlay from '../Overlay';
 import { StyledPerson, Image, Wrapper, Name, Role } from './styled';
+import { baseImage } from '../../../apiDetails';
 
 const Person = ({ name, role, source }) => (
   <StyledPerson>
     {source ? (
-      <Image alt={`photo of ${name}`} src={source} />
+      <Image alt={`photo of ${name}`} src={`${baseImage}w185${source}`} />
     ) : (
       <Overlay person />
     )}

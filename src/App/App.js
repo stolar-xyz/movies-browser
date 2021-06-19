@@ -2,8 +2,6 @@ import Navigation from './common/structure/Navigation';
 import Movies from './features/movies/Movies';
 import People from './features/people/People';
 import PageSelect from './common/structure/PageSelect';
-import MoviePage from './features/moviePage/MoviePage';
-import PersonPage from './features/personPage/PersonPage';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -25,11 +23,9 @@ const App = () => {
         <main>
           <Switch>
             <Route path={toMovies()}>
-              <MoviePage />
               <Movies />
             </Route>
             <Route path={toPeople()}>
-              <PersonPage />
               <People />
             </Route>
             <Route>

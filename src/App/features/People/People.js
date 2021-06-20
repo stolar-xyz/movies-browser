@@ -18,7 +18,7 @@ const People = () => {
   return (
     <Section>
       <Subheader extra>
-        Popular people <ThemeToggler />
+        Popular people<ThemeToggler />
       </Subheader>
       <List people>
         {resultPage.map(({ name, profile_path, id }) => (

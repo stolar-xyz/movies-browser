@@ -18,7 +18,7 @@ const Movies = () => {
   return (
     <Section>
       <Subheader extra>
-        Popular movies <ThemeToggler />
+        Popular movies<ThemeToggler />
       </Subheader>
       <List movies>
         {resultPage.map(

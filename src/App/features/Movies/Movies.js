@@ -28,6 +28,7 @@ const Movies = () => {
           ({
             title,
             release_date,
+            genre_ids,
             vote_average,
             vote_count,
             poster_path,
@@ -35,8 +36,8 @@ const Movies = () => {
           }) => (
             <Movie
               title={title}
-              year={release_date} //incorrect date (same year)
-              genres={'Action'} //test
+              year={release_date}
+              genres={genre_ids}
               rate={vote_average}
               votes={vote_count}
               source={poster_path}

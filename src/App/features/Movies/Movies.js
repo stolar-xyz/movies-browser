@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchList, selectResult } from '../listSlice';
+import { fetchGenres } from '../../common/structure/Genres/genresSlice';
 import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
 import Section from '../../common/styled/Section';
@@ -12,6 +13,7 @@ const Movies = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchGenres());
     dispatch(fetchList({ page: '1', type: 'movies' }));
   }, [dispatch]);
 

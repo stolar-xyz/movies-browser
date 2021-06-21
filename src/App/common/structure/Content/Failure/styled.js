@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Container from '../../../common/styled/Container';
+import Container from '../../../styled/Container';
 import { ReactComponent as Danger } from '../../../assets/svgs/danger.svg';
 import { Link } from 'react-router-dom';
 

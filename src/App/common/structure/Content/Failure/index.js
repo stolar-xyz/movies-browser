@@ -1,6 +1,6 @@
-import Subheader from '../../../common/styled/Subheader';
+import Subheader from '../../../styled/Subheader';
 import { DangerIcon, Description, StyledLinkButton, StyledContainer } from './styled';
-import { toMovies } from '../../../routes';
+import { toMovies } from '../../../../routes';
 
 const Failure = () => (
   <StyledContainer>

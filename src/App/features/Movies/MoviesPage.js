@@ -13,8 +13,8 @@ const MoviesPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchGenres());
     dispatch(fetchList({ page: '1', type: 'movies' }));
+    dispatch(fetchGenres());
   }, [dispatch]);
 
   return (

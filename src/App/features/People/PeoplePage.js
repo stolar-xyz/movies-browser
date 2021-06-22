@@ -7,7 +7,7 @@ import Section from '../../common/styled/Section';
 import List from '../../common/styled/List';
 import ThemeToggler from '../themeToggler/ThemeToggler';
 
-const People = () => {
+const PeoplePage = () => {
   const resultPage = useSelector(selectResult);
   const dispatch = useDispatch();
 
@@ -30,4 +30,4 @@ const People = () => {
   );
 };
 
-export default People;
+export default PeoplePage;

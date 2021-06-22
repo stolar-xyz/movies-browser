@@ -23,7 +23,7 @@ const Tile = ({
   description,
 }) => (
   <StyledTile>
-    {source ? <Image alt={`${name} ${altText}`} src={source} /> : null}
+    {source && <Image alt={`${name} ${altText}`} src={source} />}
     <Wrapper>
       <Subheader>{name}</Subheader>
       {year && <TextContent>{year}</TextContent>}

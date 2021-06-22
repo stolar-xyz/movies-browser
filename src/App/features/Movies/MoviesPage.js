@@ -8,7 +8,7 @@ import Section from '../../common/styled/Section';
 import List from '../../common/styled/List';
 import ThemeToggler from '../themeToggler/ThemeToggler';
 
-const Movies = () => {
+const MoviesPage = () => {
   const resultPage = useSelector(selectResult);
   const dispatch = useDispatch();
 
@@ -50,4 +50,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default MoviesPage;

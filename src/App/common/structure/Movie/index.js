@@ -14,7 +14,7 @@ const Movie = ({ title, year, genres, rate, votes, source }) => (
     <Wrapper>
       <Container>
         <Title>{title}</Title>
-        <Year>{year.slice(0, 4)}</Year>
+        {year && <Year>{year.slice(0, 4)}</Year>}
         <Genres genres={genres} />
       </Container>
       <Rating small rate={rate} votes={votes} />

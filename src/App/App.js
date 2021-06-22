@@ -1,6 +1,6 @@
 import Navigation from './common/structure/Navigation';
-import Movies from './features/movies/Movies';
-import People from './features/people/People';
+import MoviesPage from './features/movies/MoviesPage';
+import PeoplePage from './features/people/PeoplePage';
 import PageSelect from './common/structure/PageSelect';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
@@ -9,7 +9,7 @@ import { darkTheme, lightTheme } from './theme';
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { toMovies, toPeople } from './routes';
 import { useSelector } from 'react-redux';
-import { selectTheme } from './features/themeToggler/themeSlice';
+import { selectTheme } from './features/ThemeToggler/themeSlice';
 
 const App = () => {
   const isTheme = useSelector(selectTheme);
@@ -23,10 +23,10 @@ const App = () => {
         <main>
           <Switch>
             <Route path={toMovies()}>
-              <Movies />
+              <MoviesPage />
             </Route>
             <Route path={toPeople()}>
-              <People />
+              <PeoplePage />
             </Route>
             <Route>
               <Redirect to={toMovies()} />

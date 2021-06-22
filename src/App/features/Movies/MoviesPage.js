@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchList, selectResult } from '../listSlice';
-import { fetchGenres } from '../../common/structure/Genres/genresSlice';
+import { fetchGenres } from './Genres/genresSlice';
 import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
 import Section from '../../common/styled/Section';
 import List from '../../common/styled/List';
-import ThemeToggler from '../themeToggler/ThemeToggler';
+import ThemeToggler from '../ThemeToggler';
 
 const MoviesPage = () => {
   const resultPage = useSelector(selectResult);

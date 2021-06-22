@@ -5,7 +5,7 @@ import Subheader from '../../common/styled/Subheader';
 import Person from '../../common/structure/Person';
 import Section from '../../common/styled/Section';
 import List from '../../common/styled/List';
-import ThemeToggler from '../themeToggler/ThemeToggler';
+import ThemeToggler from '../ThemeToggler';
 
 const PeoplePage = () => {
   const resultPage = useSelector(selectResult);

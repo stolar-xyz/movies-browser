@@ -1,4 +1,4 @@
-import Genres from '../Genres';
+import Genres from '../../../features/movies/Genres';
 import Overlay from '../Overlay';
 import Rating from '../Rating';
 import { StyledMovie, Image, Title, Year, Wrapper, Container } from './styled';

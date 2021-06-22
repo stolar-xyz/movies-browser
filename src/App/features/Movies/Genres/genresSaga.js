@@ -4,7 +4,7 @@ import {
   fetchGenresSuccess,
   fetchGenresError,
 } from './genresSlice';
-import { getDataFromApi } from '../../../features/getDataFromApi';
+import { getDataFromApi } from '../../getDataFromApi';
 import { base, apiKey, language } from '../../../apiDetails';
 
 function* fetchGenresHandler() {

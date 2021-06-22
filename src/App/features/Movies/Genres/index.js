@@ -7,9 +7,11 @@ const Genres = ({ genres }) => {
 
   return (
     <StyledGenres>
-      {genresList.map(({ id, name }) =>
-        genres.includes(id) ? <Genre key={id}>{name}</Genre> : null
-      )}
+      {genres &&
+        genresList.map(
+          ({ id, name }) =>
+            genres.includes(id) && <Genre key={id}>{name}</Genre>
+        )}
     </StyledGenres>
   );
 };

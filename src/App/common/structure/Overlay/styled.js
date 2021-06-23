@@ -24,7 +24,7 @@ export const StyledOverlay = styled.div`
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         height: 225px;
-        width: 150px;
+        min-width: 150px;
         border-radius: 5px 0 0 5px;
       }
     `}

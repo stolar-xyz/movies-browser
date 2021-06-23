@@ -8,6 +8,7 @@ import List from '../../common/styled/List';
 import ThemeToggler from '../ThemeToggler';
 import Loading from '../../common/structure/Content/Loading';
 import Failure from '../../common/structure/Content/Failure';
+import PageSelect from '../../common/structure/PageSelect';
 
 const PeoplePage = () => {
   const resultPage = useSelector(selectResult);
@@ -30,17 +31,20 @@ const PeoplePage = () => {
 
     case 'success':
       return (
-        <Section>
-          <Subheader extra>
-            Popular people
-            <ThemeToggler />
-          </Subheader>
-          <List people>
-            {resultPage.map(({ name, profile_path, id }) => (
-              <Person name={name} source={profile_path} key={id} />
-            ))}
-          </List>
-        </Section>
+        <>
+          <Section>
+            <Subheader extra>
+              Popular people
+              <ThemeToggler />
+            </Subheader>
+            <List people>
+              {resultPage.map(({ name, profile_path, id }) => (
+                <Person name={name} source={profile_path} key={id} />
+              ))}
+            </List>
+          </Section>
+          <PageSelect minNumber={'1'} maxNumber={'500'} />
+        </>
       );
 
     default:

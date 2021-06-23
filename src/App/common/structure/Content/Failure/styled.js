@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Container from '../../../styled/Container';
-import { ReactComponent as Danger } from '../../../assets/svgs/danger.svg';
+import { ReactComponent as Danger } from '../../../../assets/svgs/danger.svg';
 import { Link } from 'react-router-dom';
 
 export const StyledContainer = styled(Container)`

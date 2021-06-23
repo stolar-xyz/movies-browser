@@ -1,14 +1,9 @@
-import Container from '../../../styled/Container';
-import Subheader from '../../../styled/Subheader';
-import { Loader } from './styled';
+import { StyledLoading, Loader } from './styled';
 
-const Loading = ({ title }) => (
-  <>
-    <Subheader>Search results for “{title}”</Subheader>
-    <Container>
-      <Loader />
-    </Container>
-  </>
+const Loading = () => (
+  <StyledLoading>
+    <Loader />
+  </StyledLoading>
 );
 
 export default Loading;

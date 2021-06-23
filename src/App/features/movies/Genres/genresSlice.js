@@ -4,7 +4,7 @@ const genresSlice = createSlice({
   name: 'genres',
   initialState: {
     result: [],
-    status: 'inital',
+    status: 'initial',
   },
   reducers: {
     fetchGenres: state => {

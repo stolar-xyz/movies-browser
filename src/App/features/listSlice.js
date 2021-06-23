@@ -4,7 +4,7 @@ const listSlice = createSlice({
   name: 'list',
   initialState: {
     result: [],
-    status: 'inital',
+    status: 'initial',
   },
   reducers: {
     fetchList: state => {

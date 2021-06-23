@@ -20,8 +20,8 @@ export const Loader = styled.div`
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 10px solid #dddeee;
-  border-color: #000000 transparent #000000 transparent;
+  border: 10px solid;
+  border-color: ${({ theme }) => theme.color.text.primaryText} transparent;
   animation: ${spin} 1s ease-in-out infinite;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

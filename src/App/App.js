@@ -1,7 +1,6 @@
 import Navigation from './common/structure/Navigation';
 import MoviesPage from './features/movies/MoviesPage';
 import PeoplePage from './features/people/PeoplePage';
-import PageSelect from './common/structure/PageSelect';
 import { Normalize } from 'styled-normalize';
 import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
@@ -34,7 +33,6 @@ const App = () => {
           </Switch>
         </main>
       </HashRouter>
-      <PageSelect minNumber={'1'} maxNumber={'500'} />
     </ThemeProvider>
   );
 };

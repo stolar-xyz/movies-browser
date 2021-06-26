@@ -63,7 +63,7 @@ const MoviesPage = () => {
               )}
             </List>
           </Section>
-          <PageSelect minNumber={'1'} maxNumber={'500'} />
+          <PageSelect minNumberPage={'1'} maxNumberPage={'500'} />
         </>
       );
 

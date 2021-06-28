@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchList, selectResult, selectStatus } from '../listSlice';
 import { fetchGenres } from './Genres/genresSlice';
+import { usePageParameters } from '../usePageParameters';
 import Subheader from '../../common/styled/Subheader';
 import Movie from '../../common/structure/Movie';
 import Section from '../../common/styled/Section';
@@ -14,12 +15,13 @@ import PageSelect from '../../common/structure/PageSelect';
 const MoviesPage = () => {
   const resultPage = useSelector(selectResult);
   const listStatus = useSelector(selectStatus);
+  const page = +usePageParameters();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchList({ page: '1', type: 'movies' }));
+    dispatch(fetchList({ page, type: 'movies' }));
     dispatch(fetchGenres());
-  }, [dispatch]);
+  }, [dispatch, page]);
 
   switch (listStatus) {
     case 'initial':

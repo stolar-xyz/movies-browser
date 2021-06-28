@@ -43,7 +43,7 @@ const PeoplePage = () => {
               ))}
             </List>
           </Section>
-          <PageSelect minNumberPage={'1'} maxNumberPage={'500'} />
+          <PageSelect />
         </>
       );
 

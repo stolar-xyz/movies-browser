@@ -4,7 +4,7 @@ const listSlice = createSlice({
   name: 'list',
   initialState: {
     result: [],
-    pages: null,
+    totalPages: null,
     status: 'initial',
   },
   reducers: {
@@ -14,7 +14,7 @@ const listSlice = createSlice({
     fetchListSuccess: (state, { payload }) => {
       state.status = 'success';
       state.result = payload.results;
-      state.pages = payload.total_pages;
+      state.totalPages = payload.total_pages;
     },
     fetchListError: state => {
       state.status = 'error';
@@ -27,6 +27,6 @@ export const { fetchList, fetchListSuccess, fetchListError } =
 
 export const selectResult = state => state.list.result;
 export const selectStatus = state => state.list.status;
-export const selectPages = state => state.list.pages;
+export const selectTotalPages = state => state.list.totalPages;
 
 export default listSlice.reducer;

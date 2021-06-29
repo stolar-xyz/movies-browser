@@ -18,7 +18,7 @@ const List = styled.ul`
       grid-template-columns: repeat(auto-fill, 314px);
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        grid-template-columns: 1fr;
       }
     `}
 

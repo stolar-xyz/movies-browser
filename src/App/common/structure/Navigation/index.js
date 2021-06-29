@@ -11,32 +11,41 @@ import {
   StyledLink,
 } from './styled';
 import { toMovies, toPeople } from '../../../routes';
+import { useLocation } from 'react-router-dom';
 
-const Navigation = () => (
-  <StyledNavigation>
-    <Wrapper>
-      <header>
-        <Title>
-          <StyledLink to={toMovies()}>
-            <VideoIcon />
-            Movies&nbsp;browser
-          </StyledLink>
-        </Title>
-      </header>
-      <List>
-        <li>
-          <StyledNavLink to={toMovies()}>Movies</StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to={toPeople()}>People</StyledNavLink>
-        </li>
-      </List>
-      <Search>
-        <SearchIcon />
-        <SearchField placeholder={'Search for movies...'} />
-      </Search>
-    </Wrapper>
-  </StyledNavigation>
-);
+const Navigation = () => {
+  const { pathname } = useLocation();
+
+  return (
+    <StyledNavigation>
+      <Wrapper>
+        <header>
+          <Title>
+            <StyledLink to={toMovies()}>
+              <VideoIcon />
+              Movies&nbsp;browser
+            </StyledLink>
+          </Title>
+        </header>
+        <List>
+          <li>
+            <StyledNavLink to={toMovies()}>Movies</StyledNavLink>
+          </li>
+          <li>
+            <StyledNavLink to={toPeople()}>People</StyledNavLink>
+          </li>
+        </List>
+        <Search>
+          <SearchIcon />
+          <SearchField
+            placeholder={`Search for ${
+              pathname.includes('movies') ? 'movies' : 'people'
+            }...`}
+          />
+        </Search>
+      </Wrapper>
+    </StyledNavigation>
+  );
+};
 
 export default Navigation;

@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { selectTotalPages } from '../../../features/listSlice';
-import { usePageParameters } from '../../../features/usePageParameters';
-import { useReplacePageParameters } from '../../../features/useReplacePageParameters';
-import { pageKey } from '../../../paramKeys';
+import { selectTotalPages } from '../listSlice';
+import { usePageParameters } from '../usePageParameters';
+import { useReplacePageParameters } from '../useReplacePageParameters';
+import { pageKey } from '../../paramKeys';
 import {
   ArrowheadIcon,
   ArrowheadsWrapper,

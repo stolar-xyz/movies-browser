@@ -10,7 +10,7 @@ import List from '../../common/styled/List';
 import ThemeToggler from '../ThemeToggler';
 import Loading from '../../common/structure/Content/Loading';
 import Failure from '../../common/structure/Content/Failure';
-import PageSelect from '../../common/structure/PageSelect';
+import PageSelect from '../PageSelect';
 
 const MoviesPage = () => {
   const resultPage = useSelector(selectResult);

@@ -14,7 +14,7 @@ export const StyledPageSelect = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    grid-gap: 8px;
+    grid-gap: 10px;
   }
 `;
 
@@ -70,7 +70,7 @@ export const PageButton = styled.button`
   }
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    padding: 8px 12px;
+    padding: 8px 14px;
   }
 `;
 
@@ -88,8 +88,8 @@ export const Wrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     margin: 0 6px;
-    grid-gap: 4px;
-    font-size: 10px;
+    grid-gap: 5px;
+    font-size: 13px;
   }
 `;
 

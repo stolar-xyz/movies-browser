@@ -34,7 +34,7 @@ export const StyledPerson = styled.li`
 
 export const Image = styled.img`
   width: 100%;
-  height: 278px;
+  height: 295px;
   border-radius: 5px 5px 0 0;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

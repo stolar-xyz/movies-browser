@@ -10,7 +10,7 @@ export const StyledOverlay = styled.div`
   ${({ person }) =>
     person &&
     css`
-      height: 278px;
+      height: 295px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         height: 204px;

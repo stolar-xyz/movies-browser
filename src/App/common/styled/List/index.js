@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const List = styled.ul`
   display: grid;
-  grid-gap: 24px;
+  grid-gap: 26px;
   justify-content: center;
   margin: 24px 0 0;
   padding: 0;
@@ -25,7 +25,7 @@ const List = styled.ul`
   ${({ people }) =>
     people &&
     css`
-      grid-template-columns: repeat(auto-fill, 185px);
+      grid-template-columns: repeat(auto-fill, 202px);
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         grid-template-columns: repeat(auto-fill, 136px);

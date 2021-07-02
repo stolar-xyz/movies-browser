@@ -20,7 +20,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 8px 20px;
   border-radius: 30px;
   border: 2px solid transparent;
   transition: color 0.15s, background 0.15s;

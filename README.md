@@ -5,7 +5,7 @@
 
 ## Description
 
-The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled using Styled Components and adapted for display on small screens (RWD). The site will allow you to change the theme to a darker one by clicking a switch near the subheader.
+The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled with Styled Components and adapted to display on smaller screens (RWD). The site will allow you to change the theme to a darker one by clicking a switch near the subheader.
 
 ### Libraries Used
 

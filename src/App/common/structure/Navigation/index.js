@@ -8,6 +8,7 @@ import {
   StyledLink,
 } from './styled';
 import { toMovies, toPeople } from '../../../routes';
+import Search from '../Search';
 
 const Navigation = () => (
   <StyledNavigation>
@@ -28,6 +29,7 @@ const Navigation = () => (
           <StyledNavLink to={toPeople()}>People</StyledNavLink>
         </li>
       </List>
+      <Search />
     </Wrapper>
   </StyledNavigation>
 );

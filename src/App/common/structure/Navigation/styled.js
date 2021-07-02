@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { ReactComponent as Loupe } from '../../../assets/svgs/loupe.svg';
 import { ReactComponent as Video } from '../../../assets/svgs/video.svg';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -118,47 +117,5 @@ export const List = styled.ul`
   @media (max-width: ${({ theme }) => theme.mobileSmallMax}px) {
     flex-basis: 100%;
     margin-top: 24px;
-  }
-`;
-
-export const Search = styled.label`
-  background: ${({ theme }) => theme.color.text.whiteText};
-  display: flex;
-  align-items: center;
-  flex-basis: 33%;
-  border-radius: 25px;
-  padding: 12px 26px;
-
-  @media (max-width: ${({ theme }) =>
-      theme.mobileMax}px) and (orientation: portrait) {
-    flex-basis: 100%;
-    margin-top: 24px;
-    padding: 10px 18px;
-  }
-`;
-
-export const SearchIcon = styled(Loupe)`
-  margin-right: 16px;
-  height: auto;
-  color: #6C6F81;
-
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    width: 16px;
-    margin-right: 10px;
-  }
-`;
-
-export const SearchField = styled.input`
-  flex-grow: 1;
-  line-height: normal;
-  border: none;
-  background: inherit;
-
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    font-size: 14px;
-  }
-
-  &:focus {
-    outline: none;
   }
 `;

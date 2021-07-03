@@ -8,7 +8,7 @@ import {
   StyledLink,
 } from './styled';
 import { toMovies, toPeople } from '../../../routes';
-import Search from '../Search';
+import Search from '../../../features/Search';
 
 const Navigation = () => (
   <StyledNavigation>

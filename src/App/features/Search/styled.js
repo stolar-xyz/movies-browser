@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as Loupe } from '../../../assets/svgs/loupe.svg';
+import { ReactComponent as Loupe } from '../../assets/svgs/loupe.svg';
 
 export const StyledSearch = styled.form`
   display: flex;

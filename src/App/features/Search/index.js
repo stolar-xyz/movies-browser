@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { useReplacePageParameters } from '../useReplacePageParameters';
 import { selectQuery, setQuery } from './searchSlice';
 import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
 
@@ -7,9 +8,17 @@ const Search = () => {
   const dispatch = useDispatch();
   const query = useSelector(selectQuery);
   const { pathname } = useLocation();
+  const replacePageParameters = useReplacePageParameters();
 
   const onFormSubmit = event => {
     event.preventDefault();
+
+    replacePageParameters({
+      key: 'search',
+      value: query,
+    });
+
+    dispatch(setQuery(''));
   };
 
   const onChange = value => {

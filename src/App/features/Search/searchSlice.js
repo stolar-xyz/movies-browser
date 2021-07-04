@@ -40,6 +40,6 @@ export const {
 
 export const selectResults = state => state.search.results;
 export const selectQuery = state => state.search.query;
-export const selectStatus = state => state.search.loading;
+export const selectStatus = state => state.search.status;
 
 export default searchSlice.reducer;

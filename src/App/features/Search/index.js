@@ -4,8 +4,12 @@ import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
 const Search = () => {
   const { pathname } = useLocation();
 
+  const onFormSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
-    <StyledSearch>
+    <StyledSearch onSubmit={onFormSubmit}>
       <Button>
         <SearchIcon />
       </Button>

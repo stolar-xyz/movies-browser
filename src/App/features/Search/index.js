@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useReplacePageParameters } from '../useReplacePageParameters';
 import { selectQuery, setQuery } from './searchSlice';
 import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
+import ResultsBox from './ResultsBox';
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ const Search = () => {
           }...`}
         />
       </Label>
+      {query && <ResultsBox query={query} />}
     </StyledSearch>
   );
 };

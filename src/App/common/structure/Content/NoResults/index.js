@@ -1,5 +1,5 @@
-import Container from '../../../common/styled/Container';
-import Subheader from '../../../common/styled/Subheader';
+import Container from '../../../styled/Container';
+import Subheader from '../../../styled/Subheader';
 import { NoResultsPicture } from './styled';
 
 const NoResults = ({ title }) => (

@@ -6,8 +6,9 @@ export const StyledSearch = styled.form`
   align-items: center;
   flex-basis: 33%;
   background: ${({ theme }) => theme.color.text.whiteText};
-  border-radius: 25px;
+  border-radius: ${({ open }) => (open ? '25px 25px 0 0' : '25px')};
   padding: 0 22px;
+  position: relative;
 
   @media (max-width: ${({ theme }) =>
       theme.mobileMax}px) and (orientation: portrait) {

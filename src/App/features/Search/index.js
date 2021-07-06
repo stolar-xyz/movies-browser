@@ -27,7 +27,7 @@ const Search = () => {
   };
 
   return (
-    <StyledSearch onSubmit={onFormSubmit}>
+    <StyledSearch open={!!query} onSubmit={onFormSubmit}>
       <Button>
         <SearchIcon />
       </Button>

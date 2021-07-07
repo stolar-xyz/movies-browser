@@ -32,7 +32,7 @@ const ResultsBox = ({ query }) => {
             return null;
 
           case 'loading':
-            return <Loading />;
+            return <Loading search />;
 
           case 'error':
             return <Failure />;

@@ -4,9 +4,9 @@ import { ReactComponent as Loupe } from '../../assets/svgs/loupe.svg';
 export const StyledSearch = styled.form`
   display: flex;
   align-items: center;
-  flex-basis: 33%;
+  flex-basis: 35%;
   background: ${({ theme }) => theme.color.text.whiteText};
-  border-radius: ${({ open }) => (open ? '25px 25px 0 0' : '25px')};
+  border-radius: ${({ open }) => (open ? '21px 21px 0 0' : '25px')};
   padding: 0 22px;
   position: relative;
 

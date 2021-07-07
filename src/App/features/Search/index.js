@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useReplacePageParameters } from '../useReplacePageParameters';
 import { selectQuery, setQuery } from './searchSlice';
 import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
+import { searchKey } from '../../paramKeys';
 import ResultsBox from './ResultsBox';
 
 const Search = () => {
@@ -15,7 +16,7 @@ const Search = () => {
     event.preventDefault();
 
     replacePageParameters({
-      key: 'search',
+      key: searchKey,
       value: query,
     });
 

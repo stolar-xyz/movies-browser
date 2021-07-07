@@ -3,10 +3,10 @@ import styled, { keyframes } from 'styled-components';
 export const StyledLoading = styled.div`
   display: grid;
   place-items: center;
-  height: calc(100vh - 133px);
+  height: ${({ search }) => (search ? '100%' : 'calc(100vh - 133px)')};
 
   @media (max-width: ${({ theme }) => theme.mobileSmallMax}px) {
-    height: calc(100vh - 165px);
+    height: ${({ search }) => !search && 'calc(100vh - 165px)'};
   }
 `;
 
@@ -17,16 +17,14 @@ const spin = keyframes`
 `;
 
 export const Loader = styled.div`
-  width: 150px;
-  height: 150px;
+  width: ${({ search }) => (search ? '10vh' : '15vh')};
+  height: ${({ search }) => (search ? '10vh' : '15vh')};
   border-radius: 50%;
-  border: 10px solid;
+  border: 5px solid;
   border-color: ${({ theme }) => theme.color.text.primaryText} transparent;
   animation: ${spin} 1s ease-in-out infinite;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    width: 100px;
-    height: 100px;
-    border-width: 5px;
+    border-width: 3px;
   }
 `;

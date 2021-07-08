@@ -1,13 +1,13 @@
-import Container from '../../../styled/Container';
-import Subheader from '../../../styled/Subheader';
-import { NoResultsPicture } from './styled';
+import { NoResultsPicture, Wrapper, StyledSubheader } from './styled';
 
-const NoResults = ({ text }) => (
+const NoResults = ({ search, text }) => (
   <>
-    <Subheader>Sorry, there are no results for "{text}"</Subheader>
-    <Container>
+    <StyledSubheader search={search}>
+      Sorry, there are no results for "{text}"
+    </StyledSubheader>
+    <Wrapper search={search}>
       <NoResultsPicture />
-    </Container>
+    </Wrapper>
   </>
 );
 

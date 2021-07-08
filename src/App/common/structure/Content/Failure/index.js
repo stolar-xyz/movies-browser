@@ -1,21 +1,14 @@
 import Subheader from '../../../styled/Subheader';
-import {
-  DangerIcon,
-  Description,
-  StyledLinkButton,
-  StyledContainer,
-} from './styled';
-import { toMovies } from '../../../../routes';
+import { DangerIcon, Description, StyledContainer } from './styled';
 
-const Failure = () => (
-  <StyledContainer>
-    <DangerIcon />
-    <Subheader>Ooops! Something went wrong...</Subheader>
-    <Description>
+const Failure = ({ search }) => (
+  <StyledContainer search={search}>
+    <DangerIcon search={search} />
+    <Subheader search={search}>Ooops! Something went wrong...</Subheader>
+    <Description search={search}>
       Please check your network connection
       <br /> and try again
     </Description>
-    <StyledLinkButton to={toMovies()}>Back to home page</StyledLinkButton>
   </StyledContainer>
 );
 

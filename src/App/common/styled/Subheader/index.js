@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 
 const Subheader = styled.h2`
-  color: ${({ theme }) => theme.color.text.primaryText};
-  font-size: 36px;
+  color: ${({ search, theme }) =>
+    search ? '#000000' : theme.color.text.primaryText};
+  font-size: ${({ search }) => (search ? '18px' : '36px')};
   font-weight: 600;
   margin: 0;
 
@@ -15,7 +16,7 @@ const Subheader = styled.h2`
     `}
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    font-size: 18px;
+    font-size: ${({ search }) => (search ? '16px' : '18px')};
     font-weight: 500;
   }
 `;

@@ -21,7 +21,9 @@ export const Loader = styled.div`
   height: ${({ search }) => (search ? '10vh' : '15vh')};
   border-radius: 50%;
   border: 5px solid;
-  border-color: ${({ theme }) => theme.color.text.primaryText} transparent;
+  border-color: ${({ search, theme }) =>
+      search ? '#000000' : theme.color.text.primaryText}
+    transparent;
   animation: ${spin} 1s ease-in-out infinite;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {

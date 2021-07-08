@@ -51,7 +51,7 @@ const ResultsBox = ({ query }) => {
                 )
               );
             } else {
-              return <NoResults text={query} />;
+              return <NoResults search text={query} />;
             }
 
           default:

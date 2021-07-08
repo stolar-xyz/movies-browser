@@ -1,55 +1,44 @@
-import styled from 'styled-components';
-import Container from '../../../styled/Container';
+import styled, { css } from 'styled-components';
 import { ReactComponent as Danger } from '../../../../assets/svgs/danger.svg';
-import { Link } from 'react-router-dom';
 
-export const StyledContainer = styled(Container)`
+export const StyledContainer = styled.div`
+  margin-top: ${({ search }) => !search && '10%'};
   text-align: center;
+
+  ${({ search }) =>
+    search &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    `}
 `;
 
 export const DangerIcon = styled(Danger)`
-  margin-bottom: 24px;
+  margin-bottom: ${({ search }) => (search ? '8px' : '24px')};
+  height: auto;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    width: 15vw;
-    height: auto;
+    width: ${({ search }) => (search ? '15vh' : '25vw')};
     margin-bottom: 12px;
   }
 `;
 
 export const Description = styled.p`
-  color: ${({ theme }) => theme.color.text.primaryText};
-  font-size: 22px;
+  color: ${({ search, theme }) =>
+    search ? '#000000' : theme.color.text.primaryText};
+  font-size: ${({ search }) => (search ? '14px' : '22px')};
   font-weight: 500;
   line-height: 1.4;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    font-size: 14px;
-  }
-`;
-
-export const StyledLinkButton = styled(Link)`
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  background: #0044cc;
-  padding: 16px 24px;
-  color: #ffffff;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(1.2);
+    font-size: ${({ search }) => (search ? '12px' : '14px')};
   }
 
-  &:active {
-    box-shadow: inset 0px 0px 5px #c1c1c1;
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    font-size: 12px;
-    padding: 10px 14px;
-    font-weight: 400;
+  @media (max-width: ${({ theme }) =>
+      theme.tabletMax}px) and (orientation: landscape) {
+    margin-inline: ${({ search }) => search && '0.5em'};
   }
 `;

@@ -35,7 +35,7 @@ const ResultsBox = ({ query }) => {
             return <Loading search />;
 
           case 'error':
-            return <Failure />;
+            return <Failure search />;
 
           case 'success':
             if (searchResults.length) {

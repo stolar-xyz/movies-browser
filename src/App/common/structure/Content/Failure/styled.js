@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { ReactComponent as Danger } from '../../../../assets/svgs/danger.svg';
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
   margin-top: ${({ search }) => !search && '10%'};
   text-align: center;
 

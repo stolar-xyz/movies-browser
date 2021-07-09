@@ -14,15 +14,15 @@ const ResultsBox = ({ query }) => {
   const searchResults = useSelector(selectResults);
   const dispatch = useDispatch();
   const { pathname } = useLocation();
-  const pathName = pathname.includes('movie') ? 'movie' : 'person';
+  const conditionedPathname = pathname.includes('movie') ? 'movie' : 'person';
 
   useEffect(() => {
     dispatch(
       setActiveSearchPath(
-        `${base}search/${pathName}${apiKey}${language}&query=${query}`
+        `${base}search/${conditionedPathname}${apiKey}${language}&query=${query}`
       )
     );
-  }, [dispatch, pathName, query]);
+  }, [dispatch, conditionedPathname, query]);
 
   return (
     <Wrapper>
@@ -42,7 +42,7 @@ const ResultsBox = ({ query }) => {
               return searchResults.map(
                 ({ title, name, poster_path, profile_path, id }) => (
                   <ResultTile
-                    pathName={pathName}
+                    pathname={conditionedPathname}
                     text={title || name}
                     source={poster_path || profile_path}
                     id={id}

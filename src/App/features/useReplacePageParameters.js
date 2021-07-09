@@ -5,8 +5,10 @@ export const useReplacePageParameters = () => {
   const searchParams = new URLSearchParams();
 
   const replacePageParameters = ({ key, value }) => {
-    searchParams.set(key, value);
-    history.push(`?${searchParams}`);
+    if (value) {
+      searchParams.set(key, value);
+      history.push(`?${searchParams}`);
+    }
   };
 
   return replacePageParameters;

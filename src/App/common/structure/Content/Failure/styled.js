@@ -39,6 +39,6 @@ export const Description = styled.p`
 
   @media (max-width: ${({ theme }) =>
       theme.tabletMax}px) and (orientation: landscape) {
-    margin-inline: ${({ search }) => search && '0.5em'};
+    padding: ${({ search }) => search && '0 5px'};
   }
 `;

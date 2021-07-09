@@ -10,6 +10,7 @@ import ResultsBox from './ResultsBox';
 const Search = () => {
   const dispatch = useDispatch();
   const query = useSelector(selectQuery);
+  const trimmedQuery = query.trim();
   const { pathname } = useLocation();
   const replacePageParameters = useReplacePageParameters();
 
@@ -22,7 +23,7 @@ const Search = () => {
 
     replacePageParameters({
       key: searchKey,
-      value: query,
+      value: trimmedQuery,
     });
 
     dispatch(setQuery(''));
@@ -33,7 +34,7 @@ const Search = () => {
   };
 
   return (
-    <StyledSearch open={!!query} onSubmit={onFormSubmit}>
+    <StyledSearch open={trimmedQuery} onSubmit={onFormSubmit}>
       <Button title={'Search'}>
         <SearchIcon />
       </Button>
@@ -46,7 +47,7 @@ const Search = () => {
           }...`}
         />
       </Label>
-      {query && <ResultsBox query={query} />}
+      {trimmedQuery && <ResultsBox query={trimmedQuery} />}
     </StyledSearch>
   );
 };

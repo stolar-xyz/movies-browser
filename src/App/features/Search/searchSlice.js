@@ -19,12 +19,12 @@ const searchSlice = createSlice({
     fetchSearchError: state => {
       state.status = 'error';
     },
-    setActiveSearchPath: (state, { payload: path }) => {
-      state.activePath = path;
+    setActiveSearchPath: (state, { payload }) => {
+      state.activePath = payload;
       state.status = 'loading';
     },
-    setQuery: (state, { payload: query }) => {
-      state.query = query;
+    setQuery: (state, { payload }) => {
+      state.query = payload;
     },
   },
 });

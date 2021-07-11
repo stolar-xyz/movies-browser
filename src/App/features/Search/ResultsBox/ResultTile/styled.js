@@ -23,6 +23,7 @@ export const Image = styled.img`
   height: 100%;
   max-width: 130px;
   margin-right: 16px;
+  border-radius: 5px;
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     max-width: 100px;

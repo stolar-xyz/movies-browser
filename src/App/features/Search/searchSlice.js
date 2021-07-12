@@ -7,6 +7,7 @@ const searchSlice = createSlice({
     activePath: '',
     query: '',
     status: 'initial',
+    open: false,
   },
   reducers: {
     fetchSearch: state => {
@@ -26,6 +27,9 @@ const searchSlice = createSlice({
     setQuery: (state, { payload }) => {
       state.query = payload;
     },
+    setOpen: (state, { payload }) => {
+      state.open = payload;
+    },
   },
 });
 
@@ -41,5 +45,6 @@ export const {
 export const selectResults = state => state.search.results;
 export const selectQuery = state => state.search.query;
 export const selectStatus = state => state.search.status;
+export const selectOpen = state => state.search.open;
 
 export default searchSlice.reducer;

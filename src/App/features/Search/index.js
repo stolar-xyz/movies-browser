@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useReplacePageParameters } from '../useReplacePageParameters';
-import { selectQuery, setQuery } from './searchSlice';
+import { selectQuery, toggleOpen, setQuery } from './searchSlice';
 import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
 import { searchKey } from '../../paramKeys';
 import ResultsBox from './ResultsBox';
@@ -33,8 +33,19 @@ const Search = () => {
     dispatch(setQuery(value));
   };
 
+  const onFormTarget = ({ currentTarget, relatedTarget }) => {
+    if (!currentTarget.contains(relatedTarget)) {
+      dispatch(toggleOpen());
+    }
+  };
+
   return (
-    <StyledSearch open={trimmedQuery} onSubmit={onFormSubmit}>
+    <StyledSearch
+      open={trimmedQuery}
+      onFocus={onFormTarget}
+      onBlur={onFormTarget}
+      onSubmit={onFormSubmit}
+    >
       <Button title={'Search'}>
         <SearchIcon />
       </Button>

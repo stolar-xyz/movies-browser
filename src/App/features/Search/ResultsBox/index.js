@@ -2,7 +2,12 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { language, apiKey, base } from '../../../apiDetails';
-import { selectResults, selectStatus, setActiveSearchPath } from './../searchSlice';
+import {
+  selectResults,
+  selectStatus,
+  setActiveSearchPath,
+  toggleOpen,
+} from './../searchSlice';
 import { Wrapper } from './styled';
 import Loading from '../../../common/structure/Content/Loading';
 import Failure from '../../../common/structure/Content/Failure';
@@ -25,7 +30,11 @@ const ResultsBox = ({ query }) => {
   }, [dispatch, conditionedPathname, query]);
 
   return (
-    <Wrapper>
+    <Wrapper
+      onClick={() => {
+        dispatch(toggleOpen());
+      }}
+    >
       {(() => {
         switch (searchStatus) {
           case 'initial':

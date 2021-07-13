@@ -25,7 +25,7 @@ const List = styled.ul`
   ${({ people }) =>
     people &&
     css`
-      grid-template-columns: repeat(auto-fill, 202px);
+      grid-template-columns: repeat(auto-fill, 200px);
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         grid-template-columns: repeat(auto-fill, 136px);

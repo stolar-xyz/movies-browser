@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useReplacePageParameters } from '../useReplacePageParameters';
-import { selectQuery, toggleOpen, setQuery } from './searchSlice';
+import { selectOpen, selectQuery, toggleOpen, setQuery } from './searchSlice';
 import { StyledSearch, Button, Label, SearchIcon, Field } from './styled';
 import { searchKey } from '../../paramKeys';
 import ResultsBox from './ResultsBox';
@@ -10,6 +10,7 @@ import ResultsBox from './ResultsBox';
 const Search = () => {
   const dispatch = useDispatch();
   const query = useSelector(selectQuery);
+  const isOpen = useSelector(selectOpen);
   const trimmedQuery = query.trim();
   const { pathname } = useLocation();
   const replacePageParameters = useReplacePageParameters();
@@ -41,7 +42,7 @@ const Search = () => {
 
   return (
     <StyledSearch
-      open={trimmedQuery}
+      open={trimmedQuery && isOpen}
       onFocus={onFormTarget}
       onBlur={onFormTarget}
       onSubmit={onFormSubmit}
@@ -58,7 +59,7 @@ const Search = () => {
           }...`}
         />
       </Label>
-      {trimmedQuery && <ResultsBox query={trimmedQuery} />}
+      {trimmedQuery && isOpen && <ResultsBox query={trimmedQuery} />}
     </StyledSearch>
   );
 };

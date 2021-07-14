@@ -1,13 +1,10 @@
-import { StyledPerson, Image, Wrapper, Name, Role } from './styled';
-import { baseImage } from '../../../apiDetails';
+import { StyledPerson, Wrapper, Name, Role } from './styled';
 import ProfileIcon from '../../../assets/svgs/profile.svg';
+import Image from '../Image';
 
 const Person = ({ name, role, source }) => (
   <StyledPerson>
-    <Image
-      alt={`photo of ${name}`}
-      src={source ? `${baseImage}w342${source}` : ProfileIcon}
-    />
+    <Image person altText={name} source={source} icon={ProfileIcon} size={'w342'} />
     <Wrapper>
       <Name>{name}</Name>
       {role && <Role>{role}</Role>}

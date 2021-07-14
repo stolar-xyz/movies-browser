@@ -1,20 +1,17 @@
-import { baseImage } from '../../../../apiDetails';
 import { toMovie, toPerson } from '../../../../routes';
-import { Image, Text, Wrapper } from './styled';
+import { Text, Wrapper } from './styled';
 import VideoIcon from '../../../../assets/svgs/videoExtra.svg';
 import ProfileIcon from '../../../../assets/svgs/profile.svg';
+import Image from '../../../../common/structure/Image';
 
 const ResultTile = ({ pathname, id, source, text }) => (
   <Wrapper to={pathname === 'movie' ? toMovie(id) : toPerson(id)}>
     <Image
-      alt={text}
-      src={
-        source
-          ? `${baseImage}w154${source}`
-          : pathname === 'movie'
-          ? VideoIcon
-          : ProfileIcon
-      }
+      search
+      altText={text}
+      source={source}
+      icon={pathname === 'movie' ? VideoIcon : ProfileIcon}
+      size={'w154'}
     />
     <Text>{text}</Text>
   </Wrapper>

@@ -33,9 +33,11 @@ export const StyledPerson = styled.li`
 `;
 
 export const Image = styled.img`
+  background: #c4c4c4;
   width: 100%;
-  height: 295px;
+  height: 300px;
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     height: 204px;

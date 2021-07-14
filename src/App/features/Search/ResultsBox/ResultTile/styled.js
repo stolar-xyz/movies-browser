@@ -20,14 +20,12 @@ export const Wrapper = styled(Link)`
 `;
 
 export const Image = styled.img`
-  height: 100%;
-  max-width: 130px;
+  background: #c4c4c4;
+  height: 150px;
+  width: 100px;
   margin-right: 16px;
   border-radius: 5px;
-
-  @media (max-width: ${({ theme }) => theme.tabletMax}px) {
-    max-width: 100px;
-  }
+  object-fit: cover;
 `;
 
 export const Text = styled.h3`

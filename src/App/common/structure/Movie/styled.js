@@ -32,20 +32,6 @@ export const StyledMovie = styled.li`
   }
 `;
 
-export const Image = styled.img`
-  width: 100%;
-  height: 470px;
-  border-radius: 5px 5px 0px 0px;
-  background: #c4c4c4;
-  object-fit: cover;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    height: 225px;
-    width: 150px;
-    border-radius: 5px 0 0 5px;
-  }
-`;
-
 export const Container = styled.div`
   display: grid;
   grid-gap: 8px;

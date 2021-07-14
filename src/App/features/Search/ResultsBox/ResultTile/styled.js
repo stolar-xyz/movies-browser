@@ -19,15 +19,6 @@ export const Wrapper = styled(Link)`
   }
 `;
 
-export const Image = styled.img`
-  background: #c4c4c4;
-  height: 150px;
-  width: 100px;
-  margin-right: 16px;
-  border-radius: 5px;
-  object-fit: cover;
-`;
-
 export const Text = styled.h3`
   font-size: 20px;
   font-weight: 500;

@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
 import { language, apiKey, base } from '../../../apiDetails';
 import {
   selectResults,
@@ -14,12 +13,11 @@ import Failure from '../../../common/structure/Content/Failure';
 import NoResults from '../../../common/structure/Content/NoResults';
 import ResultTile from './ResultTile';
 
-const ResultsBox = ({ query }) => {
+const ResultsBox = ({ query, pathname }) => {
   const searchStatus = useSelector(selectStatus);
   const searchResults = useSelector(selectResults);
   const dispatch = useDispatch();
-  const { pathname } = useLocation();
-  const conditionedPathname = pathname.includes('movie') ? 'movie' : 'person';
+  const conditionedPathname = pathname ? 'movie' : 'person';
 
   useEffect(() => {
     dispatch(

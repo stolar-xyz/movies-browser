@@ -9,7 +9,7 @@ export const StyledImage = styled.img`
   ${({ movie }) =>
     movie &&
     css`
-      height: 470px;
+      height: 471px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         height: 225px;

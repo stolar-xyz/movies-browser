@@ -6,7 +6,13 @@ import Image from '../Image';
 
 const Movie = ({ title, year, genres, rate, votes, source }) => (
   <StyledMovie>
-    <Image movie altText={title} source={source} icon={VideoIcon} size={'w342'} />
+    <Image
+      movie
+      altText={`${title} movie poster`}
+      source={source}
+      icon={VideoIcon}
+      size={'w342'}
+    />
     <Wrapper>
       <Container>
         <Title>{title}</Title>

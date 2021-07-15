@@ -8,7 +8,7 @@ const ResultTile = ({ pathname, id, source, text }) => (
   <Wrapper to={pathname === 'movie' ? toMovie(id) : toPerson(id)}>
     <Image
       search
-      altText={text}
+      altText={pathname === 'movie' ? `${text} movie poster` : `photo of ${text}`}
       source={source}
       icon={pathname === 'movie' ? VideoIcon : ProfileIcon}
       size={'w154'}

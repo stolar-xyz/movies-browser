@@ -4,7 +4,13 @@ import Image from '../Image';
 
 const Person = ({ name, role, source }) => (
   <StyledPerson>
-    <Image person altText={name} source={source} icon={ProfileIcon} size={'w342'} />
+    <Image
+      person
+      altText={`photo of ${name}`}
+      source={source}
+      icon={ProfileIcon}
+      size={'w342'}
+    />
     <Wrapper>
       <Name>{name}</Name>
       {role && <Role>{role}</Role>}

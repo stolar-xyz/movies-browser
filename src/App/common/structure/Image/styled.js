@@ -21,7 +21,7 @@ export const StyledImage = styled.img`
   ${({ person }) =>
     person &&
     css`
-      height: 300px;
+      height: 303px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         height: 204px;

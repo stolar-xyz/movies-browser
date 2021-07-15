@@ -13,6 +13,7 @@ const Search = () => {
   const isOpen = useSelector(selectOpen);
   const trimmedQuery = query.trim();
   const { pathname } = useLocation();
+  const isPathnameIncludes = pathname.includes('/movies');
   const replacePageParameters = useReplacePageParameters();
 
   useEffect(() => {
@@ -54,12 +55,12 @@ const Search = () => {
         <Field
           value={query}
           onChange={({ target }) => onChange(target.value)}
-          placeholder={`Search for ${
-            pathname.includes('movies') ? 'movies' : 'people'
-          }...`}
+          placeholder={`Search for ${isPathnameIncludes ? 'movies' : 'people'}...`}
         />
       </Label>
-      {trimmedQuery && isOpen && <ResultsBox query={trimmedQuery} />}
+      {trimmedQuery && isOpen && (
+        <ResultsBox query={trimmedQuery} pathname={isPathnameIncludes} />
+      )}
     </StyledSearch>
   );
 };

@@ -4,17 +4,21 @@ import VideoIcon from '../../../../assets/svgs/videoExtra.svg';
 import ProfileIcon from '../../../../assets/svgs/profile.svg';
 import Image from '../../../../common/structure/Image';
 
-const ResultTile = ({ pathname, id, source, text }) => (
-  <Wrapper to={pathname === 'movie' ? toMovie(id) : toPerson(id)}>
-    <Image
-      search
-      altText={pathname === 'movie' ? `${text} movie poster` : `photo of ${text}`}
-      source={source}
-      icon={pathname === 'movie' ? VideoIcon : ProfileIcon}
-      size={'w154'}
-    />
-    <Text>{text}</Text>
-  </Wrapper>
-);
+const ResultTile = ({ pathname, id, source, text }) => {
+  const isPathnameEqual = pathname === 'movie';
+
+  return (
+    <Wrapper to={isPathnameEqual ? toMovie(id) : toPerson(id)}>
+      <Image
+        search
+        altText={isPathnameEqual ? `${text} movie poster` : `photo of ${text}`}
+        source={source}
+        icon={isPathnameEqual ? VideoIcon : ProfileIcon}
+        size={'w154'}
+      />
+      <Text>{text}</Text>
+    </Wrapper>
+  );
+};
 
 export default ResultTile;

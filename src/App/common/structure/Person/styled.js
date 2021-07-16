@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   overflow-wrap: anywhere;
   flex-grow: 1;
   text-align: center;
-  transition: box-shadow 0.3s ease-out;
   background: ${({ theme }) => theme.color.background.secondaryBackground};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
@@ -16,20 +15,8 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledPerson = styled.li`
-  color: ${({ theme }) => theme.color.text.primaryText};
   display: flex;
-  flex-direction: column;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-
-  &:hover ${Wrapper} {
-    box-shadow: 0 6px 0 0 #fcd420;
-
-    @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-      box-shadow: 0 4px 0 0 #fcd420;
-    }
-  }
 `;
 
 export const Name = styled.span`

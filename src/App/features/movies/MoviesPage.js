@@ -60,6 +60,7 @@ const MoviesPage = () => {
                     votes={vote_count}
                     source={poster_path}
                     key={id}
+                    id={id}
                   />
                 )
               )}

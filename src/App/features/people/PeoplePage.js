@@ -41,7 +41,7 @@ const PeoplePage = () => {
             </Subheader>
             <List people>
               {resultPage.map(({ name, profile_path, id }) => (
-                <Person name={name} source={profile_path} key={id} />
+                <Person name={name} source={profile_path} key={id} id={id} />
               ))}
             </List>
           </Section>

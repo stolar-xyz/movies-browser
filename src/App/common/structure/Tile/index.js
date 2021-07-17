@@ -6,14 +6,12 @@ import {
   Informations,
   StyledTile,
   Wrapper,
-  TextContent,
 } from './styled';
 
 const Tile = ({
   altText,
   source,
   name,
-  year,
   icon,
   firstInformation,
   firstInformationDetails,
@@ -27,7 +25,6 @@ const Tile = ({
     <Image tile altText={altText} source={source} icon={icon} size={'w500'} />
     <Wrapper>
       <Subheader>{name}</Subheader>
-      {year && <TextContent>{year}</TextContent>}
       <Informations>
         <div>
           <Information>{firstInformation}</Information>

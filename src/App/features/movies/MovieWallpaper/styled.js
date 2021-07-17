@@ -59,6 +59,7 @@ export const WallpaperOverlay = styled.div`
 export const Wallpaper = styled.img`
   width: 100%;
   height: 100%;
+  display: block;
 `;
 
 export const Wrapper = styled.div`

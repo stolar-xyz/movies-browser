@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const StyledLink = styled(Link)`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   text-decoration: none;
   cursor: pointer;
@@ -24,7 +25,6 @@ export const StyledLink = styled(Link)`
       min-height: 675px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-        flex-grow: 1;
         flex-direction: row;
         min-height: unset;
       }

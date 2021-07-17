@@ -18,7 +18,7 @@ const PeoplePage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchList({ page: page, type: 'people' }));
+    dispatch(fetchList({ page, type: 'people' }));
   }, [dispatch, page]);
 
   switch (listStatus) {

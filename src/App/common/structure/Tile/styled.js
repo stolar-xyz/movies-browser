@@ -24,15 +24,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const TextContent = styled.span`
-  font-size: 22px;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    font-size: 13px;
-    color: ${({ theme }) => theme.color.text.secondaryText};
-  }
-`;
-
 export const Informations = styled.div`
   display: grid;
   grid-gap: 8px;

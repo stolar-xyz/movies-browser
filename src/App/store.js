@@ -5,6 +5,7 @@ import themeReducer from './features/ThemeToggler/themeSlice';
 import listReducer from './features/listSlice';
 import genresReducer from './features/movies/Genres/genresSlice';
 import searchReducer from './features/Search/searchSlice';
+import itemReducer from './features/itemSlice';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,6 +15,7 @@ const store = configureStore({
     list: listReducer,
     genres: genresReducer,
     search: searchReducer,
+    item: itemReducer,
   },
   middleware: [sagaMiddleware],
 });

@@ -4,12 +4,14 @@ export const StyledTile = styled.div`
   color: ${({ theme }) => theme.color.text.primaryText};
   background: ${({ theme }) => theme.color.background.secondaryBackground};
   padding: 26px;
+  margin-bottom: 56px; //test
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.element.boxShadow};
   border-radius: 5px;
   overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     padding: 16px;
+    margin-bottom: 24px; //test
   }
 `;
 

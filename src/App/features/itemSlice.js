@@ -20,13 +20,7 @@ const itemSlice = createSlice({
   },
 });
 
-export const {
-  fetchItem,
-  fetchItemSuccess,
-  fetchItemError,
-  setActivePath,
-  resetState,
-} = itemSlice.actions;
+export const { fetchItem, fetchItemSuccess, fetchItemError } = itemSlice.actions;
 
 export const selectResult = state => state.item.result;
 export const selectStatus = state => state.item.status;

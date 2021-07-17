@@ -13,19 +13,6 @@ export const StyledTile = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  margin-right: 36px;
-  float: left;
-  width: 30%;
-  height: 100%;
-  border-radius: 5px;
-
-  @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    margin-right: 16px;
-    min-width: 130px;
-  }
-`;
-
 export const Wrapper = styled.div`
   display: grid;
   grid-gap: 24px;

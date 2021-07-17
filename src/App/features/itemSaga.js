@@ -1,7 +1,7 @@
-import { takeEvery, call, put } from 'redux-saga/effects';
-import { fetchItemError, fetchItemSuccess, fetchItem } from './itemSlice';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { fetchItem, fetchItemSuccess, fetchItemError } from './itemSlice';
 import { getDataFromApi } from './getDataFromApi';
-import { apiKey, base, language } from '../apiDetails';
+import { base, apiKey, language } from '../apiDetails';
 
 function* fetchItemHandler({ payload: { id, type } }) {
   const url = (() => {
@@ -24,5 +24,5 @@ function* fetchItemHandler({ payload: { id, type } }) {
 }
 
 export function* itemSaga() {
-  yield takeEvery(fetchItem.type, fetchItemHandler);
+  yield takeLatest(fetchItem.type, fetchItemHandler);
 }

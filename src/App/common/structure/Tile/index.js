@@ -1,7 +1,7 @@
 import Subheader from '../../styled/Subheader';
+import Image from '../Image';
 import {
   Description,
-  Image,
   Information,
   Informations,
   StyledTile,
@@ -14,6 +14,7 @@ const Tile = ({
   source,
   name,
   year,
+  icon,
   firstInformation,
   firstInformationDetails,
   secondInformation,
@@ -23,7 +24,7 @@ const Tile = ({
   description,
 }) => (
   <StyledTile>
-    {source && <Image alt={`${name} ${altText}`} src={source} />}
+    <Image tile altText={altText} source={source} icon={icon} size={'w500'} />
     <Wrapper>
       <Subheader>{name}</Subheader>
       {year && <TextContent>{year}</TextContent>}

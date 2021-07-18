@@ -8,10 +8,9 @@ import {
   toggleOpen,
 } from './../searchSlice';
 import { Wrapper } from './styled';
-import Loading from '../../../common/structure/Content/Loading';
-import Failure from '../../../common/structure/Content/Failure';
 import NoResults from '../../../common/structure/Content/NoResults';
 import ResultTile from './ResultTile';
+import RenderCondition from '../../RenderCondition';
 
 const ResultsBox = ({ query, pathname }) => {
   const searchStatus = useSelector(selectStatus);
@@ -33,38 +32,27 @@ const ResultsBox = ({ query, pathname }) => {
         dispatch(toggleOpen());
       }}
     >
-      {(() => {
-        switch (searchStatus) {
-          case 'initial':
-            return null;
-
-          case 'loading':
-            return <Loading search />;
-
-          case 'error':
-            return <Failure search />;
-
-          case 'success':
-            if (searchResults.length) {
-              return searchResults.map(
-                ({ title, name, poster_path, profile_path, id }) => (
-                  <ResultTile
-                    pathname={conditionedPathname}
-                    text={title || name}
-                    source={poster_path || profile_path}
-                    id={id}
-                    key={id}
-                  />
-                )
-              );
-            } else {
-              return <NoResults search text={query} />;
-            }
-
-          default:
-            throw new Error(`incorrect status - ${searchStatus}`);
-        }
-      })()}
+      {RenderCondition(
+        searchStatus,
+        (() => {
+          if (searchResults.length) {
+            return searchResults.map(
+              ({ title, name, poster_path, profile_path, id }) => (
+                <ResultTile
+                  pathname={conditionedPathname}
+                  text={title || name}
+                  source={poster_path || profile_path}
+                  id={id}
+                  key={id}
+                />
+              )
+            );
+          } else {
+            return <NoResults search text={query} />;
+          }
+        })(),
+        'search'
+      )}
     </Wrapper>
   );
 };

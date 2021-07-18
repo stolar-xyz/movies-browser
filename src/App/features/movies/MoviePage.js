@@ -6,10 +6,9 @@ import MovieWallpaper from './MovieWallpaper';
 import Tile from '../../common/structure/Tile';
 import Section from '../../common/styled/Section';
 import Rating from '../../common/structure/Rating';
-import Loading from '../../common/structure/Content/Loading';
-import Failure from '../../common/structure/Content/Failure';
 import VideoIcon from '../../assets/svgs/videoExtra.svg';
 import Genres from './Genres';
+import RenderCondition from '../RenderCondition';
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -31,50 +30,36 @@ const MoviePage = () => {
     dispatch(fetchItem({ id, type: 'movie' }));
   }, [id, dispatch]);
 
-  switch (itemStatus) {
-    case 'initial':
-      return null;
-
-    case 'loading':
-      return <Loading />;
-
-    case 'error':
-      return <Failure />;
-
-    case 'success':
-      return (
-        <>
-          {backdrop_path && (
-            <MovieWallpaper
-              source={backdrop_path}
-              title={title}
-              rating={<Rating big={'true'} rate={vote_average} votes={vote_count} />}
-            />
-          )}
-          <Section>
-            <Tile
-              altText={`${title} movie poster`}
-              source={poster_path}
-              name={title}
-              icon={VideoIcon}
-              firstInformation={'Production:'}
-              firstInformationDetails={
-                production_countries &&
-                production_countries.map(({ name }) => name).join(', ')
-              }
-              secondInformation={'Release date:'}
-              secondInformationDetails={release_date}
-              genres={<Genres genres={genres && genres.map(({ id }) => id)} />}
-              rating={<Rating rate={vote_average} votes={vote_count} />}
-              description={overview}
-            />
-          </Section>
-        </>
-      );
-
-    default:
-      throw new Error(`incorrect status - ${itemStatus}`);
-  }
+  return RenderCondition(
+    itemStatus,
+    <>
+      {backdrop_path && (
+        <MovieWallpaper
+          source={backdrop_path}
+          title={title}
+          rating={<Rating big={'true'} rate={vote_average} votes={vote_count} />}
+        />
+      )}
+      <Section>
+        <Tile
+          altText={`${title} movie poster`}
+          source={poster_path}
+          name={title}
+          icon={VideoIcon}
+          firstInformation={'Production:'}
+          firstInformationDetails={
+            production_countries &&
+            production_countries.map(({ name }) => name).join(', ')
+          }
+          secondInformation={'Release date:'}
+          secondInformationDetails={release_date}
+          genres={<Genres genres={genres && genres.map(({ id }) => id)} />}
+          rating={<Rating rate={vote_average} votes={vote_count} />}
+          description={overview}
+        />
+      </Section>
+    </>
+  );
 };
 
 export default MoviePage;

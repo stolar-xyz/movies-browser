@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchItem, selectResult, selectStatus } from '../itemSlice';
-import { useEffect } from 'react';
+import { fetchGenres } from './Genres/genresSlice';
 import MovieWallpaper from './MovieWallpaper';
 import Tile from '../../common/structure/Tile';
 import Section from '../../common/styled/Section';
@@ -27,6 +28,7 @@ const MoviePage = () => {
   const itemStatus = useSelector(selectStatus);
 
   useEffect(() => {
+    dispatch(fetchGenres());
     dispatch(fetchItem({ id, type: 'movie' }));
   }, [id, dispatch]);
 

@@ -18,8 +18,8 @@ const MoviesPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchList({ page, type: 'movies' }));
     dispatch(fetchGenres());
+    dispatch(fetchList({ page, type: 'movies' }));
   }, [dispatch, page]);
 
   return RenderCondition(

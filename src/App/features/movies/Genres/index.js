@@ -5,15 +5,13 @@ import { Genre, StyledGenres } from './styled';
 const Genres = ({ genres }) => {
   const genresList = useSelector(selectResult);
 
-  return (
+  return genres && genres.length > 0 ? (
     <StyledGenres>
-      {genres &&
-        genresList.map(
-          ({ id, name }) =>
-            genres.includes(id) && <Genre key={id}>{name}</Genre>
-        )}
+      {genresList.map(
+        ({ id, name }) => genres.includes(id) && <Genre key={id}>{name}</Genre>
+      )}
     </StyledGenres>
-  );
+  ) : null;
 };
 
 export default Genres;

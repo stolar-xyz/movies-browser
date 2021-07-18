@@ -1,72 +1,80 @@
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchItem, selectResult, selectStatus } from '../itemSlice';
+import { useEffect } from 'react';
 import MovieWallpaper from './MovieWallpaper';
-import Subheader from '../../common/styled/Subheader';
 import Tile from '../../common/structure/Tile';
-import List from '../../common/styled/List';
 import Section from '../../common/styled/Section';
-import Person from '../../common/structure/Person';
 import Rating from '../../common/structure/Rating';
-import Genres from '../../common/structure/Genres';
+import Loading from '../../common/structure/Content/Loading';
+import Failure from '../../common/structure/Content/Failure';
+import VideoIcon from '../../assets/svgs/videoExtra.svg';
+import Genres from './Genres';
 
-//test structure
-const data = {
-  title: 'Mulan',
-  rate: '7,8',
-  votes: '355',
+const MoviePage = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const {
+    backdrop_path,
+    poster_path,
+    title,
+    release_date,
+    production_countries,
+    overview,
+    vote_average,
+    vote_count,
+    genres,
+  } = useSelector(selectResult);
+  const itemStatus = useSelector(selectStatus);
+
+  useEffect(() => {
+    dispatch(fetchItem({ id, type: 'movie' }));
+  }, [id, dispatch]);
+
+  switch (itemStatus) {
+    case 'initial':
+      return null;
+
+    case 'loading':
+      return <Loading />;
+
+    case 'error':
+      return <Failure />;
+
+    case 'success':
+      return (
+        <>
+          {backdrop_path && (
+            <MovieWallpaper
+              source={backdrop_path}
+              title={title}
+              rating={<Rating big={'true'} rate={vote_average} votes={vote_count} />}
+            />
+          )}
+          <Section>
+            <Tile
+              altText={`${title} movie poster`}
+              source={poster_path}
+              name={title}
+              icon={VideoIcon}
+              firstInformation={'Production:'}
+              firstInformationDetails={
+                production_countries &&
+                production_countries.map(({ name }) => name).join(', ')
+              }
+              secondInformation={'Release date:'}
+              secondInformationDetails={release_date}
+              genres={<Genres genres={genres && genres.map(({ id }) => id)} />}
+              rating={<Rating rate={vote_average} votes={vote_count} />}
+              description={overview}
+            />
+          </Section>
+        </>
+      );
+
+    default:
+      throw new Error(`incorrect status - ${itemStatus}`);
+  }
 };
-
-const MoviePage = () => (
-  <>
-    <MovieWallpaper
-      source={''}
-      title={data.title}
-      rating={<Rating big={'true'} rate={data.rate} votes={data.votes} />}
-    />
-    <Section>
-      <Tile
-        altText={'movie poster'}
-        source={''}
-        name={data.title}
-        year={'2020'}
-        firstInformation={'Production:'}
-        firstInformationDetails={'China, United States of America'}
-        secondInformation={'Release date:'}
-        secondInformationDetails={'24.10.2020'}
-        genres={<Genres genres={'Action'} />}
-        rating={<Rating rate={data.rate} votes={data.votes} />}
-        description={
-          'A young Chinese maiden disguises herself as a male warrior in order to save her father. Disguises herself as a male warrior in order to save her father. A young Chinese maiden disguises herself as a male warrior in order to save her father.'
-        }
-      />
-    </Section>
-    <Section>
-      <Subheader>Cast</Subheader>
-      <List people>
-        <Person name={'Henry Cavill'} role={'Witcher'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-      </List>
-    </Section>
-    <Section>
-      <Subheader>Crew</Subheader>
-      <List people>
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-        <Person name={'Henry Cavill'} />
-      </List>
-    </Section>
-  </>
-);
 
 export default MoviePage;

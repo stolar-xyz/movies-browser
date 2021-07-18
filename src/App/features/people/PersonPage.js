@@ -1,106 +1,54 @@
-import Subheader from '../../common/styled/Subheader';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchItem, selectResult, selectStatus } from '../itemSlice';
+import { useParams } from 'react-router-dom';
 import Tile from '../../common/structure/Tile';
-import List from '../../common/styled/List';
 import Section from '../../common/styled/Section';
-import Movie from '../../common/structure/Movie';
-import NoResults from '../Content/NoResults';
-import Loading from '../Content/Loading';
-import Failure from '../Content/Failure';
+import Loading from '../../common/structure/Content/Loading';
+import Failure from '../../common/structure/Content/Failure';
+import ProfileIcon from '../../assets/svgs/profile.svg';
 
-//test structure
+const PersonPage = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const { profile_path, name, birthday, place_of_birth, biography } =
+    useSelector(selectResult);
+  const itemStatus = useSelector(selectStatus);
 
-const PersonPage = () => (
-  <>
-    <Section>
-      <Failure />
-    </Section>
-    <Section>
-      <Loading title={'Mulan'} />
-    </Section>
-    <Section>
-      <NoResults title={'Mulan'} />
-    </Section>
-    <Section>
-      <Tile
-        altText={'photo'}
-        source={''}
-        name={'Liu Yifei'}
-        firstInformation={'Date of birth:'}
-        firstInformationDetails={'25.08.1987'}
-        secondInformation={'Place of birth:'}
-        secondInformationDetails={'Wuhan, Hubei, China'}
-        description={
-          'Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.'
-        }
-      />
-    </Section>
-    <Section>
-      <Subheader>Movies - cast</Subheader>
-      <List movies>
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-      </List>
-    </Section>
-    <Section>
-      <Subheader>Movies - crew</Subheader>
-      <List movies>
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-        <Movie
-          title={'Mulan'}
-          year={'2020'}
-          genres={'Action'}
-          rate={'7,8'}
-          votes={'35'}
-        />
-      </List>
-    </Section>
-  </>
-);
+  useEffect(() => {
+    dispatch(fetchItem({ id, type: 'person' }));
+  }, [id, dispatch]);
+
+  switch (itemStatus) {
+    case 'initial':
+      return null;
+
+    case 'loading':
+      return <Loading />;
+
+    case 'error':
+      return <Failure />;
+
+    case 'success':
+      return (
+        <Section>
+          <Tile
+            altText={`photo of ${name}`}
+            source={profile_path}
+            name={name}
+            icon={ProfileIcon}
+            firstInformation={'Date of birth:'}
+            firstInformationDetails={birthday}
+            secondInformation={'Place of birth:'}
+            secondInformationDetails={place_of_birth}
+            description={biography}
+          />
+        </Section>
+      );
+
+    default:
+      throw new Error(`incorrect status - ${itemStatus}`);
+  }
+};
 
 export default PersonPage;

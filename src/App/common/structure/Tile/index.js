@@ -25,20 +25,26 @@ const Tile = ({
     <Image tile altText={altText} source={source} icon={icon} size={'w500'} />
     <Wrapper>
       <Subheader>{name}</Subheader>
-      <Informations>
-        <div>
-          <Information>{firstInformation}</Information>
-          {firstInformationDetails}
-        </div>
-        <div>
-          <Information>{secondInformation}</Information>
-          {secondInformationDetails}
-        </div>
-      </Informations>
+      {(firstInformationDetails || secondInformationDetails) && (
+        <Informations>
+          {firstInformationDetails && (
+            <div>
+              <Information>{firstInformation}</Information>
+              {firstInformationDetails}
+            </div>
+          )}
+          {secondInformationDetails && (
+            <div>
+              <Information>{secondInformation}</Information>
+              {secondInformationDetails}
+            </div>
+          )}
+        </Informations>
+      )}
       {genres}
       {rating}
     </Wrapper>
-    <Description>{description}</Description>
+    {description && <Description>{description}</Description>}
   </StyledTile>
 );
 

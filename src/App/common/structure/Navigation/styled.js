@@ -80,6 +80,10 @@ export const Title = styled.h1`
   letter-spacing: -1.5px;
   margin: 0;
 
+  &:hover {
+    filter: brightness(0.9);
+  }
+
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 16px;
   }

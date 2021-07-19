@@ -1,6 +1,6 @@
 import { StyledMovie, Title, Year, Wrapper, Container } from './styled';
-import { StyledLink } from '../../styled/Link';
 import { toMovie } from '../../../routes';
+import StyledLink from '../../styled/Link';
 import Genres from '../../../features/movies/Genres';
 import Rating from '../Rating';
 import VideoIcon from '../../../assets/svgs/videoExtra.svg';

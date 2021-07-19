@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -30,3 +30,5 @@ export const StyledLink = styled(Link)`
       }
     `}
 `;
+
+export default StyledLink;

@@ -1,6 +1,6 @@
 import { StyledPerson, Wrapper, Name, Role } from './styled';
-import { StyledLink } from '../../styled/Link';
 import { toPerson } from '../../../routes';
+import StyledLink from '../../styled/Link';
 import ProfileIcon from '../../../assets/svgs/profile.svg';
 import Image from '../Image';
 

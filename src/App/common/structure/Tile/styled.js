@@ -9,7 +9,7 @@ export const StyledTile = styled.div`
   overflow: hidden;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    padding: 16px;
+    padding: 12px;
   }
 `;
 
@@ -48,6 +48,6 @@ export const Description = styled.p`
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     font-size: 14px;
-    margin: 8px 0 0;
+    margin: 16px 0 0;
   }
 `;

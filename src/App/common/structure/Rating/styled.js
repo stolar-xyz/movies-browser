@@ -27,7 +27,7 @@ export const Rate = styled.span`
   font-weight: 500;
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-    margin: ${({ big }) => big && '0 2px 0 4px'};
+    margin: ${({ big }) => big && '0 2px 0 6px'};
     margin: ${({ small }) => small && '0 8px'};
     font-weight: 600;
     font-size: 14px;

@@ -8,7 +8,7 @@ import Image from '../Image';
 
 const Movie = ({ title, year, genres, rate, votes, source, id }) => (
   <StyledMovie>
-    <StyledLink movie={'true'} to={toMovie(id)}>
+    <StyledLink $movie={'true'} to={toMovie(id)}>
       <Image
         movie
         altText={`${title} movie poster`}

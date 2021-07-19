@@ -6,7 +6,7 @@ export const StyledSearch = styled.form`
   align-items: center;
   flex-basis: 35%;
   background: ${({ theme }) => theme.color.text.whiteText};
-  border-radius: ${({ open }) => (open ? '21px 21px 0 0' : '25px')};
+  border-radius: ${({ $open }) => ($open ? '21px 21px 0 0' : '25px')};
   padding: 0 22px;
   position: relative;
 

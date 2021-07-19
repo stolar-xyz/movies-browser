@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ReactComponent as Arrowhead } from '../../assets/svgs/arrowhead.svg';
 
 export const StyledPageSelect = styled.div`
@@ -20,12 +20,7 @@ export const StyledPageSelect = styled.div`
 
 export const ArrowheadIcon = styled(Arrowhead)`
   color: #0044cc;
-
-  ${({ rotated }) =>
-    rotated &&
-    css`
-      transform: rotate(180deg);
-    `}
+  transform: ${({ $rotated }) => $rotated && 'rotate(180deg)'};
 
   @media (max-width: ${({ theme }) => theme.mobileMax}px) {
     width: 5px;

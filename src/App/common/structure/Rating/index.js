@@ -4,7 +4,7 @@ const Rating = ({ rate, votes, big, small }) => (
   <StyledRating big={big} small={small}>
     {votes ? (
       <>
-        <StarIcon big={big} />
+        <StarIcon $big={big} />
         <Rate big={big} small={small}>
           {rate}
         </Rate>

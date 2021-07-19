@@ -43,7 +43,7 @@ const Search = () => {
 
   return (
     <StyledSearch
-      open={trimmedQuery && isOpen}
+      $open={trimmedQuery && isOpen}
       onFocus={onFormTarget}
       onBlur={onFormTarget}
       onSubmit={onFormSubmit}

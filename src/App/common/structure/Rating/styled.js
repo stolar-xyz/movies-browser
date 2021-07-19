@@ -12,7 +12,7 @@ export const StyledRating = styled.div`
 `;
 
 export const StarIcon = styled(Star)`
-  width: ${({ big }) => big && '40px'};
+  width: ${({ $big }) => $big && '40px'};
   height: auto;
   vertical-align: bottom;
 

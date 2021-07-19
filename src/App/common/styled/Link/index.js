@@ -19,8 +19,8 @@ const StyledLink = styled(Link)`
     }
   }
 
-  ${({ movie }) =>
-    movie &&
+  ${({ $movie }) =>
+    $movie &&
     css`
       min-height: 675px;
 

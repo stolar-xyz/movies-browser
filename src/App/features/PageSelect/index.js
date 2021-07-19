@@ -56,7 +56,7 @@ const PageSelect = () => {
         title={'Next page'}
       >
         <PageButtonText>Next</PageButtonText>
-        <ArrowheadIcon rotated={'true'} />
+        <ArrowheadIcon $rotated={'true'} />
       </PageButton>
       <PageButton
         disabled={page === totalPages}
@@ -65,8 +65,8 @@ const PageSelect = () => {
       >
         <PageButtonText>Last</PageButtonText>
         <ArrowheadsWrapper>
-          <ArrowheadIcon rotated={'true'} />
-          <ArrowheadIcon rotated={'true'} />
+          <ArrowheadIcon $rotated={'true'} />
+          <ArrowheadIcon $rotated={'true'} />
         </ArrowheadsWrapper>
       </PageButton>
     </StyledPageSelect>

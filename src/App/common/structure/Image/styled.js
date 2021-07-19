@@ -39,14 +39,20 @@ export const StyledImage = styled.img`
     ${({ tile }) =>
     tile &&
     css`
+      width: 400px;
+      height: 600px;
       margin-right: 36px;
       float: left;
-      width: 30%;
-      height: 100%;
+
+      @media (max-width: ${({ theme }) => theme.tabletMax}px) {
+        width: 300px;
+        height: 450px;
+      }
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
         margin-right: 16px;
-        min-width: 130px;
+        width: 140px;
+        height: 210px;
       }
     `}
 `;

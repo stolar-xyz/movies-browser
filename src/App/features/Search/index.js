@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useReplacePageParameters } from '../useReplacePageParameters';
@@ -15,10 +14,6 @@ const Search = () => {
   const { pathname } = useLocation();
   const isPathnameIncludes = pathname.includes('/movies');
   const replacePageParameters = useReplacePageParameters();
-
-  useEffect(() => {
-    dispatch(setQuery(''));
-  }, [pathname, dispatch]);
 
   const onFormSubmit = event => {
     event.preventDefault();

@@ -14,8 +14,8 @@ const StyledLink = styled(Link)`
     box-shadow: 0 6px 0 0 #fcd420;
 
     @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-      box-shadow: ${({ movie }) =>
-        movie ? '4px 0 0 0 #fcd420;' : '0 4px 0 0 #fcd420;'};
+      box-shadow: ${({ $movie }) =>
+        $movie ? '4px 0 0 0 #fcd420;' : '0 4px 0 0 #fcd420;'};
     }
   }
 

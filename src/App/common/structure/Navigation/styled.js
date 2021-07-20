@@ -77,7 +77,7 @@ export const Title = styled.h1`
   text-transform: capitalize;
   font-size: 24px;
   font-weight: 500;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   margin: 0;
 
   &:hover {

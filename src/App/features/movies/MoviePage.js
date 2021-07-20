@@ -1,8 +1,3 @@
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchItem, selectResult, selectStatus } from '../itemSlice';
-import { fetchGenres } from './Genres/genresSlice';
 import MovieWallpaper from './MovieWallpaper';
 import Tile from '../../common/structure/Tile';
 import Section from '../../common/styled/Section';
@@ -10,27 +5,23 @@ import Rating from '../../common/structure/Rating';
 import VideoIcon from '../../assets/svgs/videoExtra.svg';
 import Genres from './Genres';
 import RenderCondition from '../RenderCondition';
+import useItemResources from '../useItemResources';
 
 const MoviePage = () => {
-  const { id } = useParams();
-  const dispatch = useDispatch();
   const {
-    backdrop_path,
-    poster_path,
-    title,
-    release_date,
-    production_countries,
-    overview,
-    vote_average,
-    vote_count,
-    genres,
-  } = useSelector(selectResult);
-  const itemStatus = useSelector(selectStatus);
-
-  useEffect(() => {
-    dispatch(fetchGenres());
-    dispatch(fetchItem({ id, type: 'movie' }));
-  }, [id, dispatch]);
+    resultPage: {
+      backdrop_path,
+      poster_path,
+      title,
+      release_date,
+      production_countries,
+      overview,
+      vote_average,
+      vote_count,
+      genres,
+    },
+    itemStatus,
+  } = useItemResources('movie');
 
   return RenderCondition(
     itemStatus,

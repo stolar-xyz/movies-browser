@@ -1,22 +1,14 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchItem, selectResult, selectStatus } from '../itemSlice';
-import { useParams } from 'react-router-dom';
 import Tile from '../../common/structure/Tile';
 import Section from '../../common/styled/Section';
 import ProfileIcon from '../../assets/svgs/profile.svg';
 import RenderCondition from '../RenderCondition';
+import useItemResources from '../useItemResources';
 
 const PersonPage = () => {
-  const { id } = useParams();
-  const dispatch = useDispatch();
-  const { profile_path, name, birthday, place_of_birth, biography } =
-    useSelector(selectResult);
-  const itemStatus = useSelector(selectStatus);
-
-  useEffect(() => {
-    dispatch(fetchItem({ id, type: 'person' }));
-  }, [id, dispatch]);
+  const {
+    resultPage: { name, profile_path, birthday, place_of_birth, biography },
+    itemStatus,
+  } = useItemResources('person');
 
   return RenderCondition(
     itemStatus,

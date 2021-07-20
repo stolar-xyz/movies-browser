@@ -23,3 +23,10 @@ export const Wrapper = styled.div`
     border-radius: 5px;
   }
 `;
+
+export const ResultList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: inherit;
+`;

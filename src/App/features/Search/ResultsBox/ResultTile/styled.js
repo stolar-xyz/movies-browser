@@ -1,22 +1,25 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Wrapper = styled(Link)`
-  display: flex;
+export const ListItem = styled.li`
   padding: 16px;
   border-top: 1px solid #cccccc;
-  text-decoration: none;
-  color: #000000;
-  align-items: center;
   background: inherit;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
 
   @media (max-width: ${({ theme }) => theme.tabletMax}px) {
     padding: 8px;
   }
+`;
 
-  :hover {
-    filter: brightness(0.95);
-  }
+export const StyledLink = styled(Link)`
+  display: flex;
+  text-decoration: none;
+  color: #000000;
+  align-items: center;
 `;
 
 export const Text = styled.h3`

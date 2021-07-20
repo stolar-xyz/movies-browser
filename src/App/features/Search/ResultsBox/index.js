@@ -7,7 +7,7 @@ import {
   setActiveSearchPath,
   toggleOpen,
 } from './../searchSlice';
-import { Wrapper } from './styled';
+import { ResultList, Wrapper } from './styled';
 import NoResults from '../../../common/structure/Content/NoResults';
 import ResultTile from './ResultTile';
 import RenderCondition from '../../RenderCondition';
@@ -36,22 +36,26 @@ const ResultsBox = ({ query, pathname }) => {
         searchStatus,
         (() => {
           if (searchResults.length) {
-            return searchResults.map(
-              ({ title, name, poster_path, profile_path, id }) => (
-                <ResultTile
-                  pathname={conditionedPathname}
-                  text={title || name}
-                  source={poster_path || profile_path}
-                  id={id}
-                  key={id}
-                />
-              )
+            return (
+              <ResultList>
+                {searchResults.map(
+                  ({ title, name, poster_path, profile_path, id }) => (
+                    <ResultTile
+                      pathname={conditionedPathname}
+                      text={title || name}
+                      source={poster_path || profile_path}
+                      id={id}
+                      key={id}
+                    />
+                  )
+                )}
+              </ResultList>
             );
           } else {
             return <NoResults search text={query} />;
           }
         })(),
-        'search'
+        true
       )}
     </Wrapper>
   );

@@ -12,7 +12,8 @@ export const StyledImage = styled.img`
       height: 471px;
 
       @media (max-width: ${({ theme }) => theme.mobileMax}px) {
-        height: 225px;
+        min-height: 225px;
+        height: 100%;
         width: 150px;
         border-radius: 5px 0 0 5px;
       }

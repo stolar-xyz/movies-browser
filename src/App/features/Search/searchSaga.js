@@ -1,17 +1,13 @@
 import { call, put, debounce } from 'redux-saga/effects';
 import { getDataFromApi } from '../getDataFromApi';
-import store from '../../store';
-import {
-  fetchSearchError,
-  fetchSearchSuccess,
-  setActiveSearchPath,
-} from './searchSlice';
+import { fetchSearch, fetchSearchError, fetchSearchSuccess } from './searchSlice';
+import { apiKey, base, language } from '../../apiDetails';
 
-function* fetchSearchHandler() {
-  const activePath = store.getState().search.activePath;
+function* fetchSearchHandler({ payload: { pathname, query } }) {
+  const path = `${base}search/${pathname}${apiKey}${language}&query=${query}`;
 
   try {
-    const responseData = yield call(getDataFromApi, activePath);
+    const responseData = yield call(getDataFromApi, path);
     yield put(fetchSearchSuccess(responseData));
   } catch (error) {
     yield put(fetchSearchError());
@@ -19,5 +15,5 @@ function* fetchSearchHandler() {
 }
 
 export function* searchSaga() {
-  yield debounce(500, setActiveSearchPath.type, fetchSearchHandler);
+  yield debounce(500, fetchSearch.type, fetchSearchHandler);
 }

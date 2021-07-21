@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const searchSlice = createSlice({
   name: 'search',
   initialState: {
-    results: [],
+    result: [],
     activePath: '',
     query: '',
     status: 'initial',
@@ -14,7 +14,7 @@ const searchSlice = createSlice({
       state.status = 'loading';
     },
     fetchSearchSuccess: (state, { payload }) => {
-      state.results = payload.results;
+      state.result = payload.results;
       state.status = 'success';
     },
     fetchSearchError: state => {
@@ -42,7 +42,7 @@ export const {
   toggleOpen,
 } = searchSlice.actions;
 
-export const selectResults = state => state.search.results;
+export const selectResult = state => state.search.result;
 export const selectQuery = state => state.search.query;
 export const selectStatus = state => state.search.status;
 export const selectOpen = state => state.search.open;

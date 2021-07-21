@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { language, apiKey, base } from '../../../apiDetails';
 import {
-  selectResults,
+  selectResult,
   selectStatus,
   setActiveSearchPath,
   toggleOpen,
@@ -14,7 +14,7 @@ import RenderCondition from '../../RenderCondition';
 
 const ResultsBox = ({ query, pathname }) => {
   const searchStatus = useSelector(selectStatus);
-  const searchResults = useSelector(selectResults);
+  const searchResult = useSelector(selectResult);
   const dispatch = useDispatch();
   const conditionedPathname = pathname ? 'movie' : 'person';
 
@@ -35,10 +35,10 @@ const ResultsBox = ({ query, pathname }) => {
       {RenderCondition(
         searchStatus,
         (() => {
-          if (searchResults.length) {
+          if (searchResult.length) {
             return (
               <ResultList>
-                {searchResults.map(
+                {searchResult.map(
                   ({ title, name, poster_path, profile_path, id }) => (
                     <ResultTile
                       pathname={conditionedPathname}

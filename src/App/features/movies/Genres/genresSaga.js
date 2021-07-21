@@ -8,10 +8,10 @@ import { getDataFromApi } from '../../getDataFromApi';
 import { base, apiKey, language } from '../../../apiDetails';
 
 function* fetchGenresHandler() {
-  const genresUrl = `${base}genre/movie/list${apiKey}${language}`;
+  const genresPath = `${base}genre/movie/list${apiKey}${language}`;
 
   try {
-    const responseData = yield call(getDataFromApi, genresUrl);
+    const responseData = yield call(getDataFromApi, genresPath);
     yield put(fetchGenresSuccess(responseData));
   } catch (error) {
     yield put(fetchGenresError());

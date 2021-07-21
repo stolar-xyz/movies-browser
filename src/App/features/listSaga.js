@@ -4,7 +4,7 @@ import { getDataFromApi } from './getDataFromApi';
 import { base, apiKey, language } from '../apiDetails';
 
 function* fetchListHandler({ payload: { page, type } }) {
-  const url = (() => {
+  const path = (() => {
     switch (type) {
       case 'movies':
         return `${base}discover/movie${apiKey}${language}&sort_by=popularity.desc&page=${page}`;
@@ -16,7 +16,7 @@ function* fetchListHandler({ payload: { page, type } }) {
   })();
 
   try {
-    const responseData = yield call(getDataFromApi, url);
+    const responseData = yield call(getDataFromApi, path);
     yield put(fetchListSuccess(responseData));
   } catch (error) {
     yield put(fetchListError());

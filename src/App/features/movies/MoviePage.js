@@ -9,7 +9,7 @@ import useItemResources from '../useItemResources';
 
 const MoviePage = () => {
   const {
-    resultPage: {
+    itemPage: {
       backdrop_path,
       poster_path,
       title,

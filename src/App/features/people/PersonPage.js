@@ -6,7 +6,7 @@ import useItemResources from '../useItemResources';
 
 const PersonPage = () => {
   const {
-    resultPage: { name, profile_path, birthday, place_of_birth, biography },
+    itemPage: { name, profile_path, birthday, place_of_birth, biography },
     itemStatus,
   } = useItemResources('person');
 

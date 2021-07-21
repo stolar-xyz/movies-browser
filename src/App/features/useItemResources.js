@@ -6,7 +6,7 @@ import { selectResult, selectStatus } from './itemSlice';
 import { fetchGenres } from './movies/Genres/genresSlice';
 
 const useItemResources = type => {
-  const resultPage = useSelector(selectResult);
+  const itemPage = useSelector(selectResult);
   const itemStatus = useSelector(selectStatus);
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const useItemResources = type => {
     type === 'movie' && dispatch(fetchGenres());
   }, [dispatch, id, type]);
 
-  return { resultPage, itemStatus };
+  return { itemPage, itemStatus };
 };
 
 export default useItemResources;

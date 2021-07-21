@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { language, apiKey, base } from '../../../apiDetails';
 import {
+  fetchSearch,
   selectResult,
   selectStatus,
-  setActiveSearchPath,
   toggleOpen,
 } from './../searchSlice';
 import { ResultList, Wrapper } from './styled';
@@ -19,11 +18,7 @@ const ResultsBox = ({ query, pathname }) => {
   const conditionedPathname = pathname ? 'movie' : 'person';
 
   useEffect(() => {
-    dispatch(
-      setActiveSearchPath(
-        `${base}search/${conditionedPathname}${apiKey}${language}&query=${query}`
-      )
-    );
+    dispatch(fetchSearch({ pathname: conditionedPathname, query }));
   }, [dispatch, conditionedPathname, query]);
 
   return (

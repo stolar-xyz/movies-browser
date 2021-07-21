@@ -8,7 +8,7 @@ import RenderCondition from '../RenderCondition';
 import useListResources from '../useListResources';
 
 const MoviesPage = () => {
-  const { resultPage, listStatus } = useListResources('movies');
+  const { listPage, listStatus } = useListResources('movies');
 
   return RenderCondition(
     listStatus,
@@ -19,7 +19,7 @@ const MoviesPage = () => {
           <ThemeToggler />
         </Subheader>
         <List movies>
-          {resultPage.map(
+          {listPage.map(
             ({
               title,
               release_date,

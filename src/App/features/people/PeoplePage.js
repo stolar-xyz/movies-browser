@@ -8,7 +8,7 @@ import RenderCondition from '../RenderCondition';
 import useListResources from '../useListResources';
 
 const PeoplePage = () => {
-  const { resultPage, listStatus } = useListResources('people');
+  const { listPage, listStatus } = useListResources('people');
 
   return RenderCondition(
     listStatus,
@@ -19,7 +19,7 @@ const PeoplePage = () => {
           <ThemeToggler />
         </Subheader>
         <List people>
-          {resultPage.map(({ name, profile_path, id }) => (
+          {listPage.map(({ name, profile_path, id }) => (
             <Person name={name} source={profile_path} key={id} id={id} />
           ))}
         </List>

@@ -5,7 +5,7 @@ import { fetchGenres } from './movies/Genres/genresSlice';
 import { usePageParameters } from './usePageParameters';
 
 const useListResources = type => {
-  const resultPage = useSelector(selectResult);
+  const listPage = useSelector(selectResult);
   const listStatus = useSelector(selectStatus);
   const page = +usePageParameters();
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const useListResources = type => {
     type === 'movies' && dispatch(fetchGenres());
   }, [dispatch, page, type]);
 
-  return { resultPage, listStatus };
+  return { listPage, listStatus };
 };
 
 export default useListResources;

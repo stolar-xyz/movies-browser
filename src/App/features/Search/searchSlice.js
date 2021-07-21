@@ -4,7 +4,6 @@ const searchSlice = createSlice({
   name: 'search',
   initialState: {
     result: [],
-    activePath: '',
     query: '',
     status: 'initial',
     open: false,
@@ -20,10 +19,6 @@ const searchSlice = createSlice({
     fetchSearchError: state => {
       state.status = 'error';
     },
-    setActiveSearchPath: (state, { payload }) => {
-      state.activePath = payload;
-      state.status = 'loading';
-    },
     setQuery: (state, { payload }) => {
       state.query = payload;
     },
@@ -37,7 +32,6 @@ export const {
   fetchSearch,
   fetchSearchSuccess,
   fetchSearchError,
-  setActiveSearchPath,
   setQuery,
   toggleOpen,
 } = searchSlice.actions;

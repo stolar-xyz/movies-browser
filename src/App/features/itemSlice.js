@@ -4,6 +4,7 @@ const itemSlice = createSlice({
   name: 'item',
   initialState: {
     result: [],
+    resultDetails: [],
     status: 'initial',
   },
   reducers: {
@@ -23,6 +24,7 @@ const itemSlice = createSlice({
 export const { fetchItem, fetchItemSuccess, fetchItemError } = itemSlice.actions;
 
 export const selectResult = state => state.item.result;
+export const selectResultDetails = state => state.item.resultDetails;
 export const selectStatus = state => state.item.status;
 
 export default itemSlice.reducer;

@@ -11,8 +11,12 @@ const itemSlice = createSlice({
     fetchItem: state => {
       state.status = 'loading';
     },
-    fetchItemSuccess: (state, { payload }) => {
-      state.result = payload;
+    fetchItemSuccess: (
+      state,
+      { payload: { responseData, responseDetailsData } }
+    ) => {
+      state.result = responseData;
+      state.resultDetails = responseDetailsData;
       state.status = 'success';
     },
     fetchItemError: state => {

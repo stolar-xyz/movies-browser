@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { all, call, put, takeLatest } from 'redux-saga/effects';
 import { fetchItem, fetchItemSuccess, fetchItemError } from './itemSlice';
 import { getDataFromApi } from './getDataFromApi';
 import { base, apiKey, language } from '../apiDetails';
@@ -15,9 +15,23 @@ function* fetchItemHandler({ payload: { id, type } }) {
     }
   })();
 
+  const detailsPath = (() => {
+    switch (type) {
+      case 'movie':
+        return `${base}movie/${id}/credits${apiKey}`;
+      case 'person':
+        return `${base}person/${id}/movie_credits${apiKey}${language}`;
+      default:
+        return null;
+    }
+  })();
+
   try {
-    const responseData = yield call(getDataFromApi, path);
-    yield put(fetchItemSuccess(responseData));
+    const [responseData, responseDetailsData] = yield all([
+      call(getDataFromApi, path),
+      call(getDataFromApi, detailsPath),
+    ]);
+    yield put(fetchItemSuccess({ responseData, responseDetailsData }));
   } catch (error) {
     yield put(fetchItemError());
   }

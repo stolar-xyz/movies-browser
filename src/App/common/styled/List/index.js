@@ -4,7 +4,7 @@ const List = styled.ul`
   display: grid;
   grid-gap: 26px;
   justify-content: center;
-  margin: 24px 0 0;
+  margin: 24px 0;
   padding: 0;
   list-style: none;
 

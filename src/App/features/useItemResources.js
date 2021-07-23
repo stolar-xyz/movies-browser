@@ -17,8 +17,8 @@ const useItemResources = type => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchGenres());
     dispatch(fetchItem({ id, type }));
-    type === 'movie' && dispatch(fetchGenres());
   }, [dispatch, id, type]);
 
   return { itemPage, itemDetails, itemStatus };

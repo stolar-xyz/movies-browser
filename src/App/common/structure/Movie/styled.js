@@ -33,7 +33,7 @@ export const Title = styled.h3`
   }
 `;
 
-export const Year = styled.span`
+export const Detail = styled.span`
   font-weight: 400;
   color: ${({ theme }) => theme.color.text.secondaryText};
 

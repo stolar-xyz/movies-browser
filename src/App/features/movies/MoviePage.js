@@ -6,6 +6,9 @@ import VideoIcon from '../../assets/svgs/videoExtra.svg';
 import Genres from './Genres';
 import RenderCondition from '../RenderCondition';
 import useItemResources from '../useItemResources';
+import Subheader from '../../common/styled/Subheader';
+import List from '../../common/styled/List';
+import Person from '../../common/structure/Person';
 
 const MoviePage = () => {
   const {
@@ -20,6 +23,7 @@ const MoviePage = () => {
       vote_count,
       genres,
     },
+    itemDetails: { cast, crew },
     itemStatus,
   } = useItemResources('movie');
 
@@ -51,6 +55,38 @@ const MoviePage = () => {
           description={overview}
         />
       </Section>
+      {cast && cast.length > 0 && (
+        <Section>
+          <Subheader>Cast {`(${cast.length})`}</Subheader>
+          <List people>
+            {cast.map(({ profile_path, character, name, credit_id, id }) => (
+              <Person
+                name={name}
+                role={character}
+                source={profile_path}
+                key={credit_id}
+                id={id}
+              />
+            ))}
+          </List>
+        </Section>
+      )}
+      {crew && crew.length > 0 && (
+        <Section>
+          <Subheader>Crew {`(${crew.length})`}</Subheader>
+          <List people>
+            {crew.map(({ profile_path, job, name, credit_id, id }) => (
+              <Person
+                name={name}
+                role={job}
+                source={profile_path}
+                key={credit_id}
+                id={id}
+              />
+            ))}
+          </List>
+        </Section>
+      )}
     </>
   );
 };

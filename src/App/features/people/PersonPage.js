@@ -6,12 +6,15 @@ import useItemResources from '../useItemResources';
 import Subheader from '../../common/styled/Subheader';
 import List from '../../common/styled/List';
 import Movie from '../../common/structure/Movie';
+import ShowItemsButtons from '../ShowItemsButtons';
 
 const PersonPage = () => {
   const {
     itemPage: { name, profile_path, birthday, place_of_birth, biography },
     itemDetails: { cast, crew },
     itemStatus,
+    displayedCastItems,
+    displayedCrewItems,
   } = useItemResources('person');
 
   return RenderCondition(
@@ -34,64 +37,70 @@ const PersonPage = () => {
         <Section>
           <Subheader>Cast {`(${cast.length})`}</Subheader>
           <List movies>
-            {cast.map(
-              ({
-                title,
-                release_date,
-                character,
-                genre_ids,
-                vote_average,
-                vote_count,
-                poster_path,
-                credit_id,
-                id,
-              }) => (
-                <Movie
-                  title={title}
-                  role={character}
-                  year={release_date}
-                  genres={genre_ids}
-                  rate={vote_average}
-                  votes={vote_count}
-                  source={poster_path}
-                  key={credit_id}
-                  id={id}
-                />
-              )
-            )}
+            {cast
+              .slice(0, displayedCastItems)
+              .map(
+                ({
+                  title,
+                  release_date,
+                  character,
+                  genre_ids,
+                  vote_average,
+                  vote_count,
+                  poster_path,
+                  credit_id,
+                  id,
+                }) => (
+                  <Movie
+                    title={title}
+                    role={character}
+                    year={release_date}
+                    genres={genre_ids}
+                    rate={vote_average}
+                    votes={vote_count}
+                    source={poster_path}
+                    key={credit_id}
+                    id={id}
+                  />
+                )
+              )}
           </List>
+          <ShowItemsButtons cast={cast} displayedCastItems={displayedCastItems} />
         </Section>
       )}
       {crew && crew.length > 0 && (
         <Section>
           <Subheader>Crew {`(${crew.length})`}</Subheader>
           <List movies>
-            {crew.map(
-              ({
-                title,
-                release_date,
-                job,
-                genre_ids,
-                vote_average,
-                vote_count,
-                poster_path,
-                credit_id,
-                id,
-              }) => (
-                <Movie
-                  title={title}
-                  role={job}
-                  year={release_date}
-                  genres={genre_ids}
-                  rate={vote_average}
-                  votes={vote_count}
-                  source={poster_path}
-                  key={credit_id}
-                  id={id}
-                />
-              )
-            )}
+            {crew
+              .slice(0, displayedCrewItems)
+              .map(
+                ({
+                  title,
+                  release_date,
+                  job,
+                  genre_ids,
+                  vote_average,
+                  vote_count,
+                  poster_path,
+                  credit_id,
+                  id,
+                }) => (
+                  <Movie
+                    title={title}
+                    role={job}
+                    year={release_date}
+                    genres={genre_ids}
+                    rate={vote_average}
+                    votes={vote_count}
+                    source={poster_path}
+                    key={credit_id}
+                    id={id}
+                  />
+                )
+              )}
           </List>
+          <ShowItemsButtons crew={crew} displayedCrewItems={displayedCrewItems} />
         </Section>
       )}
     </>

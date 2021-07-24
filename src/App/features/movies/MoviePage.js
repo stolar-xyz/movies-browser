@@ -9,6 +9,7 @@ import useItemResources from '../useItemResources';
 import Subheader from '../../common/styled/Subheader';
 import List from '../../common/styled/List';
 import Person from '../../common/structure/Person';
+import ShowItemsButtons from '../ShowItemsButtons';
 
 const MoviePage = () => {
   const {
@@ -25,6 +26,8 @@ const MoviePage = () => {
     },
     itemDetails: { cast, crew },
     itemStatus,
+    displayedCastItems,
+    displayedCrewItems,
   } = useItemResources('movie');
 
   return RenderCondition(
@@ -59,32 +62,38 @@ const MoviePage = () => {
         <Section>
           <Subheader>Cast {`(${cast.length})`}</Subheader>
           <List people>
-            {cast.map(({ profile_path, character, name, credit_id, id }) => (
-              <Person
-                name={name}
-                role={character}
-                source={profile_path}
-                key={credit_id}
-                id={id}
-              />
-            ))}
+            {cast
+              .slice(0, displayedCastItems)
+              .map(({ profile_path, character, name, credit_id, id }) => (
+                <Person
+                  name={name}
+                  role={character}
+                  source={profile_path}
+                  key={credit_id}
+                  id={id}
+                />
+              ))}
           </List>
+          <ShowItemsButtons cast={cast} displayedCastItems={displayedCastItems} />
         </Section>
       )}
       {crew && crew.length > 0 && (
         <Section>
           <Subheader>Crew {`(${crew.length})`}</Subheader>
           <List people>
-            {crew.map(({ profile_path, job, name, credit_id, id }) => (
-              <Person
-                name={name}
-                role={job}
-                source={profile_path}
-                key={credit_id}
-                id={id}
-              />
-            ))}
+            {crew
+              .slice(0, displayedCrewItems)
+              .map(({ profile_path, job, name, credit_id, id }) => (
+                <Person
+                  name={name}
+                  role={job}
+                  source={profile_path}
+                  key={credit_id}
+                  id={id}
+                />
+              ))}
           </List>
+          <ShowItemsButtons crew={crew} displayedCrewItems={displayedCrewItems} />
         </Section>
       )}
     </>

@@ -3,6 +3,10 @@ import { fetchItem, fetchItemSuccess, fetchItemError } from './itemSlice';
 import { getDataFromApi } from './getDataFromApi';
 import { base, apiKey, language } from '../apiDetails';
 
+const setItemsLength = items => {
+  return items.length > 16 ? Math.ceil(items.length / 3) : items.length;
+};
+
 function* fetchItemHandler({ payload: { id, type } }) {
   const path = (() => {
     switch (type) {
@@ -31,7 +35,15 @@ function* fetchItemHandler({ payload: { id, type } }) {
       call(getDataFromApi, path),
       call(getDataFromApi, detailsPath),
     ]);
-    yield put(fetchItemSuccess({ responseData, responseDetailsData }));
+
+    yield put(
+      fetchItemSuccess({
+        responseData,
+        responseDetailsData,
+        castItemsLength: setItemsLength(responseDetailsData.cast),
+        crewItemsLength: setItemsLength(responseDetailsData.crew),
+      })
+    );
   } catch (error) {
     yield put(fetchItemError());
   }

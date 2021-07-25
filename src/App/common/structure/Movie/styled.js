@@ -33,7 +33,7 @@ export const Title = styled.h3`
   }
 `;
 
-export const Detail = styled.span`
+export const Details = styled.span`
   font-weight: 400;
   color: ${({ theme }) => theme.color.text.secondaryText};
 

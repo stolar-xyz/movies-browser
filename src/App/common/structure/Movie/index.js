@@ -1,4 +1,4 @@
-import { StyledMovie, Title, Year, Wrapper, Container } from './styled';
+import { StyledMovie, Title, Details, Wrapper, Container } from './styled';
 import { toMovie } from '../../../routes';
 import StyledLink from '../../styled/Link';
 import Genres from '../../../features/movies/Genres';
@@ -6,7 +6,7 @@ import Rating from '../Rating';
 import VideoIcon from '../../../assets/svgs/videoExtra.svg';
 import Image from '../Image';
 
-const Movie = ({ title, year, genres, rate, votes, source, id }) => (
+const Movie = ({ title, role, year, genres, rate, votes, source, id }) => (
   <StyledMovie>
     <StyledLink $movie={'true'} to={toMovie(id)}>
       <Image
@@ -19,7 +19,11 @@ const Movie = ({ title, year, genres, rate, votes, source, id }) => (
       <Wrapper>
         <Container>
           <Title>{title}</Title>
-          {year && <Year>{year.slice(0, 4)}</Year>}
+          {(role || year) && (
+            <Details>
+              {role} {year}
+            </Details>
+          )}
           <Genres genres={genres} />
         </Container>
         <Rating small rate={rate} votes={votes} />

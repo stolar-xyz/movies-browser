@@ -31,7 +31,7 @@ const MoviesPage = () => {
             }) => (
               <Movie
                 title={title}
-                year={release_date}
+                year={release_date && release_date.slice(0, 4)}
                 genres={genre_ids}
                 rate={vote_average}
                 votes={vote_count}

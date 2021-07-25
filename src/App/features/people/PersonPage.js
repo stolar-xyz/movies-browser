@@ -54,7 +54,7 @@ const PersonPage = () => {
                   <Movie
                     title={title}
                     role={character}
-                    year={release_date}
+                    year={release_date && `(${release_date.slice(0, 4)})`}
                     genres={genre_ids}
                     rate={vote_average}
                     votes={vote_count}
@@ -89,7 +89,7 @@ const PersonPage = () => {
                   <Movie
                     title={title}
                     role={job}
-                    year={release_date}
+                    year={release_date && `(${release_date.slice(0, 4)})`}
                     genres={genre_ids}
                     rate={vote_average}
                     votes={vote_count}

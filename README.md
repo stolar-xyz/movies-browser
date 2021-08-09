@@ -1,15 +1,26 @@
-# movies-browser
+# Movies Browser
 
 **The application is still under development.** \
 [Demo](https://stolar-code.github.io/movies-browser/)
 
-## Description
+## Table of contents
 
-The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled with Styled Components and adapted to display on smaller screens (RWD). The site will allow you to change the theme to a darker one by clicking a switch near the subheader.
+- [General informations](#general-informations)
+- [Technologies](#technologies)
+- [Features](#features)
+- [To do](#to-do)
+- [Lighthouse stats](#lighthouse-stats)
+- [Available Scripts](#available-scripts)
 
-### Libraries Used
+## General informations
 
-- react
+The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled with Styled Components and adapted to display on smaller screens.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies
+
+- create-react-app
 - gh-pages
 - styled-components
 - styled-normalize
@@ -19,9 +30,30 @@ The app will allow you to browse movies and actors based on the [API](https://ap
 - redux-toolkit
 - axios
 
-## Getting Started with Create React App
+## Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- display popular movies and people
+- display details of videos and people by clicking on them
+- search bar for movies and people depending on which part of the page you are in
+- display results in the search field after entering a query
+- possibility of expanding the cast and crew in the details of the movie and person
+- page selection bar with previous/next and first/last options
+- switch to a dark theme
+
+## To do
+
+- serve the "search" subpage
+
+## Lighthouse stats
+
+![lighthouse stats](https://i.ibb.co/G0tN938/movies-browser-lighthouse.png 'lighthouse stats')
+
+| Category       | Score |
+| -------------- | ----- |
+| Performance    | 99    |
+| Accessibility  | 100   |
+| Best Practices | 100   |
+| SEO            | 100   |
 
 ## Available Scripts
 

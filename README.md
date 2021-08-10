@@ -14,7 +14,7 @@
 
 ## General informations
 
-The app will allow you to browse movies and actors based on the [API](https://api.themoviedb.org). The design is styled with Styled Components and adapted to display on smaller screens.
+The application allows to view movies and people with their details based on [TMDB's API](https://api.themoviedb.org). The project was styled with Styled Components and adjusted to be displayed on smaller screens. Redux and Redux-Saga were used to manage the state and side effects of the application.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

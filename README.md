@@ -32,8 +32,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Features
 
-- display popular movies and people
-- display details of videos and people by clicking on them
+- display movies and people with their details
+- display more details of movies and people by clicking on them
 - search bar for movies and people depending on which part of the page you are in
 - display results in the search field after entering a query
 - possibility of expanding the cast and crew in the details of the movie and person

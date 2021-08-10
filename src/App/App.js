@@ -1,7 +1,6 @@
-import { Normalize } from 'styled-normalize';
-import { GlobalStyle } from './GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './theme';
+import { GlobalStyle } from './GlobalStyle';
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { toMovie, toMovies, toPeople, toPerson } from './routes';
 import { useSelector } from 'react-redux';
@@ -18,7 +17,6 @@ const App = () => {
   return (
     <ThemeProvider theme={isTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Normalize />
       <HashRouter>
         <Navigation />
         <main>

@@ -1,6 +1,5 @@
 # Movies Browser
 
-**The application is still under development.** \
 [Demo](https://stolar-code.github.io/movies-browser/)
 
 ## Table of contents

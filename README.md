@@ -1,6 +1,6 @@
 # Movies Browser
 
-[Demo](https://stolar-code.github.io/movies-browser/)
+[Demo](https://stolar-xyz.github.io/movies-browser)
 
 ## Table of contents
 
@@ -38,10 +38,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - possibility of expanding the cast and crew in the details of the movie and person
 - page selection bar with previous/next and first/last options
 - switch to a dark theme
-
-## To do
-
-- serve the "search" subpage
 
 ## Lighthouse stats
 
